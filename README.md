@@ -74,7 +74,7 @@ git clone https://github.com/your-username/Hacktoberfest.git
 ###### The commit message is an important aspect of your code contribution; it helps the other contributors fully understand the change you have made, why you made it, and how significant it is. Additionally, commit messages provide a historical record of the changes for the project at large, helping future contributors along the way.
 
 
-![screenshot 155](https://user-images.githubusercontent.com/37223446/47235390-87e2bf80-d3f6-11e8-81c0-e01b7463d038.png)
+
 
 ###### If you have a very short message, you can record that with the -m flag and the message in quotes:
 ###### // Example: // 
@@ -98,10 +98,10 @@ git clone https://github.com/your-username/Hacktoberfest.git
 
 ###### Next, you’ll have to specify a new remote upstream repository for us to sync with the fork. This will be the original repository that you forked from. you’ll have to do this with the git remote add command.
 
-##### // git remote add upstream https://github.com/acmbvp/Hacktoberfest.git //
+##### // git remote add upstream https://github.com/shivaylamba/Hacktoberfest.git //
 
 
-![screenshot 74](https://user-images.githubusercontent.com/37223446/47235672-5f0efa00-d3f7-11e8-9e45-1af02d8b969b.png)
+
 
 ###### In this example, // upstream // is the shortname we have supplied for the remote repository since in terms of Git, “upstream” refers to the repository that you cloned from. If you want to add a remote pointer to the repository of a collaborator, you may want to provide that collaborator’s username or a shortened nickname for the shortname.
 
