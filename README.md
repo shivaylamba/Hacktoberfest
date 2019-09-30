@@ -20,7 +20,7 @@ Hacktoberfest is a program by Digital Ocean and Github, where you can easily win
 
 ### 2. Fork it :fork_and_knife:
 
-You can get your own fork/copy of [Hello-world](https://github.com/piyush97/Hacktoberfest) by using the <kbd><b>Fork</b></kbd></a> button or clicking [this](https://github.com/shivaylamba/Hacktoberfest/).
+You can get your own fork/copy of [Hacktoberfest](https://github.com/shivaylamba/Hacktoberfest) by using the <kbd><b>Fork</b></kbd></a> button or clicking [this](https://github.com/shivaylamba/Hacktoberfest/).
 
  [![Fork Button](https://help.github.com/assets/images/help/repository/fork_button.jpg)](https://github.com/shivaylamba/Hacktoberfest)
 
