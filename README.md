@@ -1,27 +1,47 @@
-# Hacktoberfest
+# Hacktoberfest Hello World
 
-# Instructions :
+<br/>
+HacktoberFest Hello World in every language ever.
+Just fork it and add a hello world to contribute for hacktober fest and send a Pull Request!
+
+### Get yourself free goodies by just writing a hello world!
+Say hi to the world in any language of your choice!
 
 
-### 1. Register yourself for Hacktoberfest
+# What is Hacktoberfest?
+Hacktoberfest is a program by Digital Ocean and Github, where you can easily win a T-Shirt just by making 5 pull requests in the month of October to any open source projects on Github.
+
+## Steps to follow :scroll:
+
+### 1. Register for Hacktoberfest
+
 ###### https://hacktoberfest.digitalocean.com/
 
 
+### 2. Fork it :fork_and_knife:
 
+You can get your own fork/copy of [Hello-world](https://github.com/piyush97/Hacktoberfest) by using the <kbd><b>Fork</b></kbd></a> button or clicking [this](https://github.com/shivaylamba/Hacktoberfest/).
 
-### 2. Star and Fork this Repository
-###### You can star and fork this repository on GitHub by navigating at the top of this repository.
+ [![Fork Button](https://help.github.com/assets/images/help/repository/fork_button.jpg)](https://github.com/shivaylamba/Hacktoberfest)
 
-###### GitHub repository URLs will reference both the username associated with the owner of the repository, as well as the repository name. For example, shivaylamba is the owner of the hacktoberfest repository, so the GitHub URL for this project is: 
+### 3. Add a Program in any Language you like :rabbit2:
+Once you have forked the repo, add your progam in the language folder in 
+main branch, if there is no language folder, make one, then add into it.
+You can take a look to the [Programming Language List](https://en.wikipedia.org/wiki/List_of_programming_languages) in Wikipedia to create a new one Hacktoberfest !
 
-https://github.com/shivaylamba/Hacktoberfest/
+### 4. Ready, Steady, Go... :turtle: :rabbit2:
 
+Once you have completed these steps, you are ready to start contributing 
+by checking our `Help Wanted` issues and creating [pull requests](https://github.com/shivaylamba/Hacktoberfest/pulls).
 
+### 5. Give this Project a Star :star:
 
+If you liked working on this project, please share this project as much 
+as you can and star this project to help as many people in opensource as you can.
 
-###### When you’re on the main page for the repository, you’ll see a button to "Star" and “Fork” the repository on your upper right-hand side of the page, underneath your user icon.
+<br/>
 
-### 3. Clone the Repository
+# Steps to Make Changes and contribute using GIT!
 
 ###### To make your own local copy of the repository you would like to contribute to, let’s first open up a terminal window.
 
@@ -46,7 +66,6 @@ git clone https://github.com/your-username/Hacktoberfest.git
 
 ###### Now, we’ll create our new branch with the git branch command. Make sure you name it descriptively so that others working on the project understand what you are working on.
 
-![screenshot 154](https://user-images.githubusercontent.com/37223446/47234964-240bc700-d3f5-11e8-9837-50685ad44382.png)
 
 ##### // git branch new-branch //
 
@@ -127,3 +146,4 @@ git clone https://github.com/your-username/Hacktoberfest.git
 ###### You should navigate to your forked repository, and press the “New pull request” button on your left-hand side of the page.
 
 # Hurray!! You just got closer to complete your hacktoberfest challenge.
+
