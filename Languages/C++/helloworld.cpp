@@ -6,7 +6,7 @@ int main()
 { 
     
     cout<<"Hello World"<<endl; 
-  cout<<"Jai Shri Ram"
+  cout<<"Jai Shri Ram";
       
     return 0; 
 } 
