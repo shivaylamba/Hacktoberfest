@@ -1,5 +1,6 @@
 package com.codingblocks;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sorting {
@@ -39,13 +40,14 @@ public class Sorting {
             }
         }
     }
+
     // Merge Sort
-    public static void mSort(int[] arr, int l, int h){
+    public static void mergeSort(int[] arr, int l, int h){
         if (l == h)
             return;
         int m = (l + h) / 2;
-        mSort(arr, l, m );
-        mSort(arr, m+1, h);
+        mergeSort(arr, l, m );
+        mergeSort(arr, m+1, h);
         merge(arr, l, m, h);
     }
 
@@ -105,6 +107,10 @@ public class Sorting {
         insertion(data);
         System.out.print("Insertion sort: ");
         Utility.display(data);
+        
+        mergeSort(data, 0, data.length-1);
+        System.out.println("Merge sort: ");
+        System.out.println(Arrays.toString(data));
 
         reverse(data);
         System.out.print("Reversed: ");
