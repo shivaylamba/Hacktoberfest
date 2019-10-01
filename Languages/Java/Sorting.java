@@ -1,5 +1,6 @@
 package com.codingblocks;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Sorting {
@@ -39,6 +40,35 @@ public class Sorting {
             }
         }
     }
+
+    // Merge Sort
+    public static void mergeSort(int[] arr, int l, int h){
+        if (l == h)
+            return;
+        int m = (l + h) / 2;
+        mergeSort(arr, l, m );
+        mergeSort(arr, m+1, h);
+        merge(arr, l, m, h);
+    }
+
+    public static void merge(int[] arr, int l, int m, int h){
+        int[] res = new int[h-l+1];
+        int i=0, j=0, k = 0;
+        for (i = l, j = m+1; i <= m && j <= h; ) {
+            if(arr[i] < arr[j])
+                res[k++] = arr[i++];
+            else
+                res[k++] = arr[j++];
+        }
+        while ( j<= h)
+            res[k++] = arr[j++];
+        while ( i<= m)
+            res[k++] = arr[i++];
+
+        for (int n = 0; n< res.length; n++) 
+            arr[n+l] = res[n];
+    }
+
     // Reverse
     public static void reverse(int[] nums){
 
@@ -77,6 +107,10 @@ public class Sorting {
         insertion(data);
         System.out.print("Insertion sort: ");
         Utility.display(data);
+        
+        mergeSort(data, 0, data.length-1);
+        System.out.println("Merge sort: ");
+        System.out.println(Arrays.toString(data));
 
         reverse(data);
         System.out.print("Reversed: ");
