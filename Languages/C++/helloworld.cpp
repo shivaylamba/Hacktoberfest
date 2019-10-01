@@ -11,6 +11,7 @@ int main()
   for(int i=0;i<5;i++)
   {
     cout<<"Ramji Tshirt Dilwaaenge"<<endl;
+    cout<<"Fir hum mandir banvayenge"<<endl;
   }
   
       
