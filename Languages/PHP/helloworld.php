@@ -3,7 +3,7 @@
 $h = "Hello";
 $w = "World";
 
-echo $h.$w;
+print_r("Hello World");
 
 ?>
 
