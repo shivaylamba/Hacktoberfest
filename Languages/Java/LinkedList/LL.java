@@ -1,4 +1,4 @@
-package com.codingblocks;
+package LinkedList;
 
 import java.io.IOException;
 import java.util.Scanner;

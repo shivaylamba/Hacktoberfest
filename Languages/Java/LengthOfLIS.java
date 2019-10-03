@@ -1,9 +1,8 @@
 //Length Of Longest increasing substring using DP Optimal Substructure problem
 
-package DynamicProgramming;
 import java.util.*;
 
-public class LengthOfLongestIncreasingSub {
+public class LengthOfLIS {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

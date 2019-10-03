@@ -1,4 +1,3 @@
-
 import java.util.Stack;
 
 public class CollectMaxCoins {
@@ -21,7 +20,6 @@ public class CollectMaxCoins {
 		
 		
 		return collectMaxCoinsHelper(arr ,  0 , 0 , arr.length , arr[0].length);
-		
 	}
 	
 	public static int collectMaxCoinsHelper(int[][] arr , int Crow , int Ccol , int rows , int cols){
@@ -43,5 +41,4 @@ public class CollectMaxCoins {
 		
 		return Math.max(down, right);
 	}
-
 }

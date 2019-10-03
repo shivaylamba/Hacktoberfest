@@ -1,4 +1,3 @@
-package com.sonal;
 
 import java.util.Scanner;
 

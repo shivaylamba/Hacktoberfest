@@ -1,4 +1,3 @@
-package LAB3;
 
 class A {
     void m1() {

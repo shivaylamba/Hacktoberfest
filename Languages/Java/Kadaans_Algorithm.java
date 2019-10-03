@@ -1,8 +1,7 @@
-package com.shashank;
 
 import java.util.Scanner;
 
-public class Kadans_Algorithm {
+public class Kadaans_Algorithm {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
