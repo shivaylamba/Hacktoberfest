@@ -26,7 +26,7 @@ public class QuickSort {
 
     private static void quickSort(int[] arr, int s, int e) {
 
-        if (s < e) {
+        if (s < e && arr != null && arr.length > 1 && s >= 0 && e < arr.length) {
             int p = partition(arr, s, e);
             quickSort(arr, s, p - 1);
             quickSort(arr, p + 1, e);
