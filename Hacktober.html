@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>  
+        <title>
+            Opensourcing is fun
+        </title>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+        <title>Template BY Kedar1023</title>
+        <link rel="shortcut icon" href="" type="image/x-icon">
+<style>
+.item1 { grid-area: header; border: 1px solid black; }
+.item2 { grid-area: menu;width: 430px; border: 1px solid black;}
+.item3 { grid-area: main; width: 430px; border: 1px solid black; }
+.item4 { grid-area: right;  width: 320px; border: 1px solid black;}
+.item5 { grid-area: footer; border: 1px solid black; }
+.pavan{
+    margin-left: 200px;
+    margin-top: 0px;
+}
+
+.pavan span:hover{
+    color:black;
+}
+
+.item5 h3{
+    font-family: "Google Sans", "Roboto", sans-serif;   
+}
+
+.pavan span{
+    font-family: "Google Sans", "Roboto", sans-serif;
+    font-size: 50px;
+    color: #3f51b5 !important;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'header header header header header header'
+    'menu menu main main main right'
+    'footer footer footer footer footer footer';
+  grid-gap: 10px;
+  
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: rgba(255, 255, 255, 0.8);
+
+  padding: 20px 0;
+
+}
+.left{
+    font-size: 20px;
+}
+.left a{
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  font-size: 20px;
+}
+.left a:hover{
+    color:brown;
+}
+
+.right img{
+    border-radius: 40px;
+}
+
+ul{
+    position: absolute;
+    
+    left: 50%;
+    transform: translate(-50%,-50%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+ul li{
+    list-style: none;
+}
+
+ul li a{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #f1f1f1;
+    display: block;
+    text-align: center;
+    margin: 0 10px;
+    border-radius: 50%;
+    padding: 6px;
+    box-sizing: border-box;
+    text-decoration: none;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.3);
+    transition: .5s;
+    background: linear-gradient(0deg,#ddd,#fff);
+}
+
+ul li a:hover{
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+ul li a .fa{
+    width: 100%;
+
+    height: 100%;
+    display: block;
+    background: black;
+    border-radius: 50%;
+    line-height: calc(60px - 6px);
+    font-size: 24px;
+    color: white;
+    transform: .5s;
+
+}
+
+
+</style>
+</head>
+<body>
+<div class="grid-container">
+  <div class="item1">
+      <div class="pavan">
+            <img src="flutter.png" width="200px" alt="">
+            <span>Write YOur</span>
+
+      </div>
+
+  </div>
+  <br>
+  <div class="item2"> <h2>Some Important Link</h2><br>
+<div class="left">
+        <a href="">Whtever you want to give</a> <br><br>
+        <a href="">Whtever you want to give/a><br><br>
+        <a href="">Whtever you want to give</a>
+        
+</div>
+
+</div>
+  <div class="item3">
+
+<div class="mob">
+    <img src="fgip.gif" alt="" width="250px">
+   <h1><font color="blue">Design </font> Beautiful App's</h1>
+</div>
+
+
+  </div>  
+  <div class="item4">
+<div class="right">
+        <center> <img src="f1.png" width="200px" height="200px;" alt=""></center><br>
+<p><b>Developer(s): </b> <a href=""></a> and community</p>
+<p><b>Original author(s):</b><a href=""> </a></p>
+<p><b>Initial release date:</b> May 2017
+</p>
+</div>
+
+  </div>
+  <div class="item5">
+        <br><br><br><br><br><br>
+        <ul>
+                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+            
+            </ul>
+            <br><br>
+<center><h3>&copy; All Rights are Reserved 2019-20</h3></center>
+
+  </div>
+</div>
+
+</body>
+</html>
