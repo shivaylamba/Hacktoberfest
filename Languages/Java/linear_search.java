@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.*;
 
-public class linearSearch {
+public class linear_search {
     public static void main(String[] args) {
 
         int[] arr = {2, 5, 1, 6, 9, 3};
