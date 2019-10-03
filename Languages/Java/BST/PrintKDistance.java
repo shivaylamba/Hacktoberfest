@@ -1,4 +1,4 @@
-package com.codingblocks;
+package BST;
 
 import java.util.Scanner;
 

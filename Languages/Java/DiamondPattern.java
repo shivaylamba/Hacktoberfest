@@ -28,6 +28,5 @@ public class DiamondPattern {
             rowno++;
             System.out.println();
         }
-
     }
 }
