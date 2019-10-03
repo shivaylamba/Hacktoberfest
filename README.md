@@ -9,7 +9,7 @@ Say hi to the world in any language of your choice!
 
 
 # What is Hacktoberfest?
-Hacktoberfest is a program by Digital Ocean and Github, where you can easily win a T-Shirt just by making 5 pull requests in the month of October to any open source projects on Github.
+Hacktoberfest is a program by Digital Ocean, DEV and Github, where you can easily win a T-Shirt just by making 4 pull requests in the month of October to any open source projects on Github.
 
 ## Steps to follow :scroll:
 
@@ -27,7 +27,7 @@ You can get your own fork/copy of [Hacktoberfest](https://github.com/shivaylamba
 ### 3. Add a Program in any Language you like :rabbit2:
 Once you have forked the repo, add your progam in the language folder in 
 main branch, if there is no language folder, make one, then add into it.
-You can take a look to the [Programming Language List](https://en.wikipedia.org/wiki/List_of_programming_languages) in Wikipedia to create a new one Hacktoberfest !
+You can take a look to the [Programming Language List](https://en.wikipedia.org/wiki/List_of_programming_languages) in Wikipedia to create a new one for Hacktoberfest!
 
 ### 4. Ready, Steady, Go... :turtle: :rabbit2:
 
@@ -115,7 +115,7 @@ git clone https://github.com/your-username/Hacktoberfest.git
 
 ### 6. Configure a Remote for the Fork
 
-###### Next, you’ll have to specify a new remote upstream repository for us to sync with the fork. This will be the original repository that you forked from. you’ll have to do this with the git remote add command.
+###### Next, you’ll have to specify a new remote upstream repository for us to sync with the fork. This will be the original repository that you forked from. You’ll have to do this with the git remote add command.
 
 ##### // git remote add upstream https://github.com/shivaylamba/Hacktoberfest.git //
 
