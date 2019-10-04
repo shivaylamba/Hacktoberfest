@@ -2,7 +2,7 @@
 using namespace std;
 void swap (int &a, int &b)
 {
-	int temp = a;
+	int replace = x;
 	a = b;
 	b = temp;
 }
