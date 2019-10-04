@@ -243,4 +243,10 @@ Material Ocean is a theme for various Applications based on a blueish ocean colo
 ### 23. [Ruby on Sinatra Starter App](https://github.com/JHero23/ruby-sinatra-starter-app)
 A starter project for Ruby On Sinatra web app projects to introduce programmers to Ruby programming. [Link to Live Application HERE](https://ruby-sinatra-starter-app.herokuapp.com)
 
+### 24. [Flutter](https://github.com/flutter/flutter)
+Flutter is Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase.
+
+### 25. [Grab Front End Guide ](https://github.com/grab/front-end-guide)
+An open source Study guide and introduction to the modern front end stack created by Grab.
+
 
