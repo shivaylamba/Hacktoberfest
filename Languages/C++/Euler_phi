@@ -11,7 +11,7 @@ void seive(){
         if(!is_prime[i]){
             primes.push_back(i);
             for(int j = i*2;j < maxN;j+=i)
-                is_prime[i] = 1;
+                is_prime[j] = 1;
         }
     }
 

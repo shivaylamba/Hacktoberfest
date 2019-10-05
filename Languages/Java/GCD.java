@@ -16,10 +16,7 @@ public class GCD {
 
             divident = divisor;
             divisor = rem;
-
         }
-
         System.out.println(divisor);
-
     }
 }

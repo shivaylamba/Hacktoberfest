@@ -1,9 +1,6 @@
 <?php 
 
-$h = "Hello";
-$w = "World";
-
-echo $h.$w;
+echo "Hello World!";
 
 ?>
 

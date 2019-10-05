@@ -1,4 +1,4 @@
-package com.codingblocks;
+package LinkedList;
 
 public class LinkedList {
 
