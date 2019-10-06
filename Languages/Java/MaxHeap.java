@@ -12,6 +12,7 @@ public class MaxHeap {
         arr = arrangeMaxHeap(arr, n);
 
         showElements(arr);
+        console.close();
     }
 
     private static ArrayList<Integer> buildArrayList(int n) {
