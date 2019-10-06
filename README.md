@@ -249,4 +249,6 @@ Flutter is Google’s UI toolkit for building beautiful, natively compiled appli
 ### 25. [Grab Front End Guide ](https://github.com/grab/front-end-guide)
 An open source Study guide and introduction to the modern front end stack created by Grab.
 
+### 26. [LibreOffice](https://https://github.com/LibreOffice/core)
+LibreOffice is a free and open-source office suite, a project of The Document Foundation. LibreOffice uses the international ISO/IEC standard OpenDocument file format (ODF).
 
