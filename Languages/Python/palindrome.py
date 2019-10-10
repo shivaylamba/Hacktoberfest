@@ -1,14 +1,10 @@
-# function to check string is 
+# function to check if a string is 
 # palindrome or not 
-def isPalindrome(str): 
+def isPalindrome(string): 
+	# Simply using the python functionality
+	return string == string[::-1]
 
-	# Run loop from 0 to len/2 
-	for i in xrange(0, len(str)/2): 
-		if str[i] != str[len(str)-i-1]: 
-			return False
-	return True
-
-# main function 
+# driver program
 s = "malayalam"
 ans = isPalindrome(s) 
 
