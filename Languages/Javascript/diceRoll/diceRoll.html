@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dice Roll</title>
+	<style type="text/css">
+		
+	body{
+		margin: 0;
+	}
+
+	h1{
+		text-align: center;
+		background-color: red;
+		color: white;
+		margin: 0;
+		padding: 50px;
+		/*margin-block-start: 0;*/
+    	/*margin-block-end: 0;*/
+	}
+
+	.container1{
+		text-align: center;
+		/*margin: 0 auto;*/
+	}
+
+	img{
+		margin-top: 20px;
+		/*text-align: center;*/
+	}
+
+
+	.container2{
+		margin-left: 42%;
+		/*display: inline-block;*/
+	}
+
+	
+
+	button{
+		float: left;
+		margin-top: 5%;
+		/*margin-left: 42%;*/
+		padding: 5px;
+		width: 50px;
+		border-radius: 4px;
+		background-color: red;
+		color: white;
+		border-style: none;
+	}
+
+	.dice{
+		float: right;
+		margin-right: 72%;
+	}
+
+	</style>
+</head>
+<body>
+
+	<h1>WEB DICE</h1>
+	<div class="container1">
+		<img src="images.png">
+	</div>
+	<div class="container2">
+		<button class="button">Roll</button>
+
+		<div class="diceRoll">
+			<img src="1.png" class="dice">	
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+		var counter = 0;
+		var animation;
+		imgs = {
+			1: "1.png",
+			2: "2.png",
+			3: "3.png",
+			4: "4.png",
+			5: "5.png",
+			6: "6.png"
+		};
+
+		const diceRoll = document.querySelector(".diceRoll");
+		const rollBtn = document.querySelector(".button");
+		rollBtn.addEventListener("click", function(){
+			console.log("click");
+
+			animation = setInterval( func , 500);
+
+		});
+
+		function func(){
+			console.log(counter);
+			counter++;
+			if(counter > 5){
+				counter=0;
+				clearInterval(animation);
+			}
+			var i = Math.floor(1 + Math.random()*6);
+			diceRoll.innerHTML = "<img src = ' " + imgs[i] + " ' class='dice' >";
+		}
+
+	</script>
+</body>
+</html>
