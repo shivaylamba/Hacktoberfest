@@ -42,11 +42,11 @@ void psd(vector<int> adj[], int src, int des, int v){
     }
 
     vector<int>path;
-    int crawl = des;
-    path.push_back(crawl);
-    while(pred[crawl]!=-1){
-        crawl = pred[crawl];
-        path.push_back(crawl);
+    int temp = des;
+    path.push_back(temp);
+    while(pred[temp]!=-1){
+        temp = pred[temp];
+        path.push_back(temp);
     }
     
     for(int i = path.size()-1; i>=0; i--){
