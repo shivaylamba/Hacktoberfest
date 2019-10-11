@@ -1,0 +1,21 @@
+package DataStructures;
+
+//initialization block is called before the constructor and is used to intialize and print something even before calling the constructor
+
+class Test{
+	int a;
+	{
+		a=5;
+		System.out.println("Initialization Block is called");
+	}
+	Test(){
+		System.out.println("Constructor");
+	}
+}
+public class InitiazationBlock {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Test t=new Test();
+	}
+}
