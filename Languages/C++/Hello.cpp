@@ -1,6 +1,6 @@
-#include<bits/stdc++.h>
-using namespace std;
+#include<iostream.h>
 
 int main(){
-  cout<<"Hello";
+  cout<<"Hello \n";
+  return 0;
 }
