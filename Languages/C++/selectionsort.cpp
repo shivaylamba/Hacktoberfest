@@ -4,9 +4,9 @@ using namespace std;
 
 void swap(int *xp, int *yp) 
 { 
-	int temp = *xp; 
+	int temp1 = *xp; 
 	*xp = *yp; 
-	*yp = temp; 
+	*yp = temp1; 
 } 
 
 void selectionSort(int arr[], int n) 
