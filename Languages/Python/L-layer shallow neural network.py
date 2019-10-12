@@ -6,6 +6,12 @@ The dataset consists of 60,000 training
 and 10,000 testing images and labels each of 28x28 pixels resolution.
 '''
 
+'''
+packages:
+numpy -> vectorized calculations
+pandas -> reading csv data file
+matplotlib -> plot the cost function
+'''
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -43,6 +49,7 @@ from sklearn.preprocessing import StandardScaler
 sc_X = StandardScaler()
 x_train = sc_X.fit_transform(x_train)
 
+#convert labels from 0/1 to column vectors
 from sklearn import preprocessing
 lb = preprocessing.LabelBinarizer()
 lb.fit([0,1,2,3,4,5,6,7,8,9])
@@ -63,6 +70,7 @@ for l in range(1, len(layer_dims)):
     
     parameters["b"+str(l)] = np.zeros((layer_dims[l],1))
 
+#change this as per requirement by trail and error
 learning_rate = 0.0001
 num_iterations = 20
 
