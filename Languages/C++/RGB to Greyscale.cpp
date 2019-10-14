@@ -6,10 +6,11 @@ using namespace cv;
 
 int main()
 {
-    int Rhist[256],Ghist[256],Bhist[256],Greyhist[256];
+    int Rhist[256],Ghist[256],Bhist[256],Greyhist[256],threshold;
 
     Mat RGBimage=("Cat.jpg");
     Mat Greyimage(RGBimage.rows,RGBimage.cols,CV_8UC1);
+    Mat BinaryTimage(RGBimage.rows,RGBimage.cols,CV_8UC1);
 
     for(int i=0;i<RGBimage.rows;++i)
     {
@@ -48,8 +49,28 @@ int main()
         cout<<"Greyhist["<<i<<"]= "<<Greyhist[i]<<endl;
     }
 
+    cout<<endl<<"Enter threshold value for binary thresholding the grey image : ";
+    cin>>threshold;
+
+    for(int i=0;i<Greyimage.rows;++i)
+    {
+        for(int j=0;i<Greyimage.cols;++j)
+        {
+            a=Greyimage.at<uchar>(i,j);
+            if(a>threshold)
+            {
+                BinaryTimage.at<uchar>(i,j)=255;
+            }
+            else
+            {
+                BinaryTimage.at<uchar>(i,j)=0;
+            }
+        }
+    }
+
     imshow("RGB Image",RGBimage);
     imshow("Grey Image",Greyimage);
+    imshow("Binary Thresholded",BinaryTimage);
 
     waitKey(0);
 
