@@ -1,6 +1,5 @@
-## Hacktoberfest Hello World
+# Hacktoberfest Hello World
 
-<br/>
 <br/>
 HacktoberFest Hello World in every language ever.
 Just fork it and add a 'Hello World' program to contribute for hacktober fest and send a Pull Request!!
