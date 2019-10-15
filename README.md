@@ -36,8 +36,8 @@ by checking our `Help Wanted` issues and creating [pull requests](https://github
 
 ### 5. Give this Project a Star :star:
 
-If you liked working on this project, please share this project as much
-as you can and star this project to help as many people in opensource as you can.
+If you liked working on this repo, please share this repo as much
+as you can and star this repo to help as many people in opensource as you can.
 
 <br/>
 
