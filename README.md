@@ -248,3 +248,5 @@ An open source Study guide and introduction to the modern front end stack create
 ### 25. [LibreOffice](https://https://github.com/LibreOffice/core)
 LibreOffice is a free and open-source office suite, a project of The Document Foundation. LibreOffice uses the international ISO/IEC standard OpenDocument file format (ODF).
 
+### 25. [Uber Open Source](https://uber.github.io/#/)
+Uber open source project info
