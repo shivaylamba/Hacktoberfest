@@ -1,7 +1,10 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
+void swap(int *a,int *b)
+{
+     int t=*a;*a=*b;*b=t;
+}
 void solve(vector<int>& arr)
 {    
      int n= arr.size();
@@ -11,9 +14,10 @@ void solve(vector<int>& arr)
         {
             if(arr[j-1]>arr[j])
             {
-            int temp=arr[j-1];
-            arr[j-1]=arr[j];
-            arr[j]=temp;
+                 swap(&arr[j],&arr[j-1]);
+           // int temp=arr[j-1];
+           // arr[j-1]=arr[j];
+           // arr[j]=temp;
             }
         }
     }
