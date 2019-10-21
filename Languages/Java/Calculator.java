@@ -95,6 +95,7 @@ import java.util.Scanner;
       break;
       default : System.out.print("Invalid choice !!! Press (y/n) to proceed further : ");
       ch = sc.next().charAt(0);
+		      break;
       }
       System.out.println("Press (y/n) to Enter more : ");
       ch = sc.next().charAt(0);
