@@ -33,7 +33,6 @@ int binarySearch(int a[], int l, int r, int x)
             return binarySearch(a, l, mid - 1, x); 
    
         return binarySearch(a, mid + 1, r, x); 
-    } 
-  
+    }   
     return -1; 
 } 
