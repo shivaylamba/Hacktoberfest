@@ -250,3 +250,6 @@ LibreOffice is a free and open-source office suite, a project of The Document Fo
 
 ### 25. [Uber Open Source](https://uber.github.io/#/)
 Uber open source project info
+
+### 11. [Initial Project](https://github.com/alwibastomi/ProjekAwal)
+I am a Newbie :))
