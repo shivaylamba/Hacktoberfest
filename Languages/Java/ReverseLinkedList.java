@@ -10,7 +10,7 @@ class Solution {
     static ListNode revH = null;
     public ListNode reverseList(ListNode head) {
        if(head==null)
-           return head;
+           return null;
         revLL(head);
         return revH;
     }
