@@ -1,4 +1,4 @@
-# Hacktoberfest Hello World
+﻿# Hacktoberfest Hello World
 
 <br/>
 HacktoberFest Hello World in every language ever.
@@ -254,5 +254,4 @@ Uber open source project info
 
 ### 11. [Initial Project](https://github.com/alwibastomi/ProjekAwal)
 
-I am a Newbie :))
-###27. [data structure](https://github.com/sabith-nadakkavil/Data-Structure)
+
