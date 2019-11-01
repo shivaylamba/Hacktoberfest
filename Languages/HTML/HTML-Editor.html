@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>HTML editor</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.css'>
+  <style>
+      
+
+*, *:after, *:before {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+
+}
+html {
+	background: #23c495;
+	text-rendering: optimizeLegibility;
+	line-height: 1.5em;
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	letter-spacing: .3px;
+	font-family: 'Poppins', sans-serif;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+body {
+	color: #151515;
+}
+html {
+	font-family: 'Geneva', sans-serif;
+}
+.window {
+	
+  width: 647px;
+  background: GhostWhite;
+  border-radius: 0.3rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+.window .window-header {
+  height: 37px;
+  background: Gainsboro;
+  position: relative;
+}
+.window .window-header .action-buttons {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: -5px;
+  width: 10px;
+  height: 10px;
+  background: Crimson;
+  border-radius: 50%;
+  box-shadow: 15px 0 0 Orange, 30px 0 0 LimeGreen;
+}
+.window .window-header .language {
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -10px;
+  height: 21px;
+  padding: 0 1em;
+  text-align: right;
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  background: transparent;
+  font-family: Lato, sans-serif;
+  color: DimGrey;
+}
+.window .window-header .language:before {
+  content: "asd";
+}
+.window .window-header .language:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* ----------
+	WRAPPERS & CONTAINERS
+---------- */
+section {
+	position: relative;
+	padding: 2.5rem 0;
+}
+.container {
+	position: relative;
+	margin: auto;
+	padding: 0 20px;
+	width: 100%;
+	max-width: 970px;
+}
+section:after, .container:after, .row:after {
+	display: table;
+	content: '';
+	clear: both;
+}
+
+
+/* ----------
+	ANHOR TAG
+---------- */
+a {
+	cursor: pointer;
+	outline: 0;
+}
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a,
+p  > a {
+	color: #ed9d0a;
+	text-decoration: none;
+}
+h1 > a:hover,
+h2 > a:hover,
+h3 > a:hover,
+h4 > a:hover,
+h5 > a:hover,
+h6 > a:hover,
+p  > a:hover {
+	text-decoration: underline;
+}
+
+
+/* ----------
+	TYPOGRAPHY
+---------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+ul {
+	margin-bottom: 1rem;
+	-ms-word-break: break-word;
+	-ms-word-wrap: break-word;
+	-webkit-word-break: break-word;
+	-webkit-word-wrap: break-word;
+	word-break: break-word;
+	word-wrap: break-word;
+}
+h1:last-child,
+h2:last-child,
+h3:last-child,
+h4:last-child,
+h5:last-child,
+h6:last-child,
+p:last-child,
+blockquote:last-child,
+ul:last-child {
+	margin-bottom: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	line-height: 1.25em;
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+h1:not(:first-child),
+h2:not(:first-child),
+h3:not(:first-child),
+h4:not(:first-child),
+h5:not(:first-child),
+h6:not(:first-child) {
+	margin-top: 1.5em;
+}
+h1 {
+	letter-spacing: 2px;
+	font-size: 1.75rem;
+}
+h2 {
+	font-size: 1.5rem;
+}
+h1 strong,
+h2 strong,
+h3 strong,
+h4 strong,
+h5 strong,
+h6 strong {
+	font-weight: 700;
+}
+p {
+	line-height: 1.5em;
+}
+ul {
+	padding-left: 1.5rem;
+}
+hr {
+	border: 0;
+	border-top: 1px solid #e1e1e1;
+}
+
+
+/* ----------
+	CODE BLOCK
+---------- */
+.code-container {
+	position: relative;
+	margin-bottom: 1.5rem;
+	overflow: hidden;
+	border-radius: 3px;
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, .3);
+}
+.code-container:last-child {
+	margin-bottom: 0;
+}
+
+.btn {
+	background-color: #ed9d0a;
+	color: #fff;
+	padding: 4px 10px;
+	text-decoration: none;
+	border-radius: 3px;
+	box-shadow: 0 8px 6px -6px rgba(0, 0, 0, .15);
+	-webkit-backface-visibility: hidden;
+	-webkit-transition: 200ms -webkit-transform ease, 200ms transform ease, 200ms box-shadow ease;
+			transition: 200ms -webkit-transform ease, 200ms transform ease, 200ms box-shadow ease;
+}
+.btn:hover {
+	box-shadow: 0 6px 6px -4px rgba(0, 0, 0, .2);
+	-webkit-transform: translateY(-2px);
+			transform: translateY(-2px);
+}
+.btn.btn-left {
+	float: left;
+}
+.btn.btn-right {
+	float: right;
+}
+
+
+.row {
+	margin-bottom: 1.5rem;
+	width: 100%;
+}
+.row:last-child {
+	margin-bottom: 0;
+}
+  </style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<section>
+	<div class="window">
+        <div class="window-header">
+          <div class="action-buttons"></div>
+          <select class="language">
+            <!-- <option value="javascript" >JavaScript</option> -->
+            <option value="markup" selected>HTML</option>
+          </select>
+        </div>
+	<div class="code-container">
+	<textarea id="code">
+<!-- xml/html syntax -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- meta -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- title -->
+		<title>Example website</title>
+</head>
+	<body>
+		<h1>hello world</h1>
+	
+	</body>
+</html>
+	</textarea>
+</div>
+	
+	</div>
+</section>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/codemirror.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/xml/xml.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/css/css.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/javascript/javascript.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.13.4/mode/htmlmixed/htmlmixed.js'></script>
+<script>
+        var htmlEditor = CodeMirror.fromTextArea(document.getElementById("code"), {
+            lineNumbers: true,
+            mode: 'htmlmixed',
+            // theme: 'default',
+        });
+</script>
+
+</body>
+</html>
