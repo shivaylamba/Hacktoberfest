@@ -254,6 +254,4 @@ Uber open source project info
 
 ### 11. [Initial Project](https://github.com/alwibastomi/ProjekAwal)
 
-I am a Newbie :))
-### 26. [Nativescript]
-NativeScript is an open-source framework to develop apps on the Apple iOS and Android platforms. It was originally conceived and developed by Progress. NativeScript apps are built using JavaScript, or by using any language that transpiles to JavaScript, such as TypeScript
+
