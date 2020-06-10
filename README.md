@@ -1,7 +1,7 @@
 ﻿# Hacktoberfest Hello World
 
 <br/>
-HacktoberFest Hello World in every language ever.
+HacktoberFest Hello World in every other language ever.
 Just fork it and add a 'Hello World' program to contribute for hacktober fest and send a Pull Request!!
 
 ### Get yourself free goodies by just writing a hello world!
