@@ -11,19 +11,19 @@ public class ArrayElementFrequency {
     // Complete the sockMerchant function below.
     static int sockMerchant(int n, int[] ar) {
         Arrays.sort(ar);
-        int sum=0, count=0, as=0;
-        for(int i=0;i<n;i+=count){
+        int sum=0, cnt=0, as=0;
+        for(int i=0;i<n;i+=cnt){
             int x=ar[i];
-			count=0;
+			cnt=0;
             for(int j=i;j<n;j++){
                 if(x==ar[j])
-                count++;
+                cnt++;
             }
-			sum+=(count/2);
-			if(count==0)
-				count++;
+			sum+=(cnt/2);
+			if(cnt==0)
+				cnt++;
 				
-			System.out.println(x+" : Occurs "+count+" times!");
+			System.out.println(x+" : Occurs "+cnt+" times!");
 		}
         return sum;
     }
