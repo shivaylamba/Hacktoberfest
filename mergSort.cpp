@@ -21,41 +21,23 @@ void merge(int arr[], int l, int m, int r)
 		R[j] = arr[m + 1+ j]; 
 
 	/* Merge the temp arrays back into arr[l..r]*/
-	i = 0; // Initial index of first subarray 
-	j = 0; // Initial index of second subarray 
-	k = l; // Initial index of merged subarray 
-	while (i < n1 && j < n2) 
-	{ 
-		if (L[i] <= R[j]) 
-		{ 
-			arr[k] = L[i]; 
-			i++; 
-		} 
+	int n = r - l + 1;
+	i = 0; //pointer to L[]
+	j = 0; //pointer to R[]
+	for(k = 0; k < n; k++){
+		if(i == n1){
+			arr[k] = R[j++];
+			continue;
+		}
+		else if(j == n2){
+			arr[k] = L[i++];
+			continue;
+		}
+		if(L[i]<R[j])
+			arr[k] = L[i++];
 		else
-		{ 
-			arr[k] = R[j]; 
-			j++; 
-		} 
-		k++; 
-	} 
-
-	/* Copy the remaining elements of L[], if there 
-	are any */
-	while (i < n1) 
-	{ 
-		arr[k] = L[i]; 
-		i++; 
-		k++; 
-	} 
-
-	/* Copy the remaining elements of R[], if there 
-	are any */
-	while (j < n2) 
-	{ 
-		arr[k] = R[j]; 
-		j++; 
-		k++; 
-	} 
+			arr[k] = R[j++];
+	}
 } 
 
 /* l is for left index and r is right index of the 
