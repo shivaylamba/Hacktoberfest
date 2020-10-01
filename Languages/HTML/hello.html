@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Hacktoberfest Hello World">
+    <meta name="author" content="Cristina Dias">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="content-language" content="pt-br, en-US" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+    <title>Hacktoberfest - Digital Ocean</title>
+
+    <style type="text/css">
+        html {
+            background: radial-gradient(#a11ec6 0%, #111 100%);
+            overflow: hidden;
+            height: 100%;
+            user-select: none;
+        }
+
+        .info {
+            text-align: center;
+            font-family: 'Bangers', cursive;
+            font-size: 40px;
+            text-align: center;
+            width: 200px;
+            height: 60px;
+            line-height: 60px;
+            margin: auto;
+            position: absolute;
+            top: 140px;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            animation: noise-3 1s linear infinite;
+        }
+
+        body {
+            margin: auto;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            text-align: left;
+            color: #f2e6ff;
+            background: radial-gradient(#152347 0%, #111 100%);
+        }
+
+        @keyframes noise-3 {
+
+            0%,
+            3%,
+            5%,
+            42%,
+            44%,
+            100% {
+                opacity: 1;
+                transform: scaleY(1);
+            }
+
+            4.3% {
+                opacity: 1;
+                transform: scaleY(4);
+            }
+
+            43% {
+                opacity: 1;
+                transform: scaleX(10) rotate(60deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link active" href="https://hacktoberfest.digitalocean.com">
+                <br>
+                <h3 title="hacktoberfest" style="color:whitesmoke">Go hacktoberfest</h3>
+            </a>
+        </li>
+    </ul>
+
+    <span class="info"> Hello World </span>
+
+</body>
+
+</html>
