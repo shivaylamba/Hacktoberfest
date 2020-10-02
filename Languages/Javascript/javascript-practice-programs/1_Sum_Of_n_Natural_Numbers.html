@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Natural numbers</title>
+</head>
+
+<body style="font-family: monospace;font-size: xx-large;">
+    <script>
+        var n;
+        var sum = 0;
+
+        n = prompt('Enter a natural number')
+
+        //use -(-n) insted of +n because it concats it insted of giving output
+
+        sum = (n * n - (-n)) / 2
+
+        document.write("The sum of All Natural number till " + n + " is " + sum)
+
+    </script>
+</body>
+
+</html>
