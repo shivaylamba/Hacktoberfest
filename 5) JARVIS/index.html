@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Jarvis</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background: black;
+      color: white;
+      text-align: center;
+    }
+    button {
+      color: white;
+      margin: 5rem auto;
+      padding: 20px 40px;
+      text-decoration: none;
+      font-size: 2rem;
+      font-family: sans-serif;
+      outline: none;
+
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.05, #6789ca),
+        color-stop(1, #2b60a0)
+      );
+      background: -moz-linear-gradient(center top, #6184c5 5%, #235ba0 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#7892c2', endColorstr='#476e9e');
+      background-color: #6687c5;
+      -webkit-border-top-left-radius: 40px;
+      -moz-border-radius-topleft: 40px;
+      border-top-left-radius: 40px;
+      -webkit-border-top-right-radius: 40px;
+      -moz-border-radius-topright: 40px;
+      border-top-right-radius: 40px;
+      -webkit-border-bottom-right-radius: 40px;
+      -moz-border-radius-bottomright: 40px;
+      border-bottom-right-radius: 40px;
+      -webkit-border-bottom-left-radius: 40px;
+      -moz-border-radius-bottomleft: 40px;
+      border-bottom-left-radius: 40px;
+
+      border: 1px solid #1e3b92;
+
+      text-align: center;
+      text-shadow: 0px 1px 5px #0f1831;
+    }
+    button:hover {
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.05, #2663ad),
+        color-stop(1, #547bc4)
+      );
+      background: -moz-linear-gradient(center top, #1c59a3 5%, #537ac2 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#476e9e', endColorstr='#7892c2');
+      background-color: #285fa3;
+    }
+    button:active {
+      position: relative;
+      top: 1px;
+    }
+    button::selection {
+      background-color: none;
+      color: black;
+    }
+    h1 {
+      color: rgb(0, 174, 255);
+      font-family: sans-serif;
+    }
+    h1::selection {
+      background: yellow;
+      color: black;
+    }
+    h3 {
+      font-size: 2rem;
+      font-family: sans-serif;
+      color: rgb(156, 156, 156);
+    }
+    h3::selection {
+      background: yellow;
+      color: black;
+    }
+    .container {
+      margin: 10rem auto;
+    }
+  </style>
+
+  <body>
+    <div class="container btn">
+      <h1>Im Jarvis.<br />Lets have a conversation!</h1>
+      <button class="talk">Talk</button>
+      <h3 class="content"></h3>
+      <!-- <script src="app.js"></script> -->
+    </div>
+  </body>
+
+  <script>
+    const btn = document.querySelector(".talk");
+    const content = document.querySelector(".content");
+
+    //
+    const Hi = ["Hi Sir", "Hi, good to see you sir."];
+    const name = ["Hi, my name is Jarvis", "Im Jarvis."];
+    const more = [
+      "Im Jarvis the creation of Devraj. Devraj is a web developer and a programmer if you want to know more about him visit his personal website, devrajchatribin.netlify.app",
+    ];
+    const author = ["Im Jarvis the creation of Devraj.", "Sir Devraj made me"];
+    const greetings = [
+      "Hi! Im good",
+      "Im good, Hope you are good too",
+      "leave me alone",
+      "why do you even care?",
+    ];
+
+    const weather = [
+      "weather is fine",
+      "weather is fine but you need to stay home",
+    ];
+
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
+    const recognition = new SpeechRecognition();
+
+    recognition.onstart = function () {
+      console.log("Jarvis is activated, you can speak to microphone.");
+    };
+
+    recognition.onresult = function (event) {
+      const current = event.resultIndex;
+
+      const transcript = event.results[current][0].transcript;
+      content.textContent = transcript;
+      readOutLoud(transcript);
+    };
+
+    //add the listener to the btn
+
+    btn.addEventListener("click", () => {
+      recognition.start();
+    });
+
+    function readOutLoud(message) {
+      const speech = new SpeechSynthesisUtterance();
+
+      speech.text = "i dont know what you said";
+
+      if (message.includes("hi")) {
+        const finalText = Hi[Math.floor(Math.random() * Hi.length)];
+        speech.text = finalText;
+      }
+      if (message.includes("name")) {
+        const finalText = name[Math.floor(Math.random() * name.length)];
+        speech.text = finalText;
+      }
+      if (message.includes("who made you")) {
+        const finalText = author[Math.floor(Math.random() * author.length)];
+        speech.text = finalText;
+      }
+      if (message.includes("how are you")) {
+        const finalText =
+          greetings[Math.floor(Math.random() * greetings.length)];
+        speech.text = finalText;
+      }
+      if (message.includes("weather")) {
+        const finalText = weather[Math.floor(Math.random() * weather.length)];
+        speech.text = finalText;
+      }
+      if (message.includes("about you")) {
+        const finalText = more[Math.floor(Math.random() * more.length)];
+        speech.text = finalText;
+      }
+
+      speech.volume = 10;
+      speech.rate = 1;
+      speech.pitch = 1;
+
+      window.speechSynthesis.speak(speech);
+    }
+  </script>
+</html>
