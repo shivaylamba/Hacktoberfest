@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+	int n,i,highest,lowst,sum=0;
+	printf("Enter Number Of Elements : ");
+	scanf("%d",&n);
+	int array[n];
+	printf("Enter Array Elements : ");
+	for(i=0;i<n;i++)
+		scanf("%d",&array[i]);	
+	highest=lowst=array[0];
+	for(i=1;i<n;i++)
+		if(highest<array[i])
+			highest=array[i];
+	for(i=1;i<n;i++)
+		if(array[i]<lowst)
+			lowst=array[i];
+	sum=highest+lowst;	
+	printf("\nHighest Element Is : %d",highest);
+	printf("\nLowst Element Is : %d",lowst);
+	printf("\nSum Of Highest & Lowst Element Is : %d",sum);
+	return 0;
+}
