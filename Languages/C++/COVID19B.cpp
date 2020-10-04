@@ -1,3 +1,5 @@
+//Solution for CodeChef September long challenge division 2 2020
+//https://www.codechef.com/SEPT20B/problems/COVID19B
 //author: kvv1618
 #include <bits/stdc++.h>
 using namespace std;
