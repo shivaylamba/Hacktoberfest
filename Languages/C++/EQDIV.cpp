@@ -1,4 +1,5 @@
 //Solution for Codechef September Long challenge 2020 Division 2
+//https://www.codechef.com/SEPT20B/problems/EQDIV
 //author: kvv1618
 #include <bits/stdc++.h>
 using namespace std;
