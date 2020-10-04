@@ -1,3 +1,5 @@
+//Solution for Codechef September long Division 2
+//https://www.codechef.com/SEPT20B/problems/ADAMAT
 //author: kvv1618
 #include <iostream>
 using namespace std;
