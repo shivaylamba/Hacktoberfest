@@ -20,10 +20,11 @@ int main()
 	scanf("%d", &nd);
 
 	if(nd>n){
-	printf("Not possible!")}
+	printf("Not possible!")
+	}
 
 	else{
-		printf("\nEnter the elements to be deleted: "); 
+		printf("\nEnter the elements to be deleted\n"); 
 		
 		for(i=0;i<nd;i++)
 	{
