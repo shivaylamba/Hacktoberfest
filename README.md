@@ -278,4 +278,8 @@ The Roulette game was to control the animation ball stop number. This project wa
 
 Uber open source project info
 
+### 26. [Web Maker](https://webmaker.app/)
+
+A blazing fast & offline web playground in your browser.
+
 ### 11. [Initial Project](https://github.com/alwibastomi/ProjekAwal)
