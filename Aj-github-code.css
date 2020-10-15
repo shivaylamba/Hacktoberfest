@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    /*box-sizing: border-box;*/
+    font-size: 10px;
+    font-family: 'Lato', sans-serif;
+}
+.container{
+    display:flex;
+    flex-flow: column;
+}
+/*------------------------------------------Header----------------------------------------------------*/
+header{
+    display: flex;
+    align-items: center;
+    height: 10rem;
+    width: 100vw;
+    /*background-color:red;*/
+}
+/*---------------------Logo------------------------*/
+.Logo--col{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-flow:column;
+    height: 10rem;
+    width: 20%;
+    padding-left: 6rem;
+    margin-left: 3rem;
+    /*background-color:tan;*/
+}
+.Logo--box{
+    display:flex;
+    padding: 1rem;
+    justify-content: flex-start;
+    align-items: center;
+    height: 50%;
+    width: 90%;
+    font-size: 3.5rem;
+    letter-spacing: .5rem;
+    font-weight: lighter;
+    /*background-color: beige;*/
+}
+/*------------Right Header Section----------------------*/
+.heading{
+    display:flex;
+    height: auto;
+    width: 80%;
+    padding: 1rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    color:#898989;
+    /*background-color: blueviolet;*/
+}
+.header--icon--box
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 8rem;
+    width: 8rem;
+    transition: .5s;
+    /*background-color: lightgrey;*/
+}
+.header--icon--box:hover{
+    background-color: #F4F5F7;
+}
+.header--icon{
+    height: 40%;
+    width: 40%;
+}
+/*-------------------------Detail-----------------------------*/
+.Detail{
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+    height: 100%;
+    width: 100vw;
+    /*background-color: blue;*/
+}
+.Detail--heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    height: 8rem;
+    width: 90vw;
+    margin-bottom: 1rem;
+    /*background-color: orangered;*/
+    border-bottom: solid 1px;
+}
+.Detail--heading--col1{
+    display: flex;
+    height: 7rem;
+    padding-left: 2rem;
+    align-items: center;
+    font-size: 2.5rem;
+    width: 60%;
+    font-weight: lighter;
+    /*background-color: yellow;*/
+}
+.Detail--heading--col2{
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    width: 20%;
+    font-weight: lighter;
+    /*background-color: rebeccapurple;*/
+}
+.Detail--heading--col3{
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    width: 20%;
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    margin-left:1rem ;
+    font-weight: lighter;
+    /*background-color: bisque;*/
+}
+.Detail--item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 12rem;
+    width: 90vw;
+    /*background-color: palegreen;*/
+}
+.Detail--item--col1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 2rem;
+    flex-flow: row;
+    height: 10rem;
+    width: 60%;
+    /*background-color: yellow;*/
+}
+.Detail--item--col2{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: lighter;
+    height: 10rem;
+    padding-left: 2rem;
+    width: 20%;
+    /*background-color: rebeccapurple;*/
+}
+.Detail--item--col3{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: lighter;
+    height: 10rem;
+    padding-left: 2rem;
+    width: 20%;
+    /*background-color: bisque;*/
+}
+.col3--row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 50%;
+    /*background-color: indianred;*/
+}
+.icon--container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 100%;
+    width: 30%;
+    transition: .5s;
+    /*background-color: darkblue;*/
+}
+.icon--container:hover{
+    background-color: #F4F5F7;
+}
+.quantity{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 30%;
+    font-size: 2rem;
+    font-weight: lighter;
+    /*background-color: #898989;*/
+}
+.icon{
+    height: 80%;
+    width: 80%;
+}
