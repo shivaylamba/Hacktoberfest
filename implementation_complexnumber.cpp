@@ -10,7 +10,7 @@ class Complex{
 public:
 	Complex(float = 0, float = 0);//definition of a contructor
 	
-	void show(int = 0);//can show 3 diferents version of same complex number
+	void show(int = 0);//can show 3 different version of same complex number
 	void setR(float);
 	void setI(float);
 	

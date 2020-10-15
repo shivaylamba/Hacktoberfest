@@ -16,9 +16,9 @@ int tailX[100], tailY[100]; //snake coordinates
 
 int nTail;
 
-enum eDirecton {STOP = 0, LEFT,RIGHT, UP, DOWN}; // Controls
+enum eDirection {STOP = 0, LEFT,RIGHT, UP, DOWN}; // Controls
 
-eDirecton dir;
+eDirection dir;
 
 void Setup() {
 gameover = false;
