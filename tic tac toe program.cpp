@@ -1,6 +1,7 @@
 //TIC TAC TOE//
 #include <stdio.h>
 #include <conio.h>
+#include <stdlib.h>
 
 char square[10] = { 'o', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
 
@@ -9,6 +10,20 @@ void board();
 
 int main()
 {
+    for(float i=0;i<=1000;i=i+25)
+    {   if(i<=250)
+        cout<<"\t\tInitializing Installer...\n";
+        else if(i<=750)
+        cout<<"\t\tloading Packages...\n";
+        else if(i<850)
+        cout<<"\t\tUnzipping Contents...\n";
+        else cout<<"\t\tFinalizing the game...\n";
+        system("cls");
+        printf("\t\t%6.1f",(i/10.0)); cout<<"%"<<endl;
+    }
+    cout<<"\nPress Enter key to Continue:"<<endl;
+    getchar();
+    
     int player = 1, i, choice;
 
     char mark;
