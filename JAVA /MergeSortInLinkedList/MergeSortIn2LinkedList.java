@@ -5,7 +5,7 @@
 // GITHUB: https://github.com/noopurAg
 /**
  * Definition for singly-linked list.
- * public class ListNode {
+ *  class ListNode {
  *     int val;
  *     ListNode next;
  *     ListNode() {}
