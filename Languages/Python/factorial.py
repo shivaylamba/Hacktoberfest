@@ -1,9 +1,21 @@
-def fact(n):
-    f = 1
-    for i in range(1,n+1):
-        f = f * i
-    return f
+def factorial(num):
+    """This is a recursive function that calls
+   itself to find the factorial of given number"""
+    if num == 1:
+        return num
+    else:
+        return num * factorial(num - 1)
 
-x = int(input("Enter The number "))
-r = fact(x)
-print("The Factorial of number is " , r)
+
+# We will find the factorial of this number
+num = int(input("Enter a Number: "))
+
+# if input number is negative then return an error message
+# elif the input number is 0 then display 1 as output
+# else calculate the factorial by calling the user defined function
+if num < 0:
+    print("Factorial cannot be found for negative numbers")
+elif num == 0:
+    print("Factorial of 0 is 1")
+else:
+    print("Factorial of", num, "is: ", factorial(num))
