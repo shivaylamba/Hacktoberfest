@@ -1,0 +1,53 @@
+#include<stdio.h>
+int main()
+{
+//BinarySearch
+	int a[50],n,i,j,temp,high,low,mid,q,loc=0;
+	//clrscr();
+	printf("Enter size of array: ");
+	scanf("%d",&n);
+	printf("Enter elements of array:\n");
+	for(i=0;i<n;i++)
+		scanf("%d",&a[i]);
+//Sorting
+	for(i=0;i<n-1;i++)
+	{
+		for(j=i+1;j<n;j++)
+		{
+			if(a[i]>a[j])
+			{
+				temp=a[i];
+				a[i]=a[j];
+				a[j]=temp;
+			}
+		}
+	}
+	printf("Sorted array: \n[");
+	for(i=0;i<n;i++)
+	printf("%5d",a[i]);
+	printf("     ]\n");
+//Search
+	printf("Enter element to be searched: ");
+	scanf("%d",&q);
+	high=n-1;
+	low=0;
+	mid=(low+high)/2;
+	while((low<=high)&&(a[mid]!=q))
+	{
+		if(q>a[mid])
+			low=(mid+1);
+		else
+			high=(mid-1);
+		mid=(low+high)/2;
+	}
+	if(q==a[mid])
+	{
+		loc=mid+1;
+		printf("\nSearch successful.\nElement %d found at %d position.",q,loc);
+	}
+	else
+		printf("\nSearch Unsuccessful.");
+	return 0;
+}
+
+
