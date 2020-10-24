@@ -1,12 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
 
-main()
+int main()
 
-{int a,b,c;
-printf("enter the no. ");
-scanf("%d",&a);
-if(a%2==0)
-printf("no. is even");
-else
-printf("no. is odd");
+{
+    int a;
+    printf("Enter the no. \n");
+    scanf("%d",&a);
+    if(a%2==0)
+    {
+        printf("no. is even");
+    else
+        printf("no. is odd");
+    }
 }
