@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-drag: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #000;
+}
+
+/**********Header**********/
+
+.header {
+    position: absolute;
+    padding: 20px;
+    height: 60px;
+    width: 100%;
+    background: #000;
+    z-index: +1;
+    transition: ease .3s;
+}
+
+.header img {
+    height: 17px;
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+}
+
+
+/**********Working Area**********/
+
+.container {
+    position: absolute;
+    height: calc(100% - 120px);
+    width: 100%;
+    top: 60px;
+    overflow: auto;
+}
+
+.uploader {
+    position: absolute;
+    height: 150px;
+    width: 277px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.uploader img,
+.uploader input {
+    position: absolute;
+    margin: auto;
+    height: 150px;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.uploader input {
+    opacity: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.editor {
+    display: none;
+}
+
+.display {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+    margin: auto;
+    margin-top: 40px;
+    width: fit-content;
+    max-width: 90%;
+}
+
+.display * {
+    margin: auto;
+    color: #24FF00;
+    font-size: 12px;
+}
+
+.originalImageHolder,
+.compressedImageHolder {
+    margin: auto;
+    height: fit-content;
+    width: fit-content;
+}
+
+.compressedImage,
+.originalImage {
+    max-width: 100%;
+    max-height: 60vh;
+    border-radius: 7px;
+    margin: auto;
+    margin-right: -20px;
+}
+
+.arrowPointer {
+    width: 60px;
+}
+
+.strength-bar {
+    margin: auto;
+    margin-top: 50px;
+}
+
+.strength-bar img {
+    width: 50px;
+}
+
+.bar-interactive {
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.bar-interactive img {
+    margin: auto;
+    width: 20px;
+    cursor: pointer;
+}
+
+.progress-bar {
+    height: 7px;
+    width: 200px;
+    overflow: hidden;
+    border-radius: 7px;
+    background: #2E2E2E;
+    margin: 10px 25px 10px 10px;
+}
+
+.progress-bar .progress {
+    height: 100%;
+    width: 20%;
+    border-radius: 7px;
+    transition: ease .6s;
+    transition-delay: .3s;
+    background: linear-gradient(90deg, #24FF00 0%, #1BF1FF 100%);
+}
+
+.download-btn {
+    width: 190px;
+    margin: 20px auto;
+    cursor: pointer;
+    transition: ease .6s;
+}
+
+.download-btn:hover {
+    width: 180px;
+}
+
+.container::-webkit-scrollbar {
+    appearance: none;
+    background: black;
+}
+
+.container::-webkit-scrollbar-thumb {
+    appearance: none;
+    border-radius: 7px;
+    border: 2px solid #24FF00;
+    background: black;
+}
+
+@media (max-width: 500px) {
+    .display {
+        grid-template-columns: none;
+    }
+
+    .arrowPointer {
+        width: 25px !important;
+        transform: rotate(90deg);
+    }
+
+    .compressedImage,
+    .originalImage {
+        width: 100%;
+        max-height: none !important;
+        border-radius: 7px;
+        margin: auto;
+        margin-right: -20px;
+    }
+
+    .container::-webkit-scrollbar {
+        appearance: none;
+        background: none;
+        width: 0;
+    }
+
+    .container::-webkit-scrollbar-thumb {
+        appearance: none;
+        border: none;
+        width: 0;
+    }
+
+}
+
+/**********Footer**********/
+
+.footer {
+    position: absolute;
+    padding: 20px;
+    height: 60px;
+    width: 100%;
+    margin: auto;
+    bottom: 0;
+}
+
+.footer img {
+    position: absolute;
+    margin: auto;
+    height: 50px;
+    right: 20px;
+    bottom: 0;
+    top: 0;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scissor - Image Compressor</title>
+    <link rel="stylesheet" href="design.css" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/png" />
+  </head>
+  <body>
+    <div class="header">
+      <img src="./images/logo.png" />
+    </div>
+    <div class="container">
+      <div class="uploader">
+        <img src="./images/instruct.png" alt="" />
+        <input type="file" accept="image/*" />
+      </div>
+      <div class="editor">
+        <div class="display">
+          <div class="originalImageHolder">
+            Original
+            <img src="" class="originalImage" />
+            <div class="original-file-size">Image Size: 1.32MB</div>
+          </div>
+          <img src="./images/arrow.png" class="arrowPointer" />
+          <div class="compressedImageHolder">
+            Compressed
+            <img src="" class="compressedImage" />
+            <div class="compressed-file-size">Image Size: 2.4KB</div>
+          </div>
+        </div>
+        <div class="strength-bar">
+          <img src="./images/Compression Strength.png" alt="" />
+          <div class="bar-interactive">
+            <img
+              src="./images/decrease compression.png"
+              class="increaseStrength"
+            />
+            <div class="progress-bar">
+              <div class="progress"></div>
+            </div>
+            <img
+              src="./images/increase compression.png"
+              class="decreaseStrength"
+            />
+          </div>
+        </div>
+        <img src="./images/download button.png" class="download-btn" />
+      </div>
+    </div>
+    <div class="footer">
+      <img src="./images/credit.png" />
+    </div>
+    <script src="range.js"></script>
+    <script src="download.js"></script>
+    <script src="compress.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

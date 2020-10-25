@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <canvas id="canvas"></canvas>
+    <button id="toggle_wheel">pause/start</button>
+    <button id="take_ball">Take Ball</button>
+    <input
+      id="input_number"
+      min="0"
+      max="36"
+      placeholder="Number beetween 0 - 36"
+      onblur="listen_input_key()"
+      required
+    />
+    <button id="roll_ball" type="submit">Roll Ball</button>
+    <span id="message" style="color:red;"></span>
+    <script src="./pixi.min.js"></script>
+    <script>
+      //initial declaration
+      let btn_toggle_ticker = document.getElementById("toggle_wheel");
+      let btn_take_ball = document.getElementById("take_ball");
+      let btn_roll_ball = document.getElementById("roll_ball");
+      let msgbox = document.getElementById("message");
+      let input_number = document.getElementById("input_number");
+      const canvas = document.getElementById("canvas");
+      let key;
+      const segment = {
+        "0": [2.5, 12.5],
+        "1": [-9.8, -7.5],
+        "2": [12.5, 5.5],
+        "3": [-2, 13.5],
+        "4": [10.5, 9.5],
+        "5": [-2.5, -12.5],
+        "6": [13, -3.2],
+        "7": [-9.5, 9],
+        "8": [4, -12.5],
+        "9": [-12.5, 0.8],
+        "10": [-0.5, -12.5],
+        "11": [7.7, -10],
+        "12": [-6, 11.8],
+        "13": [11, -7],
+        "14": [-12, -3.5],
+        "15": [6.8, 12.2],
+        "16": [-6.3, -10.3],
+        "17": [13.5, 12],
+        "19": [8.5, 10.5],
+        "20": [-10.8, -5.5],
+        "21": [11.5, 7.5],
+        "22": [-12.5, 3.2],
+        "23": [1.7, -12.5],
+        "24": [-4.8, -11.8],
+        "25": [13.5, 3.5],
+        "26": [0.3, 13.5],
+        "27": [12.5, -5.5],
+        "28": [-8, 10.8],
+        "29": [-10.5, 7],
+        "30": [6, -11],
+        "31": [-12.5, -1.3],
+        "32": [4.5, 12.5],
+        "33": [-8.5, -9.3],
+        "34": [13.5, -1],
+        "35": [-4, 12.8],
+        "36": [9.5, -8.7],
+        "18 ": [-11.5, 5]
+      };
+      input_number.setAttribute("disabled", "");
+      let _w = window.innerWidth;
+      let _h = window.innerHeight;
+      const renderer = new PIXI.Renderer({
+        view: canvas,
+        width: _w,
+        height: _h,
+        resolution: window.devicePixelRatio,
+        autoDensity: true
+      });
+      const stage = new PIXI.Container();
+      let loader = PIXI.Loader.shared;
+      let wheel, ball;
+
+      const ticker = new PIXI.Ticker(); //main ticker
+
+      //eventListener
+      window.addEventListener("resize", resize);
+      btn_toggle_ticker.addEventListener("click", toggleTicker);
+      btn_take_ball.addEventListener("click", takeBall);
+      btn_roll_ball.addEventListener("click", rollBall);
+
+      //function for window resize
+      function resize() {
+        _w = window.innerWidth;
+        _h = window.innerHeight;
+        renderer.resize(_w, _h);
+      }
+      //function for btn_toggle_ticker
+      function toggleTicker() {
+        !ticker.started ? ticker.start() : ticker.stop();
+        // ticker.add(ball_rotation_standard);
+      }
+
+      //function for Take Ball
+      function takeBall() {
+        delete key;
+        stage.removeChild(ball);
+        input_number.setAttribute("disabled", "");
+        btn_roll_ball.removeAttribute("disabled");
+        input_number.value = "";
+        ticker.remove(ball_rotation_standard);
+        ball.rotation = 0;
+        ball.visible = false;
+        function clearup() {
+          stage.removeChild(ball);
+          delete key;
+          input_number.setAttribute("disabled", "");
+          input_number.value = "";
+          ticker.remove(ball_rotation_standard);
+          ball.rotation = 0;
+          ball.visible = false;
+        }
+        function notify() {
+          msgbox.innerHTML = "Ball successful taked";
+          msgbox.style.color = "green";
+        }
+        btn_roll_ball.attributes.disabled ? clearup() : notify();
+      }
+
+      //Roll Ball
+      function rollBall() {
+        input_number.removeAttribute("disabled");
+        stage.addChild(ball);
+        ball.rotation != 0 ? (ball.rotation = 0) : "";
+        !ball.visible ? (ball.visible = true) : "";
+        key = input_number.value;
+        ticker.add(ball_rotation_reverse);
+      }
+
+      //   loader.onComplete.add(handleLoadeComplete);
+      loader.onLoad.add(handleLoadAsset);
+      loader.onError.add(handleLoadError);
+      loader.onProgress.add(handleLoadProgress);
+
+      //   loader.add("silang", "assetsnotfound.png");
+      loader.add("wheel_asset", "roulette.png").add("ball_asset", "ball.png");
+      loader.load(handleLoadeComplete);
+
+      function handleLoadAsset() {
+        console.log("assets loadded");
+      }
+
+      function handleLoadProgress(loader, resource) {
+        console.log(loader.progress + "% loadded");
+      }
+
+      function handleLoadError() {
+        console.error("load error");
+      }
+
+      function handleLoadeComplete() {
+        //texture
+        let wheelTexture = loader.resources.wheel_asset.texture;
+        let ballTexture = loader.resources.ball_asset.texture;
+
+        //spritting
+        wheel = new PIXI.Sprite(wheelTexture);
+        ball = new PIXI.Sprite(ballTexture);
+
+        //anchor
+        wheel.anchor.x = 0.5;
+        wheel.anchor.y = 0.5;
+
+        //stage
+        stage.addChild(wheel);
+
+        //add function to ticker
+        ticker.add(responsiveObj);
+        ticker.add(wheel_animate);
+
+        ticker.start();
+      }
+
+      function responsiveObj() {
+        //ResponsiveingStart
+        //dimensioning
+        if (_w > _h) {
+          wheel.width = _h * 0.75;
+          wheel.height = _h * 0.75;
+          ball.width = _h * 0.02;
+          ball.height = _h * 0.02;
+        } else if (_h > _w) {
+          wheel.width = _w * 0.75;
+          wheel.height = _w * 0.75;
+          ball.width = _w * 0.02;
+          ball.height = _w * 0.02;
+        }
+
+        //positioning wheel for permanent
+        wheel.x = renderer.screen.width / 2;
+        wheel.y = renderer.screen.height / 2;
+
+        //ResponsiveingEnd
+      }
+
+      function wheel_animate() {
+        wheel.rotation += 0.01;
+        renderer.render(stage);
+        // console.log(wheel.width);
+      }
+
+      function please_take_ball() {
+        function disable_btn() {
+          msgbox.innerHTML = "Please Take Ball before Roll Angain!";
+          msgbox.style.color = "red";
+          btn_roll_ball.setAttribute("disabled", "");
+        }
+        ball.rotation ? disable_btn() : "";
+      }
+      function listen_input_key() {
+        setTimeout(() => {
+          key = input_number.value;
+          // console.log(key);
+        }, 3000);
+      }
+      function ball_rotation_standard() {
+        please_take_ball();
+        //positioning ball
+        function validate_key() {
+          input_number.removeAttribute("disabled");
+          msgbox.innerHTML =
+            "Please Type a Number betwen 0 to 36 and click outside input bar";
+          msgbox.style.color = "red";
+          input_number.removeAttribute("disabled");
+          key = input_number.value;
+        }
+        !key ? validate_key() : "";
+        function make_stop_ball() {
+          drop_ball_anchor();
+          setTimeout(() => {
+            ball.x = renderer.screen.width / 2;
+            ball.y = renderer.screen.height / 2;
+            ticker.add(drop_ball_anchor);
+            ball.anchor.x = segment[key][0];
+            ball.anchor.y = segment[key][1];
+            ball.rotation = wheel.rotation;
+            ticker.remove(ball_rotation_reverse);
+          }, 4000);
+        }
+        key ? make_stop_ball() : "";
+
+        //  renderer.render(stage);
+      }
+      function ball_rotation_reverse() {
+        //positioning ball
+        ball.anchor.x = 13;
+        ball.anchor.y = 13;
+        ball.x = renderer.screen.width / 2;
+        ball.y = renderer.screen.height / 2;
+        ball.rotation -= 0.25;
+        ticker.add(drop_ball_anchor);
+
+        // console.log(ball.rotation);
+        // setTimeout(() => {
+        ticker.remove(drop_ball_anchor);
+        ticker.add(ball_rotation_standard);
+        // }, 3000);
+
+        // renderer.render(stage);
+      }
+      function drop_ball_anchor() {
+        ball.anchor.x -= 0.005;
+        ball.anchor.y -= 0.005;
+        setTimeout("", 3000);
+      }
+    </script>
+  </body>
+</html>
