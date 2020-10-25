@@ -4,7 +4,7 @@
 int main(void)
 {
     FILE *fptr;
-    fptr = fopen("questionfour.csv", "w");
+    fptr = fopen("Piapprox.csv", "w");
     srand(time(0));
     unsigned long int n;
     n = 0;
