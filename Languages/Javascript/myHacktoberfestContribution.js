@@ -1,1 +1,0 @@
-console.log("My First Commit for hacktoberfest")
