@@ -38,7 +38,7 @@ int main()
  }    
  printf("nThe array of elements after sorting : n");  
  Bucket_Sort(array, num);  
- for (i = 0;i < n;i++) 
+ for (i = 0;i < num;i++) 
  {     
   printf("%d ", array[i]);  
  }   
