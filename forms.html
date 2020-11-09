@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://kit.fontawesome.com/8d1d25d7e7.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="forms.css">
+    </head>
+    <body>
+        <div class="container" id="container">
+            <div class="form-container sign-up-container">
+                <form action="#">
+                    <h1>Create Account</h1>
+                    <div class="icon-container">
+                        <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span> or use your email for registration</span>
+                    <input type="text"  placeholder="Name"/>
+                    <input type="email"  placeholder="Email"/>
+                    <input type="password"  placeholder="Password"/>
+                    <input type="password" placeholder="Confirm Password"/>
+                    <button>Sign up</button>
+                </form>
+
+            </div>
+            <div class="form-container sign-in-container">
+                <form action="#">
+                    <h1>Sign in</h1>
+                    <div class="icon-container">
+                        <a href="#" class="icon"><i class="fab fa-google-plus-g"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <span>Or Use your account</span>
+                    <input type="email" placeholder="Email"/>
+                    <input type="password" placeholder="Password"/>
+                    <a href="#">Forgot Password?</a>
+                    <button onclick="window.location.href='success.html'">Sign In</button>
+                </form>
+            </div>
+            <div class="sliding-container">
+                <div class="sliding">
+                    <div class="sliding-panel sliding-left">
+                        <h1>Welcome Back!</h1>
+                        <p>
+                            To keep connected with us please login with your credentials
+                        </p>
+                        <button class="ghost" id="signIn">Sign In</button>
+                    </div>
+                    <div class="sliding-panel sliding-right">
+                        <h1>Hello friend!</h1>
+                        <p>
+                            Start and enjoy your Job-Hunting with us
+                        </p>
+                        <button class="ghost" id="signUp">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="forms.js"></script>
+    </body>
+</html>

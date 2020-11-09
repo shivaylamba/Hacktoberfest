@@ -1,0 +1,17 @@
+body{
+    background-image: url(succes.jpeg);
+    background-size: cover;
+}
+h1{
+    font-family: 'Rokkitt' , sans-serif;
+    font-size: 50px;
+    color: black;
+    font-style: italic;
+    display: flex;
+    position: absolute;
+    top: 250px;
+    left: 300px;
+    height: 40px;
+    border-radius:40px;
+    padding: 10px;
+}
