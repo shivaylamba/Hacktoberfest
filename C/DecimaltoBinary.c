@@ -8,7 +8,7 @@ void dectobin(int n)
         dectobin(n/2);
         printf("%d",n%2);
     }
-    return;
+
 }
 
 int main()
