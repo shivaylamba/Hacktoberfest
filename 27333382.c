@@ -17,7 +17,7 @@ int main(void) {
 
 	    }
 	    for(int j=0;j<n;j++){
-	        int val = f[a[j]];
+	        int v = f[a[j]];
  		        for(int k=1;k<=sqrt(a[j]);k++){
  		            if(a[j]%k==0)
  		            {
@@ -25,10 +25,11 @@ int main(void) {
  		                if(k!=(a[j]/k)) f[a[j]/k]++;
  		            }
  		        }
- 		    a[j] = val;
+ 		    a[j] = v;
 	    }
 	    
-	    for(int j=0;j<n;j++){
+	    for(int j=0;j<n;j++)
+	            {
  		       
  		        if(a[j]>m)   m=a[j];
  		    } 
