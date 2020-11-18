@@ -1,0 +1,55 @@
+#include <iostream>
+
+using namespace std;
+
+
+int main() 
+
+{
+
+	// your code goes here
+
+	int i,t,su[10];
+
+	cin>>t;
+
+	for(i=0;i<t;i++)
+
+	{
+
+	    int j,n,r,q,m,v[8];
+
+	    for(j=0;j<8;j++)
+
+	    v[j]=0;
+
+	    su[i]=0;
+
+	    cin>>n;
+
+	    for(j=1;j<=n;j++)
+
+	    {
+
+	    cin>>q>>m;
+
+	    r=q-1;
+
+	    if(q<=8 && v[r]<m)
+
+	    v[r]=m;
+
+	    }
+
+	    for(j=0;j<8;j++)
+
+	    su[i]=su[i]+v[j];
+
+	}
+
+	for(i=0;i<t;i++)
+
+	cout<<su[i]<<endl;
+	return 0;
+
+}
