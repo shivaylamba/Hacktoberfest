@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main()
+{
+   int a[20],b[20],i,j,m,n;
+   printf("enter the size of array a\n");
+   scanf("%d",&m);
+   printf("enter the element in array a\n");
+   for(i=0;i<m;i++)
+   {
+       scanf("%d",&a[i]);
+   }
+   printf("enter the size of array b\n");
+   scanf("%d",&n);
+   printf("enter the element in array b\n");
+   for(j=0;j<n;j++)
+   {
+       scanf("%d",&b[j]);
+   }
+   i=0;
+   j=0;
+   while(i<m &&j<n)
+   {
+       if (a[i]<b[j])
+       {
+           printf("%d",a[i]);
+           printf(" ");
+           i++;
+       }
+       else if(a[i]>b[j])
+       {
+           printf("%d",b[j]);
+           printf(" ");
+           j++;
+       }
+       else
+       {
+           i++;
+           j++;
+       }
+   }
+  return 0;
+}
