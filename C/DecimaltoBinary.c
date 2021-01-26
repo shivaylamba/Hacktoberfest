@@ -14,7 +14,8 @@ void dectobin(int n)
 int main()
 {
     int n;
-    printf("Enter the number: ");
+    printf("Enter the number to convert in binary format : ");
     scanf("%d",&n);
     dectobin(n);
+    printf(" --> This is the binary format of %d",n);
 }
