@@ -1,0 +1,8 @@
+<h4>Hello %%Name%% !</h4>
+
+<p>Hope you are taking care and staying safe amidst the crazy situations out there</p>
+
+<p>This is just a testing E-mail !!</p>
+
+<h5>Cheers,<h5>
+<h5>Prateek<h5>
