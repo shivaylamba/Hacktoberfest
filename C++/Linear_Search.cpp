@@ -1,4 +1,4 @@
-//Linear Search Code CPP
+//Linear Search code sample in C++
 /*By Pratyaksh Khurana*/
 #include<bits/stdc++.h>
 using namespace std;
