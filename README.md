@@ -5,7 +5,7 @@ Just fork it and add a `'Hello World'` program to contribute for hacktober fest 
 
 ### Get yourself free goodies by just writing a hello world!
 
-Say hi to the world in any language of your choice!
+Say hello to the world in any language of your choice!
 
 # What is Hacktoberfest?
 
@@ -28,7 +28,7 @@ You can get your own fork/copy of [Hacktoberfest](https://github.com/shivaylamba
 ### 3. Add a Program in any Language you like :rabbit2:
 
 Once you have forked the repo, add your progam in the language folder in main branch, if there is no language folder, make one, then add into it.
-You can take a look to the [Programming Language List](https://en.wikipedia.org/wiki/List_of_programming_languages) in Wikipedia to create a new one for Hacktoberfest!
+You can take a look at the [Programming Language List](https://en.wikipedia.org/wiki/List_of_programming_languages) in Wikipedia to create a new one for Hacktoberfest!
 
 ### 4. Ready, Steady, Go... :turtle: :rabbit2:
 
@@ -46,7 +46,7 @@ To make your own local copy of the repository you would like to contribute to, l
 
 We’ll use the `git clone` command along with the URL that points to your fork of the repository.
 
-This URL will be similar to the URL above, except now it will end with `.git` . In the cloud_haiku example above, the URL will look like this:
+This URL will be similar to the URL above, except for  now it will end with `.git` . In the cloud_haiku example above, the URL will look like this:
 
 https://github.com/your-username/Hacktoberfest.git
 
