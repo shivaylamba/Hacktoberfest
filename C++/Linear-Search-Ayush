@@ -1,0 +1,33 @@
+#include<bits/stdc++.h>
+using namespace std;
+int linear(int arr[],int n,int key)
+{
+    int last=-1;
+    for(int i=0;i<n;i++)
+    {
+        if(arr[i]==key)
+        {
+            cout<<i<<endl;
+        }
+    }
+    if(last==-1)
+    {
+        cout<<"Element not present in the array"<<endl;
+    }
+return 0;
+}
+int main(int argc, char const *argv[])
+{
+    int size,key;
+    cout<<"Enter size of the array"<<endl;
+    cin>>size;
+    int arr[size];
+    cout<<"Enter elements in the array"<<endl;
+    for(int i=0;i<size;i++)
+    cin>>arr[i];
+    cout<<"Enter element you want to search"<<endl;
+    cin>>key;
+    cout<<"Element present at indexes:"<<endl;
+    linear(arr,size,key);
+    return 0;
+}
