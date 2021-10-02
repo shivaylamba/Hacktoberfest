@@ -7,7 +7,7 @@
 //Input :
 //An array with integers and its size
 
-Note: The array passed to the function has been created dynamically.
+// Note: The array passed to the function has been created dynamically.
 
 //Output 
 //An array with only odd integers
