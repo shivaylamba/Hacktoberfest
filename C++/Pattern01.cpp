@@ -1,20 +1,22 @@
 #include<iostream>
 using namespace std;
-
 int main(){
-int n;
-cin>>n;
-
-for(int i=1;i<=n;i++){
-    for(int j=1;j<=i;j++){
-        if((i+j)%2==0){
-            cout<<"1 ";
-        }else{
-            cout<<"0 ";
+    int n;
+    cin >> n;
+    int i = 1;
+    while (i<=n)
+    {
+        int j = 1;
+        char startchar = 'A' + i-1;
+        while (j<=n)
+        {
+            char ch = startchar+j-1;
+            cout << ch;
+            j++;
         }
+        cout << endl;
+        i++;
     }
-    cout<<endl;
-}
-
+    
     return 0;
 }
