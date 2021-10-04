@@ -1,10 +1,10 @@
 /* C++ Program - Insertion Sort */
 		
-#include<iostream.h>
-#include<conio.h>
+#include<iostream>
+using namespace std;
+
 void main()
 {
-	clrscr();
 	int size, arr[50], i, j, temp;
 	cout<<"Enter Array Size : ";
 	cin>>size;
@@ -30,5 +30,5 @@ void main()
 	{
 		cout<<arr[i]<<" ";
 	}
-	getch();
+	
 }
