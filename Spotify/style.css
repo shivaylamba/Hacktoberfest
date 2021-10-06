@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: spotify-circular, Helvetica, Arial, sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.header {
+  height: 80px;
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 40px;
+  width: 130px;
+  position: relative;
+  left: 90px;
+  top: 15px;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  position: relative;
+  right: 90px;
+  top: 30px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: white;
+  padding: 28px 17px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+ul li a:hover {
+  color: #67d861;
+}
+
+.main {
+  background-color: rgb(41, 65, 171);
+  height: 800px;
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+}
+
+.main::after {
+  content: "";
+  position: relative;
+  height: 900px;
+  width: 300px;
+  background: #67d861;
+  border-radius: 50%;
+  left: 93%;
+  top: -350px;
+}
+
+.main h1:first-child {
+  color: #67d861;
+  font-size: 140px;
+  letter-spacing: -6px;
+  position: relative;
+  top: 190px;
+  left: -110px;
+  font-weight: 950;
+}
+
+.main h1 {
+  color: #67d861;
+  font-size: 140px;
+  letter-spacing: -6px;
+  position: relative;
+  top: 190px;
+  left: 110px;
+  font-weight: 950;
+}
+h5 {
+  color: #67d861;
+  position: relative;
+  top: 230px;
+}
+
+button {
+  position: relative;
+  left: 43%;
+  padding: 15px 10px;
+  width: 200px;
+  top: 260px;
+  background-color: #67d861;
+  outline: none;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  color: rgb(41, 65, 171);
+  cursor: pointer;
+}
+button:hover {
+  transform: scale(1.03);
+}
+
+.footer {
+  background-color: black;
+  color: white;
+  height: 500px;
+}
+.first_dir {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.left {
+  display: flex;
+  position: relative;
+  left: 90px;
+  top: 100px;
+  height: 300px;
+}
+
+h4 {
+  color: #919496;
+  font-size: 10px;
+}
+.company,
+.communities,
+.useful_links {
+  margin: 20px 40px;
+}
+p {
+  margin: 20px 0;
+  cursor: pointer;
+}
+
+p:hover {
+  color: #67d861;
+}
+
+.right {
+  display: flex;
+  position: relative;
+  right: 90px;
+  top: 100px;
+  height: 300px;
+}
+
+.logo1 {
+  height: 40px;
+  width: 130px;
+  cursor: pointer;
+}
+
+.fa {
+  text-align: center;
+  font-size: 25px;
+  margin: 0 5px;
+  background-color: #222326;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.fa:hover {
+  color: #67d861;
+}
+
+.sec_dir {
+  display: flex;
+  justify-content: space-between;
+}
+
+.privacy {
+  position: relative;
+  top: 100px;
+  left: 190px;
+  font-size: 12px;
+}
+
+.privacy ul li {
+  margin-right: 20px;
+  cursor: pointer;
+  color: #919496;
+}
+
+.privacy ul li:hover {
+  color: #67d861;
+}
+
+.copyright {
+  position: relative;
+  top: 110px;
+  right: 100px;
+  font-size: 12px;
+}
+
+.copyright p {
+  color: #919496;
+}
