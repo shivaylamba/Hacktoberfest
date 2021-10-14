@@ -2,7 +2,7 @@
 # !pip install phonenumbers
 import phonenumbers
 from phonenumbers import geocoder
-number = '+8801815136422'
+number = '+8801815136422' #use country code
 
 pepNumber = phonenumbers.parse(number)
 location = geocoder.description_for_number(pepNumber, "en")
