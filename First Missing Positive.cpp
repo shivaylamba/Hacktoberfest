@@ -1,28 +1,30 @@
-class Solution {
-public:
-    int firstMissingPositive(vector<int>& nums) 
-    {
-        set<int>s;
-        int c=0;
-        if(nums.size()==0)
-        {
-            return 1;
-        }
-        for(int i=0;i<nums.size();i++)
-        {
-            if(nums[i]>0)
-            {
-                s.insert(nums[i]);
+
+
+// Method 2: By using without any extra space
+#include<iostream>
+#include<vector>
+
+using namespace std;
+int first_poitive(vector<int> &A){
+    int n=A.size();
+    int start=0;
+    while(start<n){
+        if(A[start]>0 && A[start]<=n){
+            if(A[start]==A[A[start]-1]){
+                start++;
             }
+            else swap(A[start],A[A[start]-1]);
         }
-        for(int i=1;i<=nums.size()+1;i++)
-        {
-            if(s.find(i)==s.end())
-            {
-                c=i;
-                return c;
-            }
-        }
-        return 0;
+        else start++;
     }
-};
+        for(int i=0;i<n;i++){
+            if(A[i]==i+1) continue;
+            else return i+1;
+        }
+    return 1;
+}
+
+int main(){
+    vector<int> v1={1,4,3};
+    cout<<first_poitive(v1)<<endl;
+}
