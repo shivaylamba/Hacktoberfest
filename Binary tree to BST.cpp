@@ -1,62 +1,87 @@
-#include <bits/stdc++.h>
-#include<set>
 
+#include<iostream>
 using namespace std;
 
-class node {
-	public:
+class BST
+{
 	int data;
-	node *left, *right;
-}*root;
+	BST *left, *right;
 
-node* GetNode(int d) {
-	node *nn=new(node);
-	nn->left = NULL;
-	nn->right = NULL;
-	nn->data = d;
-	return nn;
+public:
+	
+	BST();
+
+	BST(int);
+
+	
+	BST* Insert(BST*, int);
+
+	
+	void Inorder(BST*);
+};
+
+BST ::BST()
+	: data(0)
+	, left(NULL)
+	, right(NULL)
+{
 }
 
-void InOrder(node *root) {
-	if(root == NULL)
-	return ;
-	InOrder(root->left);
-	cout<<root->data<<" ";
-	InOrder(root->right);
+
+BST ::BST(int value)
+{
+	data = value;
+	left = right = NULL;
 }
 
-void StoreData(node *root,set<int> &s){ //&s reference of original set
-	if(root == NULL)
-	return ;
-	StoreData(root->left,s);
-	s.insert(root->data);
-	StoreData(root->right,s);
+BST* BST ::Insert(BST* root, int value)
+{
+	if (!root)
+	{
+		
+		return new BST(value);
+	}
+
+	
+	if (value > root->data)
+	{
+		
+		root->right = Insert(root->right, value);
+	}
+	else
+	{
+		
+		root->left = Insert(root->left, value);
+	}
+
+	return root;
 }
 
-void ConvertToBST(node *root, auto &it) {
-	if(root == NULL)
-	return ;
-	ConvertToBST(root->left, it);
-	root->data = *it;
-	it++;
-	ConvertToBST(root->right, it);
+
+void BST ::Inorder(BST* root)
+{
+	if (!root) {
+		return;
+	}
+	Inorder(root->left);
+	cout << root->data << endl;
+	Inorder(root->right);
 }
+
 
 int main()
 {
-	root = GetNode(8);
-	root->left = GetNode(3);
-	root->right = GetNode(5);
-	root->left->left = GetNode(10);
-	root->left->right = GetNode(2);
-	root->right->left = GetNode(4);
-	root->right->right = GetNode(6);
-	InOrder(root);
-	
-	set<int> s;
-	StoreData(root,s);
-	auto it = s.begin();
-	ConvertToBST(root,it);
-	InOrder(root);
+	BST b, *root = NULL;
+	root = b.Insert(root, 50);
+	b.Insert(root, 30);
+	b.Insert(root, 20);
+	b.Insert(root, 40);
+	b.Insert(root, 70);
+	b.Insert(root, 60);
+	b.Insert(root, 80);
+
+	b.Inorder(root);
+	return 0;
 }
+
 
