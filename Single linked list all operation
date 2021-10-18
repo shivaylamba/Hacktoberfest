@@ -1,0 +1,219 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct node
+{
+    int data;
+    struct node *link;
+} *start = NULL;
+
+void create_node()
+{
+    struct node *temp, *i;
+    int n, j;
+    printf("Enter nodes you wants to create:");
+    scanf("%d", &n);
+    for (j = 0; j < n; j++)
+    {
+        temp = (struct node *)malloc(sizeof(struct node));
+        printf("Enter data to insert:");
+        scanf("%d", &temp->data);
+        temp->link = NULL;
+        if (start == NULL)
+        {
+            start = temp;
+        }
+        else
+        {
+            for (i = start; i->link != NULL; i++)
+            {
+            }
+            i->link = temp;
+        }
+    }
+}
+
+int length()
+{
+    struct node *temp;
+    int count = 0;
+    temp = start;
+
+    if (temp == NULL)
+    {
+        printf("KUCH NODES NAHI HE NIKAL YAHA SE");
+    }
+    else
+    {
+        while (temp != NULL)
+        {
+            temp = temp->link;
+            count++;
+        }
+        return count;
+    }
+}
+void append_begin()
+{
+    struct node *temp;
+    temp = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data to insert:");
+    scanf("%d", &temp->data);
+    if (start == NULL)
+    {
+        printf("no node are to append at begin");
+    }
+    else
+    {
+        temp->link = start;
+        start = temp;
+    }
+}
+
+void append_end()
+{
+    struct node *temp;
+    temp = (struct node *)malloc(sizeof(struct node));
+    printf("Enter data to insert:");
+    scanf("%d", &temp->data);
+    if (start == NULL)
+    {
+        printf("no node are to append to end");
+    }
+    else
+    {
+        struct node *p;
+        p = start;
+        while (p->link != NULL)
+        {
+            p = p->link;
+        }
+        p->link = temp;
+    }
+}
+void append_any()
+{
+    struct node *temp, *p;
+    int loc, i = 1;
+    printf("Enter location to append node:");
+    scanf("%d", &loc);
+    if (loc > length())
+    {
+        printf("No location are there to append");
+        printf("Till now %d node created", length());
+    }
+    else
+    {
+        p = start;
+        while (i < loc)
+        {
+            p = p->link;
+            i++;
+        }
+        temp = (struct node *)malloc(sizeof(struct node));
+        printf("Enter data to insert:");
+        scanf("%d", &temp->data);
+        temp->link = NULL;
+        temp->link = p->link;
+        p->link = temp;
+    }
+}
+void delete ()
+{
+    struct node *temp;
+    int loc;
+    printf("Enter location to delete node:");
+    scanf("%d", &loc);
+    if (loc > length())
+    {
+        printf("no location to delete node");
+    }
+    else if (loc == 1)
+    {
+        temp = start;
+        start = temp->link;
+        temp->link = NULL;
+        printf("%d will be deletd.", temp->data);
+        free(temp);
+    }
+    else
+    {
+        struct node *p, *q;
+        int i = 1;
+        p = start;
+        while (i < loc - 1)
+        {
+            p = p->link;
+            i++;
+        }
+        q = p->link;
+        p->link = q->link;
+        q->link = NULL;
+        printf("%d will be deleted", q->data);
+        free(q);
+    }
+}
+
+void display()
+{
+    struct node *temp;
+    temp = start;
+    if (temp == NULL)
+    {
+        printf("no nodes.");
+    }
+    else
+    {
+        while (temp != NULL)
+        {
+            printf("%d-->", temp->data);
+            temp = temp->link;
+        }
+    }
+}
+int main()
+{
+    while (1)
+    {
+        int choice, len;
+        printf("\n1.create");
+        printf("\n2 length:");
+        printf("\n3.append begin");
+        printf("\n4.append end");
+        printf("\n5.append at any");
+        printf("\n6.Delete");
+        printf("\n7.display");
+        printf("\n8.quit");
+        printf("\nEnter yout choice :");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            create_node();
+            break;
+        case 2:
+            len = length();
+            printf("\n%d node is created", len);
+            break;
+        case 3:
+            append_begin();
+            break;
+        case 4:
+            append_end();
+            break;
+        case 5:
+            append_any();
+        case 6:
+            delete ();
+            break;
+        case 7:
+            display();
+            break;
+        case 8:
+            exit(0);
+            break;
+        default:
+            printf("!invaild ");
+            break;
+        }
+    }
+}
