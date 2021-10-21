@@ -1,0 +1,444 @@
+// 1st problem
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int a[3];
+        cin>>a[0]>>a[1]>>a[2];
+        if(a[0]==7 or a[1]==7 or a[2]==7){
+            cout<<"YES"<<endl;
+        }
+        else{
+            cout<<"NO"<<endl;
+        }
+    }
+    return 0;
+}
+
+// 2nd
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int a[5];
+        int s=0;
+        for(int i=0; i<5; i++){
+            cin>>a[i];
+            if(a[i]==1){
+                s+=1;
+            }
+            else if(a[i]==2){
+                s-=1;
+            }
+        }
+        if(s==0){
+            cout<<"DRAW"<<endl;
+        }
+        else if(s>0){
+            cout<<"INDIA"<<endl;
+        }
+        else{
+            cout<<"ENGLAND"<<endl;
+        }
+    }
+    return 0;
+}
+
+
+// 3rd
+#include <bits/stdc++.h>
+using namespace std;
+bool compar(pair<int , int> &a , pair<int, int> &b){
+    return a.second < b.second;
+}
+
+int main(){
+    int t;
+    cin>>t;
+    while(t--){
+        int n;
+        cin>>n;
+        vector<pair<int, int>> v;
+        int temp;
+        for(int i=0; i<n; i++){
+            cin>>temp;
+            v.push_back(make_pair(temp,i));
+        }
+        int k=0;
+        sort(v.begin(), v.end());
+
+        for(int i=0; i<n;i++){
+            if(v[i].first>k){
+                v[i].first=k;
+                k++;
+            }
+            else if(v[i].first==k){
+                v[i].first=k;
+            }
+        }
+
+        sort(v.begin(), v.end(), compar);
+        for(int i=0; i<n; i++){
+            cout<<v[i].first<<" ";
+        }
+        cout<<"\n";
+    }
+    return 0;
+}
+
+//4th 
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef long double ld;
+typedef pair<int,int> pii;
+typedef vector<int> vi;
+typedef vector<vi> vvi;
+typedef vector<pii> vpii;
+typedef pair<ll,ll> pll;
+typedef vector<ll> vll;
+typedef vector<vll> vvl;
+typedef vector<pll> vpll; 
+ #define endl '\n' 
+#define fast std::ios_base::sync_with_stdio(false);cin.tie(NULL);
+#define pb push_back
+#define ll long long
+#define all(v) v.begin(),v.end()
+#define display(A) for(auto &aa:A) cout <<aa<<" ";cout <<"\n";
+#define displayP(A) for(auto &aa:A) {display(aa);}
+#define FOR(i,a,n) for(ll i=a;i<=n;i++)
+#define TTT template<typename T> 
+
+ll mp[2000010];
+vll lpsx;
+vll lpsy;
+void z_function(string s) {
+    // cout<<s<<endl;
+    int n = (int) s.length();
+    lpsy=vector<ll> (n);
+    for (ll i = 1, l = 0, r = 0; i < n; ++i) {
+        if (i <= r)
+            lpsy[i] = min (r - i + 1, lpsy[i - l]);
+        while (i + lpsy[i] < n && s[lpsy[i]] == s[i + lpsy[i]])
+            ++lpsy[i];
+        if (i + lpsy[i] - 1 > r)
+            l = i, r = i + lpsy[i] - 1;
+    }
+
+}
+
+void kmp(string s){
+    // cout<<s<<endl;
+    int n=s.size();
+    lpsx=vector<ll> (n+1);
+    lpsx[0]=-1;
+    int i=0;
+    int j=-1;
+    while(i<n){
+        while(j!=-1 and s[i]!=s[j]){
+            j=lpsx[j];
+        }
+        j++;
+        i++;
+        lpsx[i]=j;
+    }
+}
+void solve(){
+  string s,x,y;
+  cin>>x>>y>>s;
+  string newx=x+"?"+s;
+  string newy=y+"?"+s;
+
+  kmp(newx);
+  z_function(newy);
+  int lenX=x.size();
+  int lenY=y.size();
+  ll ans=1;
+  set<pair<ll,ll>> st;
+  ll lenx=0;
+  ll leny=0;
+  // multiset<string> ss;
+  // int xx=1;
+  // for(int k1=0;k1<s.size();k1++){
+  //               for(int k2=k1;k2<s.size();k2++){
+  //                   string s1=s.substr(k1,(k2-k1+1));
+  //                   ss.insert(s1);
+  //               }
+  //   }
+  //   // cout<<x.size()<<endl;
+  //   for(int i=0;i<x.size();i++){
+  //       int curr=0;
+  //       for(int j=0;j<y.size();j++){
+  //           string x1=x.substr(0,i+1);
+  //           string y1=y.substr(0,j+1);
+  //           if(ss.count(x1+y1))curr++,xx++;
+  //       }
+  //        // cout<<i+1<<":"<<curr<<" ";
+  //   }
+  //   // cout<<endl;
+  //   for(int i=0;i<x.size();i++){
+  //           string x1=x.substr(0,i+1);
+  //           if(ss.count(x1))xx++;
+  //   }
+  //   for(int i=0;i<y.size();i++){
+  //           string y1=y.substr(0,i+1);
+  //           if(ss.count(y1))xx++;
+  //   }
+  
+  for(int i=0;i<=lenX;i++)mp[i]=0;
+  for(int i=lenX+2;i+1<lpsx.size();i++){
+     int j=(i-lenX)+lenY-1;
+     ll len1=lpsx[i];
+     ll len2=lpsy[j+1];
+    
+     if(len1==0 or len2==0)continue;
+     ll allowed=max(len2-mp[len1],0ll);
+     ans+=(allowed);
+     mp[len1]=max(mp[len1],len2);
+  }
+  char c=x[0];
+  int i=0;
+  int j=0;
+  while(j<lenX and x[j]==c){
+    j++;
+  }
+  ll maxi=mp[j];
+  for(int k=j-2;k>=0;k--){
+     ans+=max(0LL,maxi-mp[k+1]);
+     maxi=max(maxi,mp[k+1]);
+  }
+  lenx=0;
+  leny=0;
+  for(int i=lenX+2;i<lpsx.size();i++){
+     int j=(i-lenX)+lenY-1;
+     ll len1=lpsx[i];
+     ll len2=lpsy[j];
+     lenx=max(lenx,len1);
+     leny=max(leny,len2);
+    }
+  ans+=(lenx)+leny;
+  // cout<<ans<<endl;
+
+}
+const ll MAX = 2e6 + 50, INF = 1e15; ll MOD = 1e9 + 7;
+
+string x,s,t,S;
+int k, n, m, N;
+int z[MAX], pi[MAX], g[MAX], found[MAX]; 
+
+
+void test_case(ll tc=0){
+  cin>>s>>t>>x;
+  int k = x.length(), n = s.length(), m = t.length();
+  for(int i = 0; i <= max(n,m) + k + 10; i++){
+    z[i] = 0, pi[i] = 0, g[i] = 0, found[i] = 0;
+  }
+   
+  S = t + "?" + x;
+  N = S.length();
+
+  for (int i = 1, l = 0, r = 0; i < N; ++i) {
+        if (i <= r){
+            z[i] = min (r - i + 1, z[i - l]);
+        }
+        while (i + z[i] < N && S[z[i]] == S[i + z[i]]){
+            ++z[i];
+        }
+        if (i + z[i] - 1 > r){
+            l = i, r = i + z[i] - 1;
+        }
+        // cout << z[i] <<" ";
+    }
+    // cout <<"\n";
+    S = s + "?" + x;
+  N = S.length();
+
+  for (int i = 1,j; i < N; i++) {
+        j = pi[i-1];
+        while (j > 0 && S[i] != S[j]){
+            j = pi[j-1];
+        }
+        if (S[i] == S[j]){
+            j++;
+        }
+         pi[i] = j;
+         // cout << pi[i] <<" ";
+         if(i > n){
+           j = i - n;
+           g[pi[i]] = max(g[pi[i]], z[j + m + 1]);
+           found[pi[i]] = 1;
+         }
+    }
+    g[0] = max(z[m + 1], g[0]);
+    found[0] = 1;
+
+    ll ans = 0;
+    for(ll i = n; i >= 0; --i){
+      if(!found[i]) continue;
+      ans += g[i] + 1;
+
+      found[pi[i - 1]] = 1;
+      g[pi[i - 1]] = max(g[pi[i - 1]], g[i]);
+    }
+    // cout << "\nans ";
+    cout <<ans <<"\n";
+}
+int main(){
+  ios_base::sync_with_stdio(false); cin.tie(NULL);
+  ll T = 1,tc=0; 
+  cin>>T;
+  for(;tc<T;tc++){
+    // cout << "Case #"<<tc+1<<": ";
+    test_case();  
+  }
+  return 0;
+}
+
+//5th 
+ #include <bits/stdc++.h>
+
+
+using namespace std;
+#define ll long long
+
+#define ld long double
+#define ff first
+#define ss second
+#define pb push_back
+#define si set<int, greater<int>>
+#define pll pair<ll, ll>
+#define vl vector<ll>
+#define mii map<int, int>
+#define mll map<ll, ll>
+#define pqb priority_queue<int>
+#define pqs priority_queue<int, vector<int>, greater<int>>
+#define setbits(x) __buildin_popcountll(x)
+#define mod 1000000007
+#define inf 1e18
+#define ps(x, y) fixed << setprecision(y) << x
+#define w(t) \
+int t; \
+cin >> t; \
+while (t--)
+#define lcm(x, y) (x * y) / __gcd(x, y)
+#define gcd(x, y) __gcd(x, y)
+bool prime(ll x)
+{
+if (x == 2)
+{
+return true;
+}
+if (x <= 1)
+{
+return false;
+}
+for (int i = 2; i < sqrt(x); i++)
+{
+
+if (x % i == 0)
+{
+return false;
+}
+}
+return true;
+}
+void printv(vl v)
+{
+for (int i = 0; i < v.size(); i++)
+{
+cout << v[i] << " ";
+}
+cout << endl;
+}
+#ifndef ONLINE_JUDGE
+#endif
+
+string Y = "YES\n";
+string N = "NO\n";
+
+
+
+signed main()
+{
+
+ios_base::sync_with_stdio(false);
+cin.tie(NULL);
+cout.tie(NULL);
+
+
+int t;
+cin >> t;
+
+for (int pop = 0; pop < t; pop++)
+{
+int n,m;
+cin >> n>>m;
+int indeg[n];
+memset(indeg,0,sizeof(indeg));
+vector<int> gr[n];
+
+for (int i = 0; i < m; i++)
+{
+int el1,el2;
+cin >> el1>>el2;
+el1--;
+el2--;
+indeg[el1]++;
+indeg[el2]++;
+gr[el1].pb(el2);
+gr[el2].pb(el1);
+}
+int ans=0;
+map<int,unordered_set<int>> mpx;
+bool vis[n];
+for(int i=0;i<n;i++){
+vis[i]=false;
+mpx[indeg[i]].insert(i);
+}
+int arr[n];
+for (int i = n; i > 0; i--)
+{
+auto kl = (mpx.begin()->second.begin());
+int val = *kl;
+mpx.begin()->second.erase(kl);
+int xl = mpx.begin()->first;
+if (mpx.begin()->second.size()==0)
+{
+mpx.erase(mpx.begin());
+}
+vis[val]=true;
+arr[val] = i;
+ans = max(ans,xl);
+for(auto k:gr[val]){
+if(vis[k]){
+continue;
+}
+mpx[indeg[k]].erase(k);
+if (mpx[indeg[k]].size()==0)
+{
+mpx.erase(indeg[k]);
+}
+indeg[k]--;
+mpx[indeg[k]].insert(k);
+}
+}
+
+cout<<ans<<"\n";
+for (int i = 0; i < n; i++)
+{
+cout<<arr[i]<<" ";
+}
+cout<<"\n";
+
+}
+
+return 0;
+}
+
