@@ -284,4 +284,7 @@ Uber open source project info
 
 A blazing fast & offline web playground in your browser.
 
+### 27. [Krita](https://krita.org/en/)
+
+Krita is a professional FREE and open source painting program. It is made by artists that want to see affordable art tools for everyone.
 ### 11. [Initial Project](https://github.com/alwibastomi/ProjekAwal)
