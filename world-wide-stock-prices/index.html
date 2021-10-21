@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+  
+    <main>
+        <h1>Your personal equity P&L checker</h1>
+        <p><i>Let's see how much profits you're making in the market</i></p>
+      <label for="data-search"
+        >Search for the company you have invested in and then press
+        <kbd class="key">Enter</kbd></label
+      >
+      <input id="search" name="data-search" list="search-results" />
+      <small id="one-small"></small>
+
+      <datalist id="search-results"> </datalist>
+      <label for="date"
+        >Enter a date to automatically get your purchase price at a specified
+        time
+      </label>
+      <input id="date" type="date" />
+      
+      <button id="btn-result">Proceed</button>
+      <small id="two-small"></small>
+
+      <label for="input-purchase"
+        >Purchase price of the stock (you can also enter the amount manually
+        )</label
+      >
+      <input id="input-purchase" placeholder="Enter Purchase Price" />
+      <label for="input-current"
+        >Current Price of the stock (you can enter the amount manually here as
+        well)</label
+      >
+      <p>Last updated on <span id="last-updated-date"></span></p>
+      <input id="input-current" type="number" />
+      <label for="input-quantity"
+        >Enter the quantity of stocks purchased
+      </label>
+      <input id="input-quantity" type="number" />
+      <button id="btn-final">Calculate</button>
+      <p id="message"></p>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
