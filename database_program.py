@@ -15,4 +15,4 @@ mycursor.execute(sql)
 
 mydb.commit()
 
-print(mycursor.rowcount, "record inserted.")
+print(mycursor.rowcount, "record inserted")
