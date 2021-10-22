@@ -1,0 +1,15 @@
+// This program can calculate stunning factorials of large numbers!
+#include <gmpxx.h> 
+#include <iostream> 
+ 
+ // Only works on selected compilers, one of them is GDB Online Debugger.
+ 
+int main() 
+{ 
+    mpz_class u = 1; 
+    for(unsigned i = 1; i <= 100000; ++i) 
+            u *= i; 
+ 
+ //Calculating factorial of 10^5 or 100000
+    std::cout << "100000! = " << u.get_str(10) << '\n'; 
+}
