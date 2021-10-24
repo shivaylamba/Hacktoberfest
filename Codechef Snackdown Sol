@@ -1,0 +1,396 @@
+SnackDown 2021 - Online Round 1A
+
+Dance Moves     Problem Code: DANCEMOVES
+
+#include<bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/detail/standard_policies.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;  
+
+#define fast            ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define endl            '\n'
+#define ll long long int
+#define setBits(x) __builtin_popcount(x)
+const int mod = 1e9 + 7;
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+ 
+void dbg_out() { cerr << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+ 
+#ifdef ONLINE_JUDGE
+#define debug(...)
+#else
+#define debug(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#endif
+ 
+typedef long long lo;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+
+#define vi vector<long long int> 
+#define vvi vector<vector<long long int> >
+#define rep(i, a, b) for (ll i=a; i<=b; i++) 
+
+template<class T> using oset =  tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> ;
+ 
+const ll INF = 1e18;
+const int MOD = 1e9 + 7;
+const ld PI = acosl(-1.0);
+const ld EPS = 1e-9;
+
+void solve() {
+    ll x,y;
+    cin >> x >> y;
+    if(x > y){
+        cout << x - y << endl;
+    }
+    else{
+        ll step = y - x;
+        if(step & 1){
+            cout << (step + 1)/2 + 1 << endl;
+        }
+        else{
+            cout << (step/2) << endl;
+        }
+    }
+
+  
+}
+ 
+signed main() {
+    fast;
+    #ifndef ONLINE_JUDGE   
+        cerr<<endl<<' '<< 1.0 * clock() / CLOCKS_PER_SEC <<endl;
+    #endif  
+    int T;
+    cin >> T; 
+    while(T--) {
+        solve();
+    }
+return 0;
+}
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Min Max LCM     Problem Code: MINLCM1
+
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/detail/standard_policies.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;
+
+#define fast                          \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+#define endl '\n'
+#define ll long long int
+#define setBits(x) __builtin_popcount(x)
+const int mod = 1e9 + 7;
+template <typename A, typename B>
+ostream &operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
+ostream &operator<<(ostream &os, const T_container &v)
+{
+    os << '{';
+    string sep;
+    for (const T &x : v)
+        os << sep << x, sep = ", ";
+    return os << '}';
+}
+
+void dbg_out() { cerr << endl; }
+template <typename Head, typename... Tail>
+void dbg_out(Head H, Tail... T)
+{
+    cerr << ' ' << H;
+    dbg_out(T...);
+}
+
+#ifdef ONLINE_JUDGE
+#define debug(...)
+#else
+#define debug(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#endif
+
+typedef long long lo;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+
+#define vi vector<long long int>
+#define vvi vector<vector<long long int>>
+#define rep(i, a, b) for (ll i = a; i <= b; i++)
+
+template <class T>
+using oset = tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update>;
+
+const ll INF = 1e18;
+const int MOD = 1e9 + 7;
+const ld PI = acosl(-1.0);
+const ld EPS = 1e-9;
+
+bool isPrime(ll x)
+{
+    
+    if (x == 1)
+    {
+        return false;
+    }
+    else if (x == 2 || x == 3)
+    {
+        return true;
+    }
+    else
+    {   
+        bool flag = true;
+        for (ll i = 2; i * i <= x; ++i)
+        {
+            if (x % i == 0)
+            {
+                flag = false;
+                break;
+            }
+        }
+        return flag;
+    }
+}
+void solve()
+{
+    ll x, k;
+    cin >> x >> k;
+    cout << 2*x << " " << (x*k)*(x*k-1) << endl;
+}
+
+signed main()
+{
+    fast;
+#ifndef ONLINE_JUDGE
+    cerr << endl
+         << ' ' << 1.0 * clock() / CLOCKS_PER_SEC << endl;
+#endif
+    int T;
+    cin >> T;
+    while (T--)
+    {
+        solve();
+    }
+    return 0;
+}
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Round Robin Ranks         Problem Code: RRR
+
+#include<bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/detail/standard_policies.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;  
+
+#define fast            ios_base::sync_with_stdio(false);cin.tie(NULL);cout.tie(NULL);
+#define endl            '\n'
+#define ll long long int
+#define setBits(x) __builtin_popcount(x)
+const int mod = 1e9 + 7;
+template<typename A, typename B> ostream& operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template<typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type> ostream& operator<<(ostream &os, const T_container &v) { os << '{'; string sep; for (const T &x : v) os << sep << x, sep = ", "; return os << '}'; }
+ 
+void dbg_out() { cerr << endl; }
+template<typename Head, typename... Tail> void dbg_out(Head H, Tail... T) { cerr << ' ' << H; dbg_out(T...); }
+ 
+#ifdef ONLINE_JUDGE
+#define debug(...)
+#else
+#define debug(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#endif
+ 
+typedef long long lo;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+
+#define vi vector<long long int> 
+#define vvi vector<vector<long long int> >
+#define rep(i, a, b) for (ll i=a; i<=b; i++) 
+
+template<class T> using oset =  tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> ;
+ 
+const ll INF = 1e18;
+const int MOD = 1e9 + 7;
+const ld PI = acosl(-1.0);
+const ld EPS = 1e-9;
+
+void solve() {
+    ll n,k;
+    cin >> n >> k;
+    ll res;
+    res = 2*abs(n-k);
+    res = res +  2*((k-1)/2);
+    cout << res << endl;
+  
+}
+ 
+signed main() {
+    fast;
+    #ifndef ONLINE_JUDGE   
+        cerr<<endl<<' '<< 1.0 * clock() / CLOCKS_PER_SEC <<endl;
+    #endif  
+    int T;
+    cin >> T; 
+    while(T--) {
+        solve();
+    }
+return 0;
+}
+________________________________________________________________________________________________________________________________________________________________________________
+Equal Beauty    Problem Code: EQBEAUTY
+
+#include <bits/stdc++.h>
+#include <ext/pb_ds/assoc_container.hpp>
+#include <ext/pb_ds/tree_policy.hpp>
+#include <ext/pb_ds/detail/standard_policies.hpp>
+
+using namespace std;
+using namespace __gnu_pbds;
+
+#define fast                          \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(NULL);                    \
+    cout.tie(NULL);
+#define endl '\n'
+#define ll long long int
+#define setBits(x) __builtin_popcount(x)
+const int mod = 1e9 + 7;
+template <typename A, typename B>
+ostream &operator<<(ostream &os, const pair<A, B> &p) { return os << '(' << p.first << ", " << p.second << ')'; }
+template <typename T_container, typename T = typename enable_if<!is_same<T_container, string>::value, typename T_container::value_type>::type>
+ostream &operator<<(ostream &os, const T_container &v)
+{
+    os << '{';
+    string sep;
+    for (const T &x : v)
+        os << sep << x, sep = ", ";
+    return os << '}';
+}
+
+void dbg_out() { cerr << endl; }
+template <typename Head, typename... Tail>
+void dbg_out(Head H, Tail... T)
+{
+    cerr << ' ' << H;
+    dbg_out(T...);
+}
+
+#ifdef ONLINE_JUDGE
+#define debug(...)
+#else
+#define debug(...) cerr << "(" << #__VA_ARGS__ << "):", dbg_out(__VA_ARGS__)
+#endif
+
+typedef long long lo;
+typedef long double ld;
+typedef pair<int, int> pii;
+typedef pair<ll, ll> pll;
+
+#define vi vector<long long int>
+#define vvi vector<vector<long long int>>
+#define rep(i, a, b) for (ll i = a; i <= b; i++)
+
+template <class T>
+using oset = tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update>;
+
+const ll INF = 1e18;
+const int MOD = 1e9 + 7;
+const ld PI = acosl(-1.0);
+const ld EPS = 1e-9;
+
+void solve()
+{
+    ll n, k, ans1 = 0, ans2 = 0, d2, d1;
+
+    ll m = INT_MAX;
+
+    cin >> n;
+
+    vector<ll> a(n);
+
+    for (ll i = 0; i < n; i++)
+
+    {
+        cin >> a[i];
+    }
+
+    sort(a.begin(), a.end());
+
+    ll l = 1, r = n - 2;
+
+    if (n == 2)
+
+    {
+
+        cout << 0 << endl;
+    }
+
+    else if (n == 3)
+
+    {
+
+        cout << min(a[1] - a[0], a[2] - a[1]) << endl;
+    }
+    else
+    {
+        for (ll i = 0; i < n - 1; i++)
+
+        {
+            ans1 += abs(a[i] - a[(n - 1) / 2]);
+        }
+
+        for (ll i = 1; i < n; i++)
+
+            ans2 += abs(a[i] - a[1 + (n - 1) / 2]);
+
+        m = min(ans1, ans2);
+
+        while (l < r)
+
+        {
+
+            d2 = a[n - 1] - a[l], d1 = a[r] - a[0];
+
+            m = min(m, abs(d1 - d2));
+
+            if (d1 < d2)
+
+                l++;
+
+            else
+
+                r--;
+        }
+
+        cout << m << endl;
+    }
+}
+
+signed main()
+{
+    fast;
+#ifndef ONLINE_JUDGE
+    cerr << endl
+         << ' ' << 1.0 * clock() / CLOCKS_PER_SEC << endl;
+#endif
+    int T;
+    cin >> T;
+    while (T--)
+    {
+        solve();
+    }
+    return 0;
+}
