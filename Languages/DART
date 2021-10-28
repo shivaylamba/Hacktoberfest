@@ -1,0 +1,8 @@
+//https://dartpad.dev/?null_safety=true
+//go to Dart pad using above link
+//paste the code given below
+
+void main() {
+  print('Hello World');
+}
+//pretty basic
