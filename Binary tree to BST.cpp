@@ -42,7 +42,7 @@ void ConvertToBST(node *root, auto &it) {
 	ConvertToBST(root->right, it);
 }
 
-int main()
+int main()             //main function
 {
 	root = GetNode(8);
 	root->left = GetNode(3);
