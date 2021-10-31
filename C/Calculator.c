@@ -1,43 +1,30 @@
-#include<stdio.h>
-int main()
-{
-	int n1,n2,o,s,a;
-	printf("ENTER 2 NO. =");
-	scanf(" %d %d",&n1,&n2);
-		printf("ENTER operator =");
-	scanf(" %c",&o);
-	
-	switch(o)
-	{
-	case '+':
-		printf("Addition value = %d",n1+n2);
-		break;
-	case '-':
-		if(n1>n2)
-		{
-			printf("Substraction value = %d",n1-n2);
-			break;
-		}
-			else
-			{
-				printf("Substraction value = %d",n2-n1);
-			break;
-		}
-	case '*':
-			printf("Multiplication value = %d",n1*n2);
-			break;
-	case '/':
-			if(n1>n2)
-			{
-			printf("Substraction value = %d",n1/n2);
-			break;
-		}
-			else
-			{
-				printf("Substraction value = %d",n2/n1);
-			break;
-		}
-}
-return 0;
+#include <stdio.h>
+int main() {
+  char o;				//Earlier o was under int hence it was not working
+  double n1,n2;
+  printf("Enter an operator (+, -, *, /): ");
+  scanf("%c", &o);
+  printf("Enter two operands: ");
+  scanf("%lf %lf", &n1, &n2);
 
-}
+  switch (o) {
+    case '+':
+      printf("%.1lf + %.1lf = %.1lf", n1,n2, n1 + n2);
+      break;
+    case '-':
+      printf("%.1lf - %.1lf = %.1lf", n1,n2, n1 - n2);
+      break;
+    case '*':
+      printf("%.1lf * %.1lf = %.1lf", n1,n2, n1 * n2);
+      break;
+    case '/':
+      printf("%.1lf / %.1lf = %.1lf", n1,n2, n1 / n2);
+      break;
+    // operator doesn't match any case constant
+    default:
+      printf("Error! operator is not correct");
+  }
+
+  return 0;
+}			
+		
