@@ -1,0 +1,29 @@
+// CPP program to find area 
+// and perimeter of equilateral triangle 
+#include <bits/stdc++.h> 
+using namespace std; 
+
+// Function to calculate Area 
+// of equilateral triangle 
+float area_equi_triangle(float side) 
+{ 
+	return sqrt(3) / 4 * side * side; 
+} 
+
+// Function to calculate Perimeter 
+// of equilateral triangle 
+float peri_equi_triangle(float side) 
+{ 
+	return 3 * side; 
+} 
+
+// Driver Code 
+int main() 
+{ 
+	float side = 4; 
+	cout << "Area of Equilateral Triangle: "
+		<< area_equi_triangle(side) << endl; 
+	cout << "Perimeter of Equilateral Triangle: "
+		<< peri_equi_triangle(side); 
+	return 0; 
+} 
