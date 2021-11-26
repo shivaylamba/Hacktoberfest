@@ -1,0 +1,7 @@
+# This program adds two numbers
+
+x = 5
+y = 10
+
+# Display the sum
+print(x + y)
