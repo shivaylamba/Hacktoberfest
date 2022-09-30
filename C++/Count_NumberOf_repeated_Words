@@ -1,0 +1,50 @@
+/* Problem Count the number of Repeated words present in a string*/
+
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    
+    string s,s_w;
+    string w;
+    int n,j=0,k=0;
+    getline(cin,s); // Input a string (may included with white space)
+    map<int,string>m;  //keep the words in a map
+    int i;
+    s_w=s+" ";
+    for(i=0;i<s_w.size();i++)
+    {
+       
+        if(s_w[i]==' ')
+        {
+            m[k]=w;
+            k++;
+            w="";
+            
+        }
+        else
+        {
+            w+=s_w[i]; 
+            j++;
+        }
+    }
+    int t=0;
+      map<string,int>mp; //this map for store the repeated words.
+     for(i=0;i<k;i++)
+      { 
+          mp[m[i]]++;
+      }
+    for(auto it:mp)
+      {
+      if(it.second>1)
+      {
+        t+=1;  //count the total repeated Words 
+      }
+      }
+      cout<<t;
+      return 0;
+}
+/* case-1:
+Input: My name is name and My home is in India.
+Output: 3 (As there are 3 repeated words in this string taken Input, such as MY, name, is.)
