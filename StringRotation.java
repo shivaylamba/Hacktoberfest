@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 public class StringRotation {
-public static void main(String[] args) {
+public static void main(String[] args) 
+{
 
 String s1 = "happy";
 int iteration = 3;
