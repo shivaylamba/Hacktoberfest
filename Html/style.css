@@ -1,0 +1,28 @@
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url(./assets/photo.jpg);
+    background-size: cover;
+    display: flex;
+}
+
+
+
+.hack {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+}
+
+
+.txt {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    font-size: 50px;
+    font-style: oblique;
+    text-shadow: 3px 2px 2px blue;
+}
