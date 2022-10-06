@@ -1,0 +1,315 @@
+to take char as input we use 
+
+scanner sc = new scanner(system.in);
+char s = sc.next().charAt(0);
+
+
+to take string we use
+String s = sc.next();  for single word
+String s2 = sc.nextLine(); for whole sentence
+
+char+int = int
+
+if u write 
+int a = 'c' + 8;
+result is ASCII code of c + 8 int integer
+
+to get the ans in char we use type conversion 
+char c = 'a';
+char s  = (char)(c + 8);
+result is i
+
+
+
+Function Calls
+
+whenever we need an updated value from a function which we send it from main but the function return void it only increases values in function calls then the call by value does not updates the value so we have to use 
+call by reference
+
+1. Call by Value
+
+class Main{
+    static void solve(int a){
+        for(int i=0;i<4;i++){
+            a = a+1;
+        }
+        sysout("value of a in function " + a );  // 4
+    }
+
+    public static void main(String[] args) {    
+        int a = 0;
+        sysout("value of a before function " + a );  // 0
+        solve(a);
+        sysout("value of a after function " + a );  // 0
+    }
+}
+
+So if the function return type is int and it return 'a'  then we get updated value of a but the return type is void 
+and we still need the updated value of a then instead of call by value, we have to call it by reference
+
+So how to call any value by reference
+
+2. Call by Reference
+
+class Main{
+
+    static int a = 0;
+
+    static void solve(int a){
+        for(int i=0;i<4;i++){
+            a = a+1;
+        }
+        sysout("value of a in function " + a );  // 4
+    }
+
+    public static void main(String[] args) {    
+        a = 0;
+        sysout("value of a before function " + a );  // 0
+        solve(a);
+        sysout("value of a after function " + a );  // 4
+    }
+}
+
+
+THE CALL BY REFERENCE IS MOSTLY USED IN THE QUESTIONS BY LOVE BABBAR BINARY TREE QUESTIONS
+
+As we can't use any data type for return value because of bfs of node so we have to use void function 
+but we need some updated values from that function so thats why we use call by REFERENCE
+
+
+
+
+
+
+METHODS used in same class
+    Function inside a class known as methods...
+ 1.   if we use static before making a method then it can be access by anyone inside the class
+
+public static int sum(){
+
+}
+
+It can be called simply like this :
+
+sum();
+
+ 2.   if we remove the static keyword before a method then to access that method an object is need to be created
+
+public int sum(){
+
+}
+
+It can be called after creating an object
+className obj = new className();
+obj.sum();
+
+
+
+
+We mostly use static keyword when use methods in same class.
+
+
+
+
+
+
+
+METHODS used from different class or from custom class
+ 1.   if we use static before making a method then it can be access by anyone inside the class
+ 
+ class Student{
+ public static int sum(){
+
+    }
+ }
+
+But here we just have to specify which class's method is this
+so for class student we use 
+
+Student.sum();
+If we use this sum method in different class or for eg class Main
+
+
+ 2.   if we remove the static keyword before a method then to access that method an object is need to be created
+
+ class Student{
+ public int sum(){
+
+    }
+ }
+
+
+Then it can be called after creating an object like simple method
+className (Here it is student) obj = new className();
+Student obj = new Student();
+obj.sum();
+
+
+
+We mostly don't use static keyword when make methods in custom class.
+
+
+
+
+
+
+METHODS OVERLOADING 
+    A method can be repeated with the same name again n again by changing the number of args present in them
+static int sum(int a){}
+static int sum(int a, int b){}
+static int sum(int a, int b, int c){}
+
+    but if we only change the data type and args remain same it gives error 
+static int sum(int a, int b){}
+static void sum(int a, int b){}
+
+    but after changing the parameter we can change the data type too...ie for a method to be overloaded the paremeters must be different
+static int sum(int a){}
+static void sum(int a, int b){}
+
+
+VAR ARGS
+    If we want to perform a same function and with different number of parametery every time then we use var-args
+static int sum(int ...arr){
+int result = 0;
+    for(int ele:arr){
+        result += ele;
+    }
+}
+
+sum(9);
+sum(9,1);
+sum(9,2,4)
+
+the parameter with ... =>  acts as array 
+
+we can also fix some parameter which need to be there like
+static int sum(int x, int y, int ...arr) <= Like this
+
+
+Public Private and Setters n Getters in class
+In classes
+we need to make the access modifier of variable always "private"
+and use setters and getters methods to set and get the value of that variables.
+
+Constructors
+But we can't make setters and getters for all the variable (if we have like 20-30 variables to make)
+So we use constructors here
+
+Declare
+public className(){
+    var1 = 45;
+    var2 = "abc";
+}
+
+It gets call automatically when created an object coz object name is same as className name
+as well as Constructor's name
+
+className obj = new className(); //constructor gets called 
+
+we can also gives args
+
+
+Declare
+public className(int var3, String var4){
+    var1 = var3;
+    var2 = var4;
+}
+
+className obj = new className(45,"abc"); //constructor with args gets called 
+
+WE can also overload the constructor.
+
+
+INHERITANCE:-
+in java it is declared from base to derived class using extends keyword
+class base{
+    int A;
+    public void get(){}
+    public void set(){}
+}
+
+class derived extends base{
+    int B;
+}
+
+Derived class can have all the features present in Base class but the accessibility of base class
+features depends upon the access modifiers. ie public private protected default...
+
+COnstructors in Inheritance and Overlaoding of Constructor in inherited class
+if we want to call a constructor with parameter from parent class then we use "super" keyword.
+
+class base{
+    base(){
+
+    }
+    base(int x){
+        print(x);
+    }
+}
+
+class derived extends base{
+    derived(){
+        super(0);
+    }
+
+    derived(int x, int y){
+        super(x);
+        print(y);
+    }
+
+    both constructors above can call the constructor with one args with super keyword.
+    based on the calling on main function => (either with 1 args or 2 args).
+    else default constructor is called automatically.
+}
+
+Main Function{
+    derived d = new derived(2,3);
+}
+
+
+
+OVERRIDING
+
+when two or more methods have same name with same datatype and same number of args 
+and have same access modifier but in different classes. Then this process is method overriding.
+
+class A{
+    public int giveAns(){}
+}
+class B{
+    @Override  //  this is not becessary keyword but it helps to prevent errors.
+    public int giveAns(){}
+}
+        
+        //then this is method overriding
+
+Main Function{
+    B b = new B();
+    b.giveAns();
+    it run the fun present in class B not A.
+    (it overrides the previous function giveAns from class A for class B)
+}
+
+In java we can't use multiple inheritance ie we can't inherited multiple class at once to same subclass
+So we use interfaces which can be implemented not extanded multiply
+
+Interfaces are comes in abstraction ie they are only soch not reality ie they are the methods which are defined only and used in classes
+Interface Animal{
+    int a = 9;
+    void legs();
+    void run();
+    void color();
+}
+
+we can't change the value a in main function
+Because in interfaces all the fieldsa are public , static and final by default..
+
+class Horse implements Animal{
+    public void legs(){     // using public is necessary in class while using interfaces and in interface it is public by default.
+        sysout("2 legs ");
+        similarly other methods
+    }
+}
+
+An interface can extends another interface but a class can only implements the interface
