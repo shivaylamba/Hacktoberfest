@@ -9,7 +9,7 @@ bool flag=0;
 
 for(int i=2;i<=sqrt(n);i++){
     if(n%i==0){
-        cout<<"Non Prime No.";
+        cout<<"Non Prime No."<<endl;
         flag=1;
         break;
     }
