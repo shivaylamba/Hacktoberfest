@@ -2,8 +2,11 @@
 using namespace std;   
 #define V 4  
 #define INF 99999  
-  
+
+
 void printSolution(int dist[][V]);   
+
+//This Function will implement FloydWarshall algorithm to find Solution   
 void floydWarshall (int graph[][V])  
 {  
     int dist[V][V], i, j, k;  
@@ -23,6 +26,9 @@ void floydWarshall (int graph[][V])
     }  
     printSolution(dist);  
 }  
+
+
+//This Function will print all Solution   
 void printSolution(int dist[][V])  
 {  
     cout<<"The following matrix shows the shortest distances"
@@ -38,7 +44,10 @@ void printSolution(int dist[][V])
         }  
         cout<<endl;  
     }  
-}   
+} 
+
+
+//This is the main Function From where the Program Start
 int main()  
 {  
     int graph[V][V] = { {0, 5, INF, 10},  
