@@ -1,0 +1,27 @@
+class Solution {
+public:
+    int minSetSize(vector<int>& arr) {
+        unordered_map<int,int>mp;
+        priority_queue<pair<int,int>>pq;
+     for(int i=0;i<arr.size();i++){
+         mp[arr[i]]++;
+     }
+      for(auto it:mp){
+       pq.push(make_pair(it.second,it.first));
+     }
+        int n=arr.size();
+        int x=n/2;
+        int ans=0;
+        while(!pq.empty()){
+            if(x<n){
+            n-=pq.top().first;
+             pq.pop();
+                ans++;
+            }
+            else{
+                break;
+            }
+        }
+        return ans;
+    }
+};
