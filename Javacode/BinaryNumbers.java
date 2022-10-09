@@ -16,7 +16,7 @@ public class BinaryNumbers {
     char[] binaryArray = Integer.toBinaryString(n).toCharArray();
     int max = 0,
     count = 0;
-    for (int i = 0; i < binaryArray.length; i++) {
+    for (int i = 0; i <= binaryArray.length-1; i++) {
       count = 0;
 
       if (((int) binaryArray[i]) == 49) {
