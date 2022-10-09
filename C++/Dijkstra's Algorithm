@@ -1,0 +1,42 @@
+#include<bits/stdc++.h>
+#define INF 0x3f3f3f3f
+using namespace std;
+int main()
+{
+    int V,E,u,v,w,sum=0;
+    scanf("%d %d",&V,&E);    
+    priority_queue<pair<int,int>,vector<pair<int,int> >,greater<pair<int,int> > >pq;
+    list< pair<int, int> > *adj=new list<pair<int,int> >[V+1];
+    vector<int> distance(V+1,INF);
+    vector<int> pre(V+1,-1);
+    vector<int> selected(V+1,0);
+    for(int i=1;i<=E;i++)
+    {
+        scanf("%d %d %d",&u,&v,&w);
+        adj[u].push_back(make_pair(v,w));
+        //adj[v].push_back(make_pair(u,w));
+    }
+    pq.push(make_pair(0,1));
+    distance[1]=0;
+    while(!pq.empty())
+    {
+        u=pq.top().second;
+        pq.pop();
+        if(selected[u])
+        continue;
+        selected[u]=1;
+        for(list<pair<int,int> >::iterator i=adj[u].begin();i!=adj[u].end();i++)
+        {
+            int v=(*i).first,w=(*i).second;
+            if(distance[u]+w<distance[v])
+            {
+                pre[v]=u;
+                distance[v]=w+distance[u];
+                pq.push(make_pair(distance[v],v));                
+            }
+        }
+    }
+    for(int i=1;i<=V;i++)
+    cout<<i<<" "<<distance[i]<<endl;
+    return 0;
+}
