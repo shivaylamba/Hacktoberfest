@@ -41,15 +41,14 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&a[i]);
     }
-    int n = sizeof(arr) / sizeof(int);
     int d=rand()%n;
     int temp;
-    temp=arr[0];
-    arr[0]=arr[d];
-    arr[d]=temp;
-    quicksort(arr,0,n-1);
+    temp=a[0];
+    a[0]=a[d];
+    a[d]=temp;
+    quicksort(a,0,n-1);
     for(int i=0;i<n;i++){
-        printf(" %d",arr[i]);
+        printf(" %d",a[i]);
     }
 
 }
