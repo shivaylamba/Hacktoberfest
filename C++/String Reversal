@@ -1,0 +1,49 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+class lap
+{
+public:
+	char* a;
+	char* b;
+	char* c;
+	lap()
+	{
+		char * a = new char[10]();
+		char * b = new char[10]();
+		char * c = new char[10]();
+	       a[0] ='M';
+		   a[1] = 'i';
+		   a[2] = 'r';
+		   a[3] = 'z';
+		   a[4] = 'a';
+
+		   b[0] = ' ';
+		   b[1] = 'J';
+		   b[2] = 'a';
+		   b[3] = 'm';
+		   b[4] = 'e';
+		   b[5] = 'e';
+		   b[6] = 'l';
+
+		   c[0] = ' ';
+		   c[1] = 'B';
+		   c[2] = 'a';
+		   c[3] = 'i';
+		   c[4] = 'g';
+	
+		join(a, b, c);
+	}
+	void join(char* x, char* y, char* z)
+	{
+		strcat(x, y);
+		strcat(x, z);
+		cout << x;
+	}
+};
+int main()
+{
+	lap w;
+	w;
+}
