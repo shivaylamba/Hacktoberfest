@@ -14,7 +14,7 @@ class Main
 		System.out.print("Enter the number :");
 		int n = sc.nextInt();
     int l=0;
-    int sum=0;
+    // int sum=0;
     while(n>0)
     {
       int d= n%10;
