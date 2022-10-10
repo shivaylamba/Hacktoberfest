@@ -43,9 +43,9 @@ int main(){
     for(int i=0;i<n;i++){
         scanf("%d",&a[i]);
     }
-    mergesort(arr,0,n-1);   
+    mergesort(a,0,n-1);   
     printf("\n");
     for(int i=0;i<n;i++){
-        printf(" %d",arr[i]);
+        printf(" %d",a[i]);
     }
 }
