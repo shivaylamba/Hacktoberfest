@@ -1,0 +1,73 @@
+//Start pseudo-code
+    //1) create string variables for user input gpaString and admissionTestScoreString
+    //2) create variable for gpa
+    //3) create variable for admissions test scores
+    //4) Prompt user input for gpa
+    //5) set gpaString to equal users input
+    //6) convert user input from string to float because it is a single decimal
+    //7) prompt user input for admission test score
+    //8) set admissionTestScoreString to equal user input
+    //9) convert user input from string to int because they are whole number integers
+    //10) write "accept":
+    //          if gpa is >= 3.0 and admisssion test score is >= 60
+    //      or
+    //          if gpa is < 3.0 and admission test score is >= 80
+    //   
+    // 11) write "Reject":
+    //          if gpa is >= 3.0 and admission test score is < 60
+    //      or
+    //          of gpa < 3.0 and admission test score is < 80
+    // 12)Prompt user to test more inputs for a max of up to 4
+using System;
+using static System.Console;
+class Admission
+{
+    static void Main()
+    {
+        string gpaString, admissionTestScoreString;
+        float gpa;
+        int admissionTestScore;
+        int loopCount = 0;
+        const int limit = 4;
+        string retestString;
+        char response = 'Y';
+        while (loopCount < limit && response == 'Y')
+        {
+            WriteLine("Please enter students gpa: ");
+            gpaString = ReadLine();
+            gpa = Convert.ToSingle(gpaString);
+            WriteLine("Please enter a students addmission test score: ");
+            admissionTestScoreString = ReadLine();
+            admissionTestScore = Convert.ToInt32(admissionTestScoreString);
+            if ((gpa >= 3.0 && admissionTestScore >= 60) || (gpa < 3.0 && admissionTestScore >= 80))
+            {
+                WriteLine("Accept");
+                WriteLine("Would you like to test another applicant? Y/n");
+                retestString = ReadLine();
+                response = Convert.ToChar(retestString);
+                loopCount = loopCount + 1;
+            }
+            else
+            {
+                WriteLine("Reject");
+                WriteLine("Would you like to test another applicant? Y/n");
+                retestString = ReadLine();
+                response = Convert.ToChar(retestString);
+                loopCount = loopCount + 1;
+            }
+            if (loopCount > limit)
+            {
+                WriteLine("Would you like to test another applicant? Y/n");
+                retestString = ReadLine();
+                response = Convert.ToChar(retestString);
+                loopCount = loopCount + 1;
+            }
+        }
+        if (loopCount == 4)
+        {
+            WriteLine("Subscribe to Premium to test more!");
+        }
+        else
+            WriteLine("Goodbye");
+    }
+}
