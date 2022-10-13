@@ -1,0 +1,95 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Node {
+public:
+    int data;
+    Node* next;
+};
+
+ListNode* merge(ListNode* l1,ListNode* l2){
+        if(l1==NULL)
+            return l2;
+        if(l2==NULL)
+            return l1;
+        if(l1->val<l2->val){
+             l1->next= merge(l1->next,l2);
+            return l1;
+        }
+        else
+          l2->next= merge(l1,l2->next);
+        return l2;
+    }
+    
+    ListNode* mergeSort(ListNode* head){
+       if(head==NULL||head->next==NULL)
+            return head;
+        
+        ListNode* slow=head,*fast=head->next;
+        while(fast!=NULL&&fast->next!=NULL){
+            fast=fast->next->next;
+           
+            slow=slow->next;
+        }
+   
+        ListNode* left=head,*right=slow->next;
+         slow->next=NULL;
+        
+      left=  mergeSort(left);
+      right=  mergeSort(right);
+       ListNode* result= merge(left,right);
+      return  result;
+    }
+
+    ListNode* sortList(ListNode* head) {
+       
+        
+       
+       return mergeSort(head);
+        
+    }
+    void printList(Node* head)
+{
+Node* temp=head;
+    while (temp != NULL) {
+        cout << temp->data << " ";
+        temp = temp->next;
+    }
+}
+ 
+/*  insert a node at the starting of the linked list */
+void push(Node** head_ref, int new_data)
+{
+    
+    Node* new_node = new Node();
+ 
+   
+    new_node->data = new_data;
+ 
+   
+    new_node->next = (*head_ref);
+ 
+   
+    (*head_ref) = new_node;
+}
+int main(){
+Node* res = NULL;
+Node* head = NULL;
+ 
+    /*  create a unsorted linked lists  a: 5->3->4->6->9->15 */
+    push(&head, 5);
+    push(&head, 3);
+    push(&head, 4);
+    push(&head, 6);
+    push(&head, 9);
+    push(&head, 15);
+ 
+    
+    MergeSort(&a);
+ 
+    cout << "Sorted Linked List is: \n";
+    printList(a);
+ 
+    return 0;
+}
+ 
