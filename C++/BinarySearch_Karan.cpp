@@ -40,7 +40,7 @@ int main()
         } 
         if(first > last)
 	{
-	   cout<<item<<" not found in the array";
+	   cout<<item<<" not found in array";
 	}
 
 	 
