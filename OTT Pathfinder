@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-30">
+<title>Mercury</title>
+</head>
+<body>
+<meta charset="utf-50">
+
+<p> If you like to go to Netflix<a href="https://www.netflix.com/"
+title="Netflix">Click Here</a>
+</p>
+
+<p> If you like to go to Prime Video<a href="https://www.primevideo.com/"
+title="PrimeVideo">Click Here</a>
+</p>
+
+<p> If you like to go to Disney Hotstar<a href="https://www.hotstar.com/in"
+title="DisneyHotstar">Click Here</a>
+</p>
+</body>
+    </html>
