@@ -1,0 +1,21 @@
+.previewImg {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+}
+
+.inputField {
+    background-color: black;
+    color: white;
+    font-size: 1.3vw;
+    display: inline-block;
+}
+
+.uploadContainer {
+    position: relative;
+    border: 2px solid red;
+    border-radius: 30px;
+    width: 40%;
+    height: auto
+}

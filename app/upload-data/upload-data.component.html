@@ -1,0 +1,12 @@
+<div class="uploadContainer">
+    <label for="a">HTML</label>
+    <input placeholder="Brand Name" id="a" class="inputField" [(ngModel)]="bName">
+    <span>Product:<input placeholder="Product Name" class="inputField" [(ngModel)]="pName"></span>
+    <span>Size:<input placeholder="size" class="inputField" [(ngModel)]="size"></span>
+    <span>Fabric: <input placeholder="Fabric Type" class="inputField" [(ngModel)]="fabric"></span><br>
+    <input type="file" class="uploadInput" [(ngModel)]="img1" (change)="chooseMainFile($event)">
+    <img [src]="preview2" class="previewImg">
+    <input type="file" class="uploadInput" [(ngModel)]="img2" (change)="chooseFile($event)">
+    <img [src]="preview1" class="previewImg">
+    <!-- <button (click)="uploadMovieData()">Generate pdf</button> -->
+</div>
