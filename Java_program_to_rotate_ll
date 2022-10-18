@@ -1,0 +1,107 @@
+# Java program to rotate a linked list... 
+
+class LinkedList 
+{
+	// Head of list
+	Node head; 
+
+	// Linked list Node
+	class Node 
+	{
+		int data;
+		Node next;
+		Node(int d)
+		{
+			data = d;
+			next = null;
+		}
+	}
+
+	void rotate(int k)
+	{
+		if (k == 0)
+			return;
+
+
+		Node current = head;
+
+		
+		int count = 1;
+		while (count < k && current != null) 
+		{
+			current = current.next;
+			count++;
+		}
+
+		
+		if (current == null)
+			return;
+
+		
+		Node kthNode = current;
+
+	
+		while (current.next != null)
+			current = current.next;
+
+		// Change next of last node to previous head
+		// Next of 60 is now changed to node 10
+
+		current.next = head;
+
+		// Change head to (k+1)th node
+		// head is now changed to node 50
+		head = kthNode.next;
+
+		// change next of kth node to null
+		kthNode.next = null;
+	}
+
+
+	void push(int new_data)
+	{
+		/* 1 & 2: Allocate the Node &
+				Put in the data*/
+		Node new_node = new Node(new_data);
+
+		// 3. Make next of new Node as head 
+		new_node.next = head;
+
+		// 4. Move the head to point to 
+		// new Node 
+		head = new_node;
+	}
+
+	void printList()
+	{
+		Node temp = head;
+		while (temp != null) 
+		{
+			System.out.print(temp.data + " ");
+			temp = temp.next;
+		}
+		System.out.println();
+	}
+
+	// Driver code
+	public static void main(String args[])
+	{
+		LinkedList llist = new LinkedList();
+
+		// Create a list 
+		// 10->20->30->40->50->60
+		for (int i = 60; i >= 10; i -= 10)
+			llist.push(i);
+
+		System.out.println(
+			"Given list");
+		llist.printList();
+
+		llist.rotate(4);
+
+		System.out.println(
+			"Rotated Linked List");
+		llist.printList();
+	}
+}
+// This code is contributed by Rajat Mishra 
