@@ -1,6 +1,3 @@
-/*file: MatrixMultiplication.java
- * author: Naveen
- */
 
 import java.util.Scanner;
 public class MatrixMultiplication {
