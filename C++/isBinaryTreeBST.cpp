@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//check if binary tree can be converted to bst
 struct Node {
     int data;
     Node * left, * right;
