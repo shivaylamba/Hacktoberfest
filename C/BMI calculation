@@ -1,0 +1,57 @@
+//BMI(Body Mass Index) of a Person:
+
+#include <stdio.h>
+#include <math.h>
+void catagory(float bmi, char type[50]){
+    if(bmi <15.0)    {char type = puts("Starvation");}
+    else if(bmi >15.0 && bmi<=17.5)   {char type = puts("Anorexic");}
+    else if(bmi >17.5 && bmi<=18.5)   {char type = puts("Underweight");}
+    else if(bmi >18.5 && bmi<=24.9)   {char type = puts("Ideal");}
+    else if(bmi >24.9 && bmi<=25.9)   {char type = puts("Overweight");}
+    else if(bmi >25.9 && bmi<=30.9)   {char type = puts("Obese");}
+    else if(bmi>=40)   {char type = puts("Morbidly Obese");}
+}
+
+int main(){
+    int w, h, hm; char type[50]; float bmi;
+    printf("Enter Your Weight(Kg): ");  scanf("%d", &w);
+
+//code for height
+    int num;
+    printf("ENTER YOUR HEIGHT\n");
+    printf("Enter 1 ->> (cm);  2 ->> (m);  3 ->> (inch): ");
+    scanf("%d", &num);
+    
+    do{
+    if(num == 2){
+        printf("Enter your height(m): ");  
+        scanf("%d", &h);  
+        hm = h;}
+    else if(num == 1){
+        printf("Enter your Height(cm): ");
+        scanf("%d", &h);
+        hm = h/100;
+    }
+    else if(num == 3){
+        printf("Enter your Height(inch): ");
+        scanf("%d", &h);
+        hm = h/39;
+    }
+    else{printf("Enter 1, 2 or 3(choose a valid value)");}
+
+    }while(num != 1 && num !=2 && num != 3);
+
+
+//code for BMI calculation
+    bmi = w/pow(hm, 2);
+    printf("Your BMI is: %.2f\n",bmi);
+
+//code for defining catagory(using function)
+    catagory(bmi, type);
+    gets(type);
+
+    int a;
+    printf("Press (0 + Enter key) to exit");
+    scanf("%d", &a);
+    return 0;
+}
