@@ -7,7 +7,7 @@ int main()
 
     cout << "Enter two numbers: ";
     cin >> a >> b;
-    c = (a > b) ? n1 : n2;
+    c = (a > b) ? a : b;
 
     do
     {
