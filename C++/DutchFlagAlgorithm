@@ -1,0 +1,53 @@
+/*
+Ques: Dutch Flag Problem
+Given an array which consists of only 0, 1 and 2. Sort the array without using any sorting algorithm.
+Time Complexity: O(N)
+*/
+#include <iostream>
+#include <bits\stdc++.h>
+using namespace std;
+
+void Sort012(int arr[], int n)
+{
+    int low = 0, mid = 0, high = n - 1;
+    while (mid <= high)
+    {
+        if (arr[mid] == 0)
+        {
+            swap(arr[low], arr[mid]);
+            low++;
+            mid++;
+        }
+
+        else if (arr[mid] == 1)
+        {
+            mid++;
+        }
+        
+        else
+        {
+            swap(arr[high], arr[mid]);
+            high--;
+        }
+    }
+}
+
+int main()
+{
+    int n;
+    cout << "Size of array: ";
+    cin >> n;
+    int arr1[n];
+    cout << "Array\n";
+    for (int i = 0; i < n; i++)
+    {
+        cin >> arr1[i];
+    }
+    Sort012(arr1, n);
+    cout << "Sorted Array\n";
+    for (int i = 0; i < n; i++)
+    {
+        cout << arr1[i] << " ";
+    }
+    return 0;
+}
