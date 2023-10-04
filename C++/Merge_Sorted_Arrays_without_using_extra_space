@@ -1,0 +1,42 @@
+// Merge two sorted array using no extra space
+
+#include <bits\stdc++.h>
+using namespace std;
+// T.C = (n + m)log(n + m)
+void Merge(vector<int> &arr1, vector<int> &arr2, int n1, int n2)
+{
+    int i = 0, j = 0, k = n1 - 1;
+    while (i <= k && j < n2)
+    {
+        if (arr1[i] < arr2[j])
+            i++;
+        else
+        {
+            swap(arr1[k], arr2[j]);
+            k--;
+            j++;
+        }
+    }
+    sort(arr1.begin(), arr1.end());
+    sort(arr2.begin(), arr2.end());
+}
+
+int main()
+{
+    vector<int> arr1 = {1, 3, 5, 7};
+    vector<int> arr2 = {0, 2, 6, 8, 9};
+    int n1 = arr1.size();
+    int n2 = arr2.size();
+    cout << "arr1: ";
+    print(arr1);
+    cout << "arr2: ";
+    print(arr2);
+    cout << endl;
+    Merge(arr1, arr2, n1, n2);
+    cout << "arr1: ";
+    print(arr1);
+    cout << "arr2: ";
+    print(arr2);
+
+    return 0;
+}
