@@ -1,84 +1,67 @@
-#include <iostream> 
-#include <list> 
-#include <stack> 
-using namespace std; 
+#include <bits/stdc++.h>
 
-class Graph { 
-	int V; 
+using namespace std;
 
-	list<int>* adj; 
+class Solution
+{
+	void findTopoSort(int node, vector<int> &vis, stack<int> &st, vector<int> adj[])
+	{
+		vis[node] = 1;
 
+		for (auto it : adj[node])
+		{
+			if (!vis[it])
+			{
+				findTopoSort(it, vis, st, adj);
+			}
+		}
+		st.push(node);
+	}
 
-	void topologicalSortUtil(int v, bool visited[], stack<int>& Stack); 
+public:
+	vector<int> topoSort(int N, vector<int> adj[])
+	{
+		stack<int> st;
+		vector<int> vis(N, 0);
+		for (int i = 0; i < N; i++)
+		{
+			if (vis[i] == 0)
+			{
+				findTopoSort(i, vis, st, adj);
+			}
+		}
+		vector<int> topo;
+		while (!st.empty())
+		{
+			topo.push_back(st.top());
+			st.pop();
+		}
+		return topo;
+	}
+};
 
-public: 
-	Graph(int V);
+int main()
+{
 
+	int N = 6;
 
-	void addEdge(int v, int w); 
+	vector<int> adj[5 + 1];
 
+	adj[5].push_back(2);
+	adj[5].push_back(0);
+	adj[4].push_back(0);
+	adj[4].push_back(1);
+	adj[2].push_back(3);
+	adj[3].push_back(1);
 
-	void topologicalSort(); 
-}; 
+	Solution obj;
+	vector<int> res = obj.topoSort(6, adj);
 
-Graph::Graph(int V) 
-{ 
-	this->V = V; 
-	adj = new list<int>[V]; 
-} 
+	cout << "Toposort of the given graph is:" << endl;
+	for (int i = 0; i < res.size(); i++)
+	{
+		cout << res[i] << " ";
+	}
 
-void Graph::addEdge(int v, int w) 
-{ 
-	adj[v].push_back(w); 
-} 
-
-void Graph::topologicalSortUtil(int v, bool visited[], 
-								stack<int>& Stack) 
-{ 
-
-	visited[v] = true; 
-
-
-	list<int>::iterator i; 
-	for (i = adj[v].begin(); i != adj[v].end(); ++i) 
-		if (!visited[*i]) 
-			topologicalSortUtil(*i, visited, Stack); 
-
-
-	Stack.push(v); 
-} 
-
-void Graph::topologicalSort() 
-{ 
-	stack<int> Stack; 
-
-
-	bool* visited = new bool[V]; 
-	for (int i = 0; i < V; i++) 
-		visited[i] = false; 
-
-
-	for (int i = 0; i < V; i++) 
-		if (visited[i] == false) 
-			topologicalSortUtil(i, visited, Stack); 
-
-	while (Stack.empty() == false) { 
-		cout << Stack.top() << " "; 
-		Stack.pop(); 
-	} 
-} 
-int main() 
-{ 
-	Graph g(6); 
-	g.addEdge(5, 2); 
-	g.addEdge(5, 0); 
-	g.addEdge(4, 0); 
-	g.addEdge(4, 1); 
-	g.addEdge(2, 3); 
-	g.addEdge(3, 1); 
-
-	cout << "Topological Sort:"; 
-	g.topologicalSort(); 
-
-	return 0; 
-} 
+	return 0;
+}
