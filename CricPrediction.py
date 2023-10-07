@@ -5,6 +5,6 @@ pg=int(input('enter your guess'))
 #print(pg)
 diff=abs(pg-a)
 if(diff<=10 and diff>=1):
-	print('fan')
+	print('True Fan')
 else:
-	print('fake')
+	print('Fake Fan')
