@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator....</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <section class="calculator">
+        <form>
+            <input type="text" class="screen">
+        </form>
+        <div class="buttons">
+            <button type="button" class="btn btn-yellow">*</button>
+            <button type="button" class="btn btn-yellow">/</button>
+            <button type="button" class="btn btn-yellow">-</button>
+            <button type="button" class="btn btn-yellow">+</button>
+
+            <button type="button" class="btn btn-grey">9</button>
+            <button type="button" class="btn btn-grey">8</button>
+            <button type="button" class="btn btn-grey">7</button>
+            <button type="button" class="btn btn-grey">6</button>
+
+            <button type="button" class="btn btn-grey">5</button>
+            <button type="button" class="btn btn-grey">4</button>
+            <button type="button" class="btn btn-grey">3</button>
+            <button type="button" class="btn btn-grey">2</button>
+            <button type="button" class="btn btn-grey">1</button>
+            <button type="button" class="btn btn-grey">0</button>
+            <button type="button" class="btn btn-grey">.</button>
+
+            <button type="button" class="btn btn-down">=</button>
+            <button type="button" class="btn btn-clear">C</button>
+        </div>
+    </section>
+
+    <script>
+        let point = "";
+
+        let buttons = document.querySelectorAll('.btn');
+
+
+        Array.from(buttons).forEach((button) => {
+            button.addEventListener('click', (e) => {
+                if (e.target.innerHTML == '=') {
+
+                    point = eval(point);
+                    document.querySelector('input').value = point;
+                }
+                else if (e.target.innerHTML == 'C') {
+                    point = " ";
+                    document.querySelector('input').value = point;
+                }
+                else {
+                    console.log(e.target);
+                    point = point + e.target.innerHTML;
+                    document.querySelector('input').value = point;
+                }
+            })
+
+        })
+
+
+
+            window.addEventListener("keypress", (e) => {
+                console.log(e.which);
+                if(e.which <=65 ){
+                if (e.key === 'Enter') {
+
+                    point = eval(point);
+                    document.querySelector('input').value = point;
+                }
+               
+                else {
+                    
+                    point = point + e.key;
+                    document.querySelector('input').value = point;
+                }
+                }
+            })
+
+        
+
+
+    </script>
+</body>
+
+</html>
