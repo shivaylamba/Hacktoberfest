@@ -1,0 +1,324 @@
+// A C++ program for a phonebook application
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+// A structure to store the details of a contact
+struct Contact {
+  string name;
+  string phone;
+  string address;
+};
+
+// A constant for the maximum number of contacts in the phonebook
+const int MAX = 100;
+
+// A global array to store the contacts in the phonebook
+Contact phonebook[MAX];
+
+// A global variable to store the current number of contacts in the phonebook
+int count = 0;
+
+// A function to show the menu to the user
+void showMenu();
+
+// A function to add a new contact to the phonebook
+void addContact();
+
+// A function to find a contact in the phonebook by name
+void findContact();
+
+// A function to edit a contact in the phonebook by name
+void editContact();
+
+// A function to remove a contact from the phonebook by name
+void removeContact();
+
+// A function to save the contacts in the phonebook to a file
+void saveContacts();
+
+// A function to load the contacts in the phonebook from a file
+void loadContacts();
+
+// The main function of the program
+int main() {
+  // Load the contacts from the file at the beginning
+  loadContacts();
+
+  // Declare a variable to store the user's choice from the menu
+  int choice;
+
+  // Show the menu and get the user's choice until they exit
+  do {
+    showMenu();
+    cin >> choice;
+
+    // Perform different actions based on the user's choice
+    switch (choice) {
+      case 1:
+        addContact();
+        break;
+      case 2:
+        findContact();
+        break;
+      case 3:
+        editContact();
+        break;
+      case 4:
+        removeContact();
+        break;
+      case 5:
+        cout << "Thank you for using the phonebook application.\n";
+        break;
+      default:
+        cout << "Invalid choice. Please try again.\n";
+    }
+  } while (choice != 5);
+
+  // Save the contacts to the file at the end
+  saveContacts();
+
+  // Return 0 to indicate successful termination
+  return 0;
+}
+
+// The function to show the menu to the user
+void showMenu() {
+  cout << "Welcome to the phonebook application.\n";
+  cout << "Please choose one of the following options:\n";
+  cout << "1. Add a new contact\n";
+  cout << "2. Find a contact\n";
+  cout << "3. Edit a contact\n";
+  cout << "4. Remove a contact\n";
+  cout << "5. Exit\n";
+}
+
+// The function to add a new contact to the phonebook
+void addContact() {
+  // Check if
+
+the phonebook is full
+if (count == MAX) {
+    cout << "The phonebook is full. You cannot add more contacts.\n";
+    return;
+}
+
+// Declare variables to store
+
+the details of
+
+the new contact
+string name, phone, address;
+
+// Get
+
+the details of
+
+the new contact from
+
+the user
+cout << "Enter
+
+the name of
+
+the new contact: ";
+cin.ignore(); // Ignore any leftover characters in
+
+the input buffer
+getline(cin, name); // Get
+
+the whole line as name
+
+cout << "Enter
+
+the phone number of
+
+the new contact: ";
+getline(cin, phone); // Get
+
+the whole line as phone
+
+cout << "Enter
+
+the address of
+
+the new contact: ";
+getline(cin, address); // Get
+
+the whole line as address
+
+// Validate
+
+the phone number format (optional)
+#include <regex>
+...
+// Declare a regular expression object to match
+
+the phone number format
+std::regex phone_regex("\\(\\d{3}\\) \\d{3}-\\d{4}|\\+\\d{2} \\d{10}");
+
+// Check if
+
+the phone number matches
+
+the regular expression
+if (!std::regex_match(phone, phone_regex)) {
+    cout << "Invalid phone number format. Please enter again.\n";
+    return;
+}
+
+// Add
+
+the new contact to
+
+the phonebook array and increment
+
+the count variable
+phonebook[count].name = name;
+phonebook[count].phone = phone;
+phonebook[count].address = address;
+count++;
+}
+
+// The function to find a contact in
+
+the phonebook by name
+void findContact() {
+    // Declare a variable to store
+
+the name of
+
+the contact to find
+    string name;
+
+    // Get
+
+the name of
+
+the contact to find from
+
+the user
+    cout << "Enter
+
+the name of
+
+the contact to find: ";
+    cin.ignore(); // Ignore any leftover characters in
+
+    the input buffer
+    getline(cin, name); // Get
+
+    the whole line as name
+
+    // Use a loop to iterate over
+
+    the phonebook array
+    for (int i = 0; i < count; i++) {
+        // Compare
+
+        the name of each contact with
+
+        the name that you entered
+        if (phonebook[i].name == name) {
+            // Display
+
+            the details of
+
+            the contact if you find a match
+            cout << "Name: " << phonebook[i].name << "\n";
+            cout << "Phone: " << phonebook[i].phone << "\n";
+            cout << "Address: " << phonebook[i].address << "\n";
+            return;
+        }
+    }
+
+    // Display a message that
+
+    the contact does not exist if you do not find a match
+    cout << "The contact with name " << name << " does not exist in
+
+    the phonebook.\n";
+}
+
+// The function to edit a contact in
+
+the phonebook by name
+void editContact() {
+    // Declare variables to store
+
+the name of
+
+the contact to edit and
+
+the new details that you want to update
+string name, new_name, new_phone, new_address;
+
+// Get
+
+the name of
+
+the contact to edit from
+
+the user
+cout << "Enter
+
+the name of
+
+the contact to edit: ";
+cin.ignore(); // Ignore any leftover characters in
+
+the input buffer
+getline(cin, name); // Get
+
+the whole line as name
+
+// Use a loop to iterate over
+
+the phonebook array
+for (int i = 0; i < count; i++) {
+  // Compare
+
+  the name of each contact with
+
+  the name that you entered
+  if (phonebook[i].name == name) {
+    // Get
+
+    the new details from
+
+    the user
+    cout << "Enter
+
+    the new
+
+    name of
+
+    the contact: ";
+    getline(cin, new_name); // Get
+
+    the whole line as new_name
+
+    cout << "Enter
+
+    the new
+
+    phone number of
+
+    the contact: ";
+    getline(cin, new_phone); // Get
+
+    the whole line as new_phone
+
+    cout << "Enter
+
+    the new
+
+    address of
+
+    the contact: ";
+    getline(cin, new_address); // Get
+
+    the whole line as new_address
+    
+    
