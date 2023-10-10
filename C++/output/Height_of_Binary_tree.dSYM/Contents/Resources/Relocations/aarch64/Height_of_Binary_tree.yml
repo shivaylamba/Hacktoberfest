@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/rounaksarkar/Desktop/Github repo/Hacktoberfest/C++/output/Height_of_Binary_tree'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z6heightP4Node, symObjAddr: 0x0, symBinAddr: 0x100003BAC, symSize: 0x84 }
+  - { offsetInCU: 0xB0C, offset: 0xB0C, size: 0x8, addend: 0x0, symName: __ZNSt3__13maxB7v160006IiEERKT_S3_S3_, symObjAddr: 0x84, symBinAddr: 0x100003C30, symSize: 0x2C }
+  - { offsetInCU: 0xB4F, offset: 0xB4F, size: 0x8, addend: 0x0, symName: __ZNSt3__13maxB7v160006IiNS_6__lessIiiEEEERKT_S5_S5_T0_, symObjAddr: 0x2D4, symBinAddr: 0x100003E80, symSize: 0x54 }
+  - { offsetInCU: 0x2D3E, offset: 0x2D3E, size: 0x8, addend: 0x0, symName: __Z6heightP4Node, symObjAddr: 0x0, symBinAddr: 0x100003BAC, symSize: 0x84 }
+  - { offsetInCU: 0x2D6A, offset: 0x2D6A, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0xB0, symBinAddr: 0x100003C5C, symSize: 0x1C8 }
+  - { offsetInCU: 0x2DDC, offset: 0x2DDC, size: 0x8, addend: 0x0, symName: __ZN4NodeC1Ei, symObjAddr: 0x278, symBinAddr: 0x100003E24, symSize: 0x34 }
+  - { offsetInCU: 0x2E12, offset: 0x2E12, size: 0x8, addend: 0x0, symName: __ZN4NodeC2Ei, symObjAddr: 0x2AC, symBinAddr: 0x100003E58, symSize: 0x28 }
+  - { offsetInCU: 0x2E5C, offset: 0x2E5C, size: 0x8, addend: 0x0, symName: __ZNKSt3__16__lessIiiEclB7v160006ERKiS3_, symObjAddr: 0x328, symBinAddr: 0x100003ED4, symSize: 0x34 }
+...
