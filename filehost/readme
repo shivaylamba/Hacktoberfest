@@ -1,0 +1,9 @@
+to use
+
+install these dependancies using this command!
+
+npm i express fs
+
+to run the server
+
+node ./server.js
