@@ -1,0 +1,17 @@
+To use my filehost, please run these simple steps.
+
+(assuming you have NODEJS installed already)
+
+First, run in your console "npm i express fs"
+
+then CD into the same folder as "server.js", and run in your console "node ./server.js"
+
+This can only be used with a POST request at the moment.
+
+Post usage is in JSON like this:
+
+{
+    'whatever': 'contents that should be saved to .txt file'
+}
+
+Thank you for using my filehost!
