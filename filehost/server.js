@@ -1,10 +1,10 @@
 const express = require(`express`);
 const fs = require(`fs`);
-const { auth } = require(`./auth.json`)
+// const { auth } = require(`./auth.json`)
 const d = new Date()
 const app = express();
-const port = 3000;
-const files = fs.readdirSync(`./files`);
+const port = 3000; // you can change the port to whatever you would like!
+// const files = fs.readdirSync(`./files`);
 app.use(express.json());
 
 function objToString(obj) {
@@ -51,5 +51,5 @@ app.get('/upload', (req, res) => {
 // }); it fills up your ram so dont uncomment and then go to localhost:3000/view :troll:
 
 app.listen(port, () => {
-    console.log(`Ready for use! Visit the page on localhost:3000`);
+    console.log(`Ready for use! Visit the page on localhost:${port}`);
 });
