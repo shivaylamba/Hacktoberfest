@@ -1,0 +1,25 @@
+#include <iostream>
+
+int main() {
+    int n;
+    std::cout << "Enter the size of the star: ";
+    std::cin >> n;
+
+    if (n % 2 == 0) {
+        std::cout << "Please enter an odd number for a better star pattern." << std::endl;
+        return 1;
+    }
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < n; j++) {
+            if (i == n / 2 || j == n / 2 || i + j == n - 1 || i == j) {
+                std::cout << "*";
+            } else {
+                std::cout << " ";
+            }
+        }
+        std::cout << std::endl;
+    }
+
+    return 0;
+}
