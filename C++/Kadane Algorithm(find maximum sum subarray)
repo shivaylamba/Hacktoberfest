@@ -3,11 +3,14 @@ using namespace std;
 
 int solve(int a[], int n){
 
+  int currsum = INT_MIN;
+  int maxsum = INT_MIN;
+
   for(int i = 0 ; i < n ; i++){
-     currsum = max(arr[i],currsum+arr[i]);
+     currsum = max(a[i], currsum+a[i] );
      maxsum = max(maxsum ,currsum);}
 
-    return currsum;
+    return maxsum;
 }
 
 int main(){
