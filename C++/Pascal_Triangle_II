@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+
+vector<int> getRow(int rowIndex) {
+        vector<int>  row(rowIndex+1,0);
+        row[0]=1;
+        for(int i=0;i<rowIndex+1;i++){
+            for(int j=i;j>=1;j--){
+                row[j]+=row[j-1];
+            }
+        }
+        return row;
+    }
+
+int main(){
+  vector<int> row=getRow(3);
+  for(int i=0;i<row.size();i++){
+    cout<<ans[i]<<" ";
+  }
+  return 0;
+}
