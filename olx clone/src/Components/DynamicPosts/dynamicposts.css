@@ -1,0 +1,28 @@
+.moreView {
+    margin: 16px 16px 24px;
+    padding: 16px 16px 32px;
+    background-color: #ebeeef;
+    border-radius: 4px;
+  }
+  
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .heading :first-child {
+    font-size: 24px;
+    color: #002f34;
+  }
+  
+  .heading :last-child {
+    font-size: 14px;
+    color: #002f34;
+  }
+  
+  .moreView .cards {
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+  }

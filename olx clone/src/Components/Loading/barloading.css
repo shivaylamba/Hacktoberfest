@@ -1,0 +1,54 @@
+.bar-loading .middle {
+    
+    left: 15%;
+    position: relative;
+  }
+   .bar {
+    width: 50px;
+    margin:6px 25px;
+    height: 200px;
+    background: #fff;
+    display: inline-block;
+    transform-origin: bottom center;
+    animation: loader 1.2s linear infinite;
+  }
+  .bar1 {
+    animation-delay: 0.1s;
+  }
+  .bar2 {
+    animation-delay: 0.2s;
+  }
+  .bar3 {
+    animation-delay: 0.3s;
+  }
+  .bar4 {
+    animation-delay: 0.4s;
+  }
+  .bar5 {
+    animation-delay: 0.5s;
+  }
+  .bar6 {
+    animation-delay: 0.6s;
+  }
+  .bar7 {
+    animation-delay: 0.7s;
+  }
+  .bar8 {
+    animation-delay: 0.8s;
+  }
+  
+  @keyframes loader {
+    0% {
+      transform: scaleY(0.1);
+      background: rgb(33, 43, 13);
+    }
+    50% {
+      transform: scaleY(1);
+      background: rgb(106, 219, 200);
+    }
+    100% {
+      transform: scaleY(0.1);
+      background: transparent;
+    }
+}
+  
