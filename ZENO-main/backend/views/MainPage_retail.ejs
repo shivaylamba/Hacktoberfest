@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image: url('https://p4.wallpaperbetter.com/wallpaper/185/914/378/hexagon-white-abstract-3d-abstract-hd-wallpaper-preview.jpg');
+            opacity: 0.3; */
+            background-color: #f4f4f5;
+            margin-left: 50px;
+        }
+        .card {
+        /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+          padding: 2px 16px;
+        }
+        .box {
+            width: 100%;
+            display: flex;
+        }
+        .card {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container input{
+            border: none;
+        }
+        input{
+            padding: 6px 10px;
+            margin: 8px 0;
+        }
+        input[type=submit]{
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        #popup div{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #popup div p{
+            display: inline;
+            margin-right: 20px;
+        }
+        li{
+            list-style-type: none;
+        }
+        #profimag{
+            width: 40px;
+        }
+        .profile{
+            padding: 10px;
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Alert -->
+    <div id="popup">
+        <div>
+            <% if (Data.Alert != "") {%>
+            <p><%= Data.Alert %></p>
+            <input type="submit" value="x" onclick="remove()">
+            <% }%>
+        </div>
+    </div>
+
+    <script>
+        function remove(){
+            const element = document.getElementById("popup");
+            element.remove();
+        }
+    </script>
+
+    <!-- profile Section -->
+    <div class = "profile-flex">
+        <div class="profile card">
+            <h2><img id ="profimag" src="https://icon-library.com/images/coder-icon/coder-icon-13.jpg" alt=""> Profile</h2>
+            <div class="details">
+                 <ul >
+                    <% if (Data.Profile != {}){ for (var prop in Data.Profile ) { %>
+                        <li> <%= prop %> : <%= Data.Profile[prop] %></li>
+                    <% } } else {%>
+                        <li>No data available</li>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Input form section -->
+<div class = "form-for-data-upload">
+    <h2><img src="https://cdn-icons-png.flaticon.com/512/1486/1486433.png" alt="" width="40px"> Create a Product Schema</h4>
+    <form action="/retailer/create-product" method="post" class = "dataform">
+        
+        <input type="text" name = "Product" placeholder="Product Name">
+        <br><br>
+        <input type="text" name = "material_1" placeholder="Material 1">
+        <input type="text" name = "capacity_1" placeholder="Capacity required"><br>
+        <!-- <input type="text" name = "price_1" placeholder="Price"><br> -->
+        <input type="text" name = "material_2" placeholder="Material 2">
+        <input type="text" name = "capacity_2" placeholder="Capacity required"><br>
+        <!-- <input type="text" name = "price_2" placeholder="Price"> -->
+        <input type="text" name = "material_3" placeholder="Material 3">
+        <input type="text" name = "capacity_3" placeholder="Capacity required"><br><br>
+        <!-- <input type="text" name = "price_3" placeholder="Price"><br><br> -->
+
+        <input type="submit" value = "Upload">
+    </form>
+    </div>
+    
+    <style>
+        .form-for-data-upload{
+            /* margin: 0px 0px 0px 10px; */
+            padding: 10px;
+        }
+        .dataform div{
+            padding-bottom: 10px;
+        }
+    </style>
+
+<!-- Available inventory -->
+<div>
+    <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Inventory </h2>
+        <% if (Data.Approved.length == 0) {%>
+            <h3>No stock present</h3>  
+            <% } %>
+        <div class = "box">
+                <% if (Data.Approved) { for (const request of Data.Approved) { %>
+                    <div class="card">
+                        <div class = "container">
+                            <form action="/digichambers/approve-reject-request" method="get">
+                                <% if (request != {}) { %>
+                                    <label for="country"> ID :</label>
+                                    <input type="text" name="_id" readonly value= <%= request._id %> ><br><br>
+                                    <label for="country"> Owner :</label>
+                                    <input type="text" name="Owner" readonly value= <%= request.Owner %> ><br><br>
+                                    <label for="country"> Material :</label>
+                                    <input type="text" name="Material" readonly value= <%= request.Material %> ><br><br>
+                                    <label for="country"> Capacity :</label>
+                                    <input type="text"  name="Status" readonly value= <%= request.Capacity %> ><br><br>
+                                <% } %>
+                            </form>
+                        </div>
+                    </div>
+            <% } } %>
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- available product Schema -->
+<div>
+    <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> All Product Schema</h2>
+    <% if (Data.Stock.length == 0) {%>
+            <h3>No products ideated</h3>  
+            <% } %>
+            <div class = "box">
+                
+                <% if (Data.Stock) { for (const stock of Data.Stock) { %>
+                    <div class="card">
+                        <div class = "container">
+                            <form action="/retailer/setup-raw-material-request" method="post">
+                                <% if (stock != {}) { %>
+                                    <label for="country"> Product :</label>
+                                    <input type="text" name="Product" readonly value= <%= stock.Product %> ><br><br>
+                                    <input type="submit" value="Deploy request">
+                                    <% } %>
+                                    </form>
+                                </div>
+            </div>
+            <% } } %>
+              
+            </div>
+        </div>
+
+
+        <div>
+            <h2>All pending Raw Material requests</h2>
+            <div class = "box">
+                <% if (Data.wRequests.length == 0) {%>
+                    <h3>No requests pending</h3>  
+                <% } %>
+    
+                 <% if (Data.wRequests != []) { for (const Request of Data.wRequests) { %>
+                <div class="card">
+                    <div class = "container">
+                        <form action="/retailer/confirm-fulfillment-of-request" method="post">
+                            <% if (Request != {}) {  %>
+                            <label for="country"> Product :</label>
+                            <input type="text" name="TransportAddress"  readonly value= <%= Request.Product %>><br>
+                            <label for="country"> Material :</label>
+                            <input type="text"  name="ProductAddress"  readonly value= <%= Request.Material %> ><br>
+                            <label for="country"> Status :</label>
+                            <input type="text"  name="ProductAddress"  readonly value= <%= Request.Status %> ><br>
+                            <% } %>
+                              
+                        </form>
+                    </div>
+                </div>
+                <% } } %>
+        </div>
+
+    <!-- tenders -->
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Proposal Requests for raw Materials </h2>
+            <% if (Data.tenders.length == 0) {%>
+                <h3>No proposals present right now</h3>  
+                <% } %>
+            <div class = "box">
+                    <% if (Data.tenders) { for (const request of Data.tenders) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/retailer/approve-raw-material-tender" method="post">
+                                    <% if (request != {}) { %>
+                                        <label for="country"> ID :</label>
+                                        <input type="text" name="_id" readonly value= <%= request._id %> ><br><br>
+                                        <label for="country"> Owner :</label>
+                                        <input type="text" name="Owner" readonly value= <%= request.Owner %> ><br><br>
+                                        <label for="country"> Product :</label>
+                                        <input type="text" name="Product" readonly value= <%= request.Product %> ><br><br>
+                                        <label for="country"> Material :</label>
+                                        <input type="text" name="Material" readonly value= <%= request.Material %> ><br><br>
+                                        <label for="country"> Price :</label>
+                                        <input type="text" name="Price" readonly value= <%= request.Price %> ><br><br>
+                                        <label for="country"> Status :</label>
+                                        <input type="text"  name="Status" readonly value= <%= request.Status %> ><br><br>
+                                        <input type="submit" value="Accept" name = "ops">
+                                        <!-- <input type="submit" value="Reject" name = "ops"> -->
+                                    <% } %>
+                                </form>
+                            </div>
+                        </div>
+                <% } } %>
+            </div>
+    </div>
+
+
+
+
+    <!-- Delivery Scheduled Table / Collection Section -->
+    <div>
+        <h2>Confirm the Scheduled raw Material delivery to Retailer</h2>
+        <div class = "box">
+            <!-- <h2><%=Data.Requests %></h2> -->
+            <% if (Data.Requests.length == 0) {%>
+                <h3>No requests pending</h3>  
+            <% } %>
+
+             <% if (Data.Requests != []) { for (const Request of Data.Requests) { %>
+            <div class="card">
+                <div class = "container">
+                    <form action="/retailer/confirm-fulfillment-of-request" method="post">
+                        <% if (Request != {}) {  %>
+                        <label for="country"> TransportAddress :</label>
+                        <input type="text" name="TransportAddress"  readonly value= <%= Request.Transport %>><br><br>
+                        <label for="country"> ProductAddress :</label>
+                        <input type="text"  name="ProductAddress"  readonly value= <%= Request.Product %> ><br><br>
+                        <input type="submit" value="Confirm delivery">
+                        <% } %>
+                    </form>
+                </div>
+            </div>
+            <% } } %>
+    </div>
+
+
+
+
+</div>
+    <div>
+        <img id = "bg" src="https://png.pngtree.com/png-vector/20190130/ourlarge/pngtree-blue-blockchain-big-data-financial-finance-bitcoin-element-managementbreathable-designbitcoin-png-image_653690.jpg" alt="">
+    </div>
+    <style>
+        #bg {
+            position: absolute;
+            right: 0px;
+            bottom: 0px; 
+            z-index: -1;   
+        }
+    </style>
+
+
+</body>
+</html>

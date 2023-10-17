@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<head>
+    <title>CUSTOMER - CREATE</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(to right bottom, rgb(148, 32, 250), rgb(148, 32, 250));
+        height: 100vh;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .container {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+    }
+
+    form {
+        background: rgb(255, 255, 255);
+        padding: 3em;
+        height: 150px;
+        width: 650px;
+        border-radius: 30px;
+        border-left: 1px solid rgb(146, 0, 141);
+        border-top: 1px solid rgb(194, 0, 97);
+        backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        position: relative;
+        transition: all 0.2s ease-in-out;
+    }
+
+    p {
+        font-weight: 500;
+        color: rgb(255, 0, 128);
+        opacity: 0.7;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 60px;
+        text-shadow: 4px 4px 4px rgb(208, 93, 246);
+        font-weight: 680;
+    }
+
+    input {
+        background: transparent;
+        height: auto;
+        width: 125px;
+        padding: 1em;
+        margin-bottom: 2em;
+        border: none;
+        border-left: 1px solid rgb(255, 255, 255);
+        border-top: 1px solid rgb(255, 255, 255);
+        border-radius: 5000px;
+        backdrop-filter: blur(7px);
+        box-shadow: 4px 4px 60px rgba(156, 156, 156, 0.533);
+        color: rgb(128, 0, 115);
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        text-shadow: 2px 2px 4px rgba(247, 96, 255, 0.678);
+    }
+
+    input:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="button"] {
+        height: auto;
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    input:hover {
+        cursor: pointer;
+    }
+
+    input:active {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    ::placeholder {
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        color: rgb(112, 112, 112);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .container-table {
+        position: relative;
+        top: 145%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    table {
+        width: 1500px;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    th {
+        background-color: #d14ad8;
+    }
+
+    tr:hover {
+        background-color: rgb(255, 61, 236);
+    }
+
+    td {
+        position: relative;
+    }
+
+</style>
+
+<body>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <div class="container-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th>Column 4</th>
+                    <th>Column 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <form>
+            <p>CUSTOMER</p>
+            <input type="text" placeholder="MATERIAL">
+            <input type="text" placeholder="CAPACITY">
+            <input type="button" value="SUBMIT">
+        </form>
+    </div>
+
+</body>
+
+</html>

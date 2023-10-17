@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            /* background-image: url('https://p4.wallpaperbetter.com/wallpaper/185/914/378/hexagon-white-abstract-3d-abstract-hd-wallpaper-preview.jpg');
+            opacity: 0.3; */
+            background-color: #f4f4f5;
+        }
+        .card {
+        /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+          padding: 2px 16px;
+        }
+        .box {
+            width: 100%;
+            display: flex;
+        }
+        .card {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container input{
+            border: none;
+        }
+        input{
+            padding: 12px 20px;
+            margin: 8px 0;
+        }
+        #popup div{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #popup div p{
+            display: inline;
+            margin-right: 20px;
+        }
+        li{
+            list-style-type: none;
+        }
+        #profimag{
+            width: 40px;
+        }
+        .profile{
+            padding: 10px;
+        }
+        #g, #r {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+#r{
+    background-color: #f44336;
+}
+    </style>
+</head>
+<body>
+
+    <!-- // Request raised -->
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Requests needed to review</h2>
+            <% if (Data.Requests.length == 0) {%>
+                <h3>No Requests present</h3>  
+                <% } %>
+            <div class = "box">
+                    <% if (Data.Requests) { for (const request of Data.Requests) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/digichambers//approve-reject-request" method="get">
+                                    <% if (request != {}) { %>
+                                        <label for="country"> ID :</label>
+                                        <input type="text" name="_id" readonly value= <%= request._id %> ><br><br>
+                                        <label for="country"> Owner :</label>
+                                        <input type="text" name="Owner" readonly value= <%= request.Owner %> ><br><br>
+                                        <label for="country"> Material :</label>
+                                        <input type="text" name="Material" readonly value= <%= request.Material %> ><br><br>
+                                        <label for="country"> Status :</label>
+                                        <input type="text"  name="Status" readonly value= <%= request.Status %> ><br><br>
+                                        <input type="submit" value="Accept" name = "ops" id = "g">
+                                        <input type="submit" value="Reject" name = "ops" id = "r">
+                                    <% } %>
+                                </form>
+                            </div>
+                        </div>
+                <% } } %>
+            </div>
+    </div>
+
+
+
+    <!-- // Approved Requests -->
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Approved Requests</h2>
+            <% if (Data.Approved.length == 0) {%>
+                <h3>No Requests present</h3>  
+                <% } %>
+            <div class = "box">
+                    <% if (Data.Approved) { for (const request of Data.Approved) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/digichambers/approve-reject-request" method="get">
+                                    <% if (request != {}) { %>
+                                        <label for="country"> ID :</label>
+                                        <input type="text" name="_id" readonly value= <%= request._id %> ><br><br>
+                                        <label for="country"> Owner :</label>
+                                        <input type="text" name="Owner" readonly value= <%= request.Owner %> ><br><br>
+                                        <label for="country"> Material :</label>
+                                        <input type="text" name="Material" readonly value= <%= request.Material %> ><br><br>
+                                        <label for="country"> Status :</label>
+                                        <input type="text"  name="Status" readonly value= <%= request.Status %> ><br><br>
+                                        <!-- <input type="submit" value="Accept" name = "ops">
+                                        <input type="submit" value="Reject" name = "ops"> -->
+                                    <% } %>
+                                </form>
+                            </div>
+                        </div>
+                <% } } %>
+            </div>
+    </div>
+
+    <!-- // Rejected Requests -->
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Rejected Requests</h2>
+            <% if (Data.Rejected.length == 0) {%>
+                <h3>No Requests present</h3>  
+                <% } %>
+            <div class = "box">
+                    <% if (Data.Rejected) { for (const request of Data.Rejected) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/digichambers/approve-reject-request" method="get">
+                                    <% if (request != {}) { %>
+                                        <label for="country"> ID :</label>
+                                        <input type="text" name="_id" readonly value= <%= request._id %> ><br><br>
+                                        <label for="country"> Owner :</label>
+                                        <input type="text" name="Owner" readonly value= <%= request.Owner %> ><br><br>
+                                        <label for="country"> Material :</label>
+                                        <input type="text" name="Material" readonly value= <%= request.Material %> ><br><br>
+                                        <label for="country"> Status :</label>
+                                        <input type="text"  name="Status" readonly value= <%= request.Status %> ><br><br>
+                                        <!-- <input type="submit" value="Accept" name = "ops">
+                                        <input type="submit" value="Reject" name = "ops"> -->
+                                    <% } %>
+                                </form>
+                            </div>
+                        </div>
+                <% } } %>
+            </div>
+    </div>
+
+
+
+
+    <div>
+        <img id = "bg" width="500px" src="https://digitalchamber.org/wp-content/uploads/2016/12/chamber-logo-PNG.png" alt="">
+    </div>
+
+
+    <style>
+        #bg {
+            position: absolute;
+            right: 0px;
+            bottom: 0px; 
+            z-index: -1;   
+        }
+    </style>
+
+
+</body>
+</html>

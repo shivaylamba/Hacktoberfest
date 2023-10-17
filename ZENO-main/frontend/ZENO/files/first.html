@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <title>ZENO</title>
+</head>
+<style>
+body {
+	margin: 0;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(to right bottom, rgb(148, 32, 250), rgb(252, 82, 244));
+}
+
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+nav ul li {
+	font-size: 40px;
+	font-family: sans-serif;
+	background-color: rgb(230, 165, 251);
+	border: 2px solid rgb(250, 221, 240);
+	letter-spacing: 0.1em;
+	width: 10em;
+	height: 1.5em;
+	line-height: 1.5em;
+	position: relative;
+	overflow: hidden;
+	margin: 0.5em;
+	cursor: pointer;
+}
+
+nav ul li span {
+	color: rgb(255, 255, 255);
+	mix-blend-mode: difference;
+}
+
+nav ul li::before {
+	content: '';
+	position: absolute;
+	width: 1.5em;
+	height: inherit;
+	background-color: rgb(255, 255, 255);
+	border-radius: 50%;
+	top: 0;
+	left: -0.68em;
+	transition: 0.5s ease-out;
+}
+
+nav ul li:hover::before {
+	transform: scale(13.7);
+}
+
+a:link {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+  text-decoration: none;
+}
+
+</style>
+
+<body>
+    <nav>
+        <ul>
+            <li><span><a href ="http://127.0.0.1:5500/ZENO/files/login.html">LOGIN</a></span></li>
+            <li><span><a href ="http://127.0.0.1:5500/ZENO/files/start.html">SIGN UP</a></span></li>
+        </ul>
+      </nav>
+</body>
+
+</html>

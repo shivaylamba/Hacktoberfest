@@ -1,0 +1,27 @@
+.pagination {
+  justify-content: center;
+  margin: 50px 0;
+}
+.pagination li {
+  color: #03080a;
+  font-weight: bolder;
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 1px;
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 8px;
+  transition: all ease 0.3s;
+  
+}
+.pagination li:hover {
+  background-color: rgb(106, 219, 200);;
+  border-color: #ebeeef;
+}
+.active {
+  background-color: rgb(7, 192, 216);
+}

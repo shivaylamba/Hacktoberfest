@@ -1,0 +1,37 @@
+{
+  "name": "supply-chain-and-logistics-blockchain",
+  "version": "1.0.0",
+  "description": "Mini project semester 4 at SPIT mumbai",
+  "main": "index.mjs",
+  "type": "commonjs",
+  "scripts": {
+    "test": "nodemon server.mjs",
+    "start": "nodemon server.mjs",
+    "lint:ejs": "ejslint src/templates/some-template.ejs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prathamesh111-netizen/Supply-Chain-and-Logistics-Blockchain.git"
+  },
+  "author": "Prathamesh Pawar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prathamesh111-netizen/Supply-Chain-and-Logistics-Blockchain/issues"
+  },
+  "homepage": "https://github.com/Prathamesh111-netizen/Supply-Chain-and-Logistics-Blockchain#readme",
+  "dependencies": {
+    "@truffle/contract": "^4.5.2",
+    "body-parser": "^1.19.2",
+    "circular-json": "^0.5.9",
+    "cookie-parser": "^1.4.6",
+    "core-js": "^3.21.1",
+    "dotenv": "^16.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9",
+    "nodemon": "^2.0.15",
+    "solc": "^0.8.13",
+    "web3": "^1.2.1",
+    "web3-eth-contract": "^1.7.1"
+  }
+}
