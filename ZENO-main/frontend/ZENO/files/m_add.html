@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<head>
+    <title>MANUFACTURER - CREATE</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(to right bottom, rgb(148, 32, 250), rgb(148, 32, 250));
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .container {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 110%;
+        left: 50%;
+    }
+
+    form {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        background: rgb(255, 255, 255);
+        padding: 3em;
+        top: 450px;
+        height: 120px;
+        width: 500px;
+        border-radius: 30px;
+        border-left: 1px solid rgb(146, 0, 141);
+        border-top: 1px solid rgb(194, 0, 97);
+        backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+        transition: all 0.2s ease-in-out;
+    }
+
+    p {
+        font-weight: 500;
+        color: rgb(255, 0, 128);
+        opacity: 0.7;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 60px;
+        text-shadow: 4px 4px 4px rgb(208, 93, 246);
+        font-weight: 680;
+    }
+
+    input {
+        background: transparent;
+        height: auto;
+        width: 125px;
+        padding: 1em;
+        margin-bottom: 2em;
+        border: none;
+        border-left: 1px solid rgb(255, 255, 255);
+        border-top: 1px solid rgb(255, 255, 255);
+        border-radius: 5000px;
+        backdrop-filter: blur(7px);
+        box-shadow: 4px 4px 60px rgba(156, 156, 156, 0.533);
+        color: rgb(128, 0, 115);
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        text-shadow: 2px 2px 4px rgba(247, 96, 255, 0.678);
+    }
+
+    input:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="button"] {
+        height: auto;
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    input:hover {
+        cursor: pointer;
+    }
+
+    input:active {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    ::placeholder {
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        color: rgb(112, 112, 112);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .container-table {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    table {
+        width: 1500px;
+        border-collapse: collapse;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    th,
+    td {
+        padding: 15px;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #fff;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    th {
+        background-color: #d14ad8;
+    }
+
+    tr:hover {
+        background-color: rgb(255, 61, 236);
+    }
+
+    td {
+        position: relative;
+    }
+
+    .breadcrumbs {
+        border: 1px solid #929292;
+        border-radius: 0.3rem;
+        left: 50%;
+        display: inline-flex;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .breadcrumbs__item {
+        background: rgb(255, 205, 239);
+        color: rgb(255, 0, 255);
+        outline: none;
+        padding: 0.75em 0.75em 0.75em 1.25em;
+        position: relative;
+        text-decoration: none;
+        transition: background 0.2s linear;
+    }
+
+    .breadcrumbs__item:hover:after,
+    .breadcrumbs__item:hover {
+        background: #edf1f5;
+    }
+
+    .padding {
+    padding: 3rem !important
+}
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 10px;
+    -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px
+}
+
+.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#310041), to(#f69bfb));
+    background: linear-gradient(to right, #84b6fb, #390047)
+}
+
+.user-profile {
+    padding: 20px 0
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.b-b-default {
+    border-bottom: 1px solid #000000
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.text-muted {
+    color: #ffffff !important
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.f-w-600 {
+    font-weight: 600
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.user-card-full .social-link li {
+    display: inline-block
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+
+</style>
+
+<body>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <div class="container-table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1</th>
+                    <th>Column 2</th>
+                    <th>Column 3</th>
+                    <th>Column 4</th>
+                    <th>Column 5</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+                <tr>
+                    <td>Cell 1</td>
+                    <td>Cell 2</td>
+                    <td>Cell 3</td>
+                    <td>Cell 4</td>
+                    <td>Cell 5</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <form>
+            <p>MANUFACTURER</p>
+            <input type="text" placeholder="MATERIAL">
+            <input type="text" placeholder="CAPACITY">
+            <input type="button" value="SUBMIT">
+        </form>
+    </div>
+
+    <nav class="breadcrumbs">
+        <a href="#home" class="breadcrumbs__item">Home</a>
+        <a href="#shop" class="breadcrumbs__item">Shop</a>
+        <a href="#cart" class="breadcrumbs__item">Cart</a>
+        <a href="#checkout" class="breadcrumbs__item is-active">Checkout</a>
+    </nav>
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-xl-6 col-md-12">
+                    <div class="card user-card-full">
+                        <div class="row m-l-0 m-r-0">
+                            <div class="col-sm-4 bg-c-lite-green user-profile">
+                                <div class="card-block text-center text-white">
+                                    <div class="m-b-25"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9cXQzIJhOThBhw4AUSo5jXQYw5KlxY5A0gg&usqp=CAU" class="img-radius" alt="User-Profile-Image"> </div>
+                                    <h6 class="f-w-600">HARSH PATIL</h6>
+                                    <p>MANUFACTURER</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                </div>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

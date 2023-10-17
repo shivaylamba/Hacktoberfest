@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Asset</title>
+    <style>
+        body{
+            /* background-image: url('https://p4.wallpaperbetter.com/wallpaper/185/914/378/hexagon-white-abstract-3d-abstract-hd-wallpaper-preview.jpg');
+            opacity: 0.3; */
+            background-color: #f4f4f5;
+        }
+        .card {
+        /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }
+
+        /* Add some padding inside the card container */
+        .container {
+          padding: 2px 16px;
+        }
+        .box {
+            width: 100%;
+            display: flex;
+        }
+        .card {
+            background-color: white;
+            margin: 10px;
+            padding: 10px;
+        }
+        .container input{
+            border: none;
+        }
+        #popup div{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        #popup div p{
+            display: inline;
+            margin-right: 20px;
+        }
+        li{
+            list-style-type: none;
+        }
+        #profimag{
+            width: 40px;
+        }
+        .profile{
+            padding: 10px;
+        }
+        #bg{
+            position : "fixed" ;
+            margin-bottom : 0
+        }
+    </style>
+</head>
+<body>
+    <form action="/asset-tracking-page" method="get">
+        <input type="text" name = "CertificateID">
+        <input type="submit" value="Submit">
+    </form>
+
+    <div>
+        <h2> <img src="https://cdn-icons-png.flaticon.com/512/172/172150.png" alt="" width="30px"> Tracking of Asset </h2>
+            <% if ("asset" in Data && Data.asset.length == 0) {%>
+                <h3>No stock present</h3>  
+                <% } %>
+            <div class = "box">
+                    <% if (Data.asset) { for (const request of Data.asset) { %>
+                        <div class="card">
+                            <div class = "container">
+                                <form action="/digichambers/approve-reject-request" method="get">
+                                    <% if (request != {}) { %>
+                                        <label for="country"> Operation :</label>
+                                        <input type="text" name="Owner" readonly value= <%= request.Operation %> ><br><br>
+                                        <label for="country"> From :</label>
+                                        <input type="text" name="From" readonly value= <%= request.From %> ><br><br>
+                                        <label for="country"> To :</label>
+                                        <input type="text"  name="To" readonly value= <%= request.To %> ><br><br>
+                                    <% } %>
+                                </form>
+                            </div>
+                        </div>
+                <% } } %>
+            </div>
+    </div>
+
+
+    <div>
+        <img id = "bg" src="https://uploads-ssl.webflow.com/60edc0a8835d5b38bf11f03f/61cf04c6b9b698be148447b9_Useful-Asset-Tracking-Tips.jpeg" alt="">
+    </div>
+</body>
+</html>

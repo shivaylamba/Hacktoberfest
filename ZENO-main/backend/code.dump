@@ -1,0 +1,45 @@
+//testing
+// app.get('/', (req, res)=>{
+
+//   const data = {
+//     Alert : "You just killed someone",
+//     Profile : {
+//       _id: "624bd9dbe4893b9103c54c04",
+//       Email: "manufacturer@gmail.com",
+//       Password: "1234",
+//       Role: "Manufacturer",
+//       ContractAddress: "0xd5dB3BCB9c4Df328C8366c3d8Fa890EB1d5F7aFc",
+//       eth_Account: "0x535ec26742feD9Fe9Bd98D851F60B17e621ca68e",
+//       IsActive: true,
+//       timestamp: "2022-04-05T05:55:39.309+00:00",
+//       __v : 0
+//     },
+//     Requests :[
+//       {
+//         _id: "624bd9dbe4893b9103c54c04",
+//       Email: "manufacturer@gmail.com",
+//       Password: "1234",
+//       Role: "Manufacturer",
+//       ContractAddress: "0xd5dB3BCB9c4Df328C8366c3d8Fa890EB1d5F7aFc",
+//       eth_Account: "0x535ec26742feD9Fe9Bd98D851F60B17e621ca68e",
+//       IsActive: true,
+//       timestamp: "2022-04-05T05:55:39.309+00:00",
+//       __v : 0
+//       },
+//       {
+//         _id: "624bd9dbe4893b9103c54c04",
+//       Email: "manufacturer@gmail.com",
+//       Password: "1234",
+//       Role: "Manufacturer",
+//       ContractAddress: "0xd5dB3BCB9c4Df328C8366c3d8Fa890EB1d5F7aFc",
+//       eth_Account: "0x535ec26742feD9Fe9Bd98D851F60B17e621ca68e",
+//       IsActive: true,
+//       timestamp: "2022-04-05T05:55:39.309+00:00",
+//       __v : 0
+//       }
+//     ]
+//   }
+//   res.render("MainPage", {Data : data});
+//   // return res.render("MainPage", {Data : data});
+//   // return res.send(data);
+// })

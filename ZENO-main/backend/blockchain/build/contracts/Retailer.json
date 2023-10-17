@@ -1,0 +1,2083 @@
+{
+  "contractName": "Retailer",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "constructor",
+      "signature": "constructor"
+    },
+    {
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "fallback"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x38cc4831"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_product",
+          "type": "string"
+        },
+        {
+          "name": "_material",
+          "type": "string"
+        },
+        {
+          "name": "_capacity",
+          "type": "int256"
+        },
+        {
+          "name": "_price",
+          "type": "int256"
+        }
+      ],
+      "name": "createProduct",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function",
+      "signature": "0x769bdf1b"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "_product",
+          "type": "string"
+        }
+      ],
+      "name": "getProduct",
+      "outputs": [
+        {
+          "components": [
+            {
+              "name": "material",
+              "type": "string"
+            },
+            {
+              "name": "capacity",
+              "type": "int256"
+            },
+            {
+              "name": "price",
+              "type": "int256"
+            }
+          ],
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function",
+      "signature": "0x68111cce"
+    }
+  ],
+  "bytecode": "0x608060405261081a806100136000396000f3fe608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806338cc48311461005957806368111cce14610084578063769bdf1b146100c1575b005b34801561006557600080fd5b5061006e6100ea565b60405161007b9190610681565b60405180910390f35b34801561009057600080fd5b506100ab60048036036100a6919081019061049b565b6100f2565b6040516100b8919061069c565b60405180910390f35b3480156100cd57600080fd5b506100e860048036036100e391908101906104dc565b610273565b005b600030905090565b60606000826040518082805190602001908083835b60208310151561012c5780518252602082019150602081019050602083039250610107565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805480602002602001604051908101604052809291908181526020016000905b82821015610268578382906000526020600020906003020160606040519081016040529081600082018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561023c5780601f106102115761010080835404028352916020019161023c565b820191906000526020600020905b81548152906001019060200180831161021f57829003601f168201915b50505050508152602001600182015481526020016002820154815250508152602001906001019061017f565b505050509050919050565b61027b61036a565b83816000018190525082816020018181525050818160400181815250506000856040518082805190602001908083835b6020831015156102d057805182526020820191506020810190506020830392506102ab565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390208190806001815401808255809150509060018203906000526020600020906003020160009091929091909150600082015181600001908051906020019061034b92919061038c565b5060208201518160010155604082015181600201555050505050505050565b6060604051908101604052806060815260200160008152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103cd57805160ff19168380011785556103fb565b828001600101855582156103fb579182015b828111156103fa5782518255916020019190600101906103df565b5b509050610408919061040c565b5090565b61042e91905b8082111561042a576000816000905550600101610412565b5090565b90565b600061043d8235610783565b905092915050565b600082601f830112151561045857600080fd5b813561046b610466826106eb565b6106be565b9150808252602083016020830185838301111561048757600080fd5b61049283828461078d565b50505092915050565b6000602082840312156104ad57600080fd5b600082013567ffffffffffffffff8111156104c757600080fd5b6104d384828501610445565b91505092915050565b600080600080608085870312156104f257600080fd5b600085013567ffffffffffffffff81111561050c57600080fd5b61051887828801610445565b945050602085013567ffffffffffffffff81111561053557600080fd5b61054187828801610445565b935050604061055287828801610431565b925050606061056387828801610431565b91505092959194509250565b61057881610747565b82525050565b600061058982610724565b808452602084019350836020820285016105a285610717565b60005b848110156105db5783830388526105bd838351610631565b92506105c88261073a565b91506020880197506001810190506105a5565b508196508694505050505092915050565b6105f581610759565b82525050565b60006106068261072f565b80845261061a81602086016020860161079c565b610623816107cf565b602085010191505092915050565b6000606083016000830151848203600086015261064e82826105fb565b915050602083015161066360208601826105ec565b50604083015161067660408601826105ec565b508091505092915050565b6000602082019050610696600083018461056f565b92915050565b600060208201905081810360008301526106b6818461057e565b905092915050565b6000604051905081810181811067ffffffffffffffff821117156106e157600080fd5b8060405250919050565b600067ffffffffffffffff82111561070257600080fd5b601f19601f8301169050602081019050919050565b6000602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b600061075282610763565b9050919050565b6000819050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b838110156107ba57808201518184015260208101905061079f565b838111156107c9576000848401525b50505050565b6000601f19601f830116905091905056fea265627a7a72305820b8f758eea8da4fbe543f451bf43b782bb8609cf56bf8f148fd19068092cdfdc16c6578706572696d656e74616cf50037",
+  "deployedBytecode": "0x608060405260043610610057576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806338cc48311461005957806368111cce14610084578063769bdf1b146100c1575b005b34801561006557600080fd5b5061006e6100ea565b60405161007b9190610681565b60405180910390f35b34801561009057600080fd5b506100ab60048036036100a6919081019061049b565b6100f2565b6040516100b8919061069c565b60405180910390f35b3480156100cd57600080fd5b506100e860048036036100e391908101906104dc565b610273565b005b600030905090565b60606000826040518082805190602001908083835b60208310151561012c5780518252602082019150602081019050602083039250610107565b6001836020036101000a0380198251168184511680821785525050505050509050019150509081526020016040518091039020805480602002602001604051908101604052809291908181526020016000905b82821015610268578382906000526020600020906003020160606040519081016040529081600082018054600181600116156101000203166002900480601f01602080910402602001604051908101604052809291908181526020018280546001816001161561010002031660029004801561023c5780601f106102115761010080835404028352916020019161023c565b820191906000526020600020905b81548152906001019060200180831161021f57829003601f168201915b50505050508152602001600182015481526020016002820154815250508152602001906001019061017f565b505050509050919050565b61027b61036a565b83816000018190525082816020018181525050818160400181815250506000856040518082805190602001908083835b6020831015156102d057805182526020820191506020810190506020830392506102ab565b6001836020036101000a03801982511681845116808217855250505050505090500191505090815260200160405180910390208190806001815401808255809150509060018203906000526020600020906003020160009091929091909150600082015181600001908051906020019061034b92919061038c565b5060208201518160010155604082015181600201555050505050505050565b6060604051908101604052806060815260200160008152602001600081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106103cd57805160ff19168380011785556103fb565b828001600101855582156103fb579182015b828111156103fa5782518255916020019190600101906103df565b5b509050610408919061040c565b5090565b61042e91905b8082111561042a576000816000905550600101610412565b5090565b90565b600061043d8235610783565b905092915050565b600082601f830112151561045857600080fd5b813561046b610466826106eb565b6106be565b9150808252602083016020830185838301111561048757600080fd5b61049283828461078d565b50505092915050565b6000602082840312156104ad57600080fd5b600082013567ffffffffffffffff8111156104c757600080fd5b6104d384828501610445565b91505092915050565b600080600080608085870312156104f257600080fd5b600085013567ffffffffffffffff81111561050c57600080fd5b61051887828801610445565b945050602085013567ffffffffffffffff81111561053557600080fd5b61054187828801610445565b935050604061055287828801610431565b925050606061056387828801610431565b91505092959194509250565b61057881610747565b82525050565b600061058982610724565b808452602084019350836020820285016105a285610717565b60005b848110156105db5783830388526105bd838351610631565b92506105c88261073a565b91506020880197506001810190506105a5565b508196508694505050505092915050565b6105f581610759565b82525050565b60006106068261072f565b80845261061a81602086016020860161079c565b610623816107cf565b602085010191505092915050565b6000606083016000830151848203600086015261064e82826105fb565b915050602083015161066360208601826105ec565b50604083015161067660408601826105ec565b508091505092915050565b6000602082019050610696600083018461056f565b92915050565b600060208201905081810360008301526106b6818461057e565b905092915050565b6000604051905081810181811067ffffffffffffffff821117156106e157600080fd5b8060405250919050565b600067ffffffffffffffff82111561070257600080fd5b601f19601f8301169050602081019050919050565b6000602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b600061075282610763565b9050919050565b6000819050919050565b600073ffffffffffffffffffffffffffffffffffffffff82169050919050565b6000819050919050565b82818337600083830152505050565b60005b838110156107ba57808201518184015260208101905061079f565b838111156107c9576000848401525b50505050565b6000601f19601f830116905091905056fea265627a7a72305820b8f758eea8da4fbe543f451bf43b782bb8609cf56bf8f148fd19068092cdfdc16c6578706572696d656e74616cf50037",
+  "sourceMap": "94:844:7:-;;;;;;;;;",
+  "deployedSourceMap": "94:844:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;236:91;;8:9:-1;5:2;;;30:1;27;20:12;5:2;236:91:7;;;;;;;;;;;;;;;;;;;;804:125;;8:9:-1;5:2;;;30:1;27;20:12;5:2;804:125:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;526:270;;8:9:-1;5:2;;;30:1;27;20:12;5:2;526:270:7;;;;;;;;;;;;;;;;;;;236:91;280:7;314:4;299:20;;236:91;:::o;804:125::-;868:17;904:7;912:8;904:17;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;904:17:7;;;;;;;;;;;;;;;;;;;;;897:24;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;804:125;;;:::o;526:270::-;642:17;;:::i;:::-;683:9;670:1;:10;;:22;;;;716:9;703:1;:10;;:22;;;;;746:6;736:1;:7;;:16;;;;;763:7;771:8;763:17;;;;;;;;;;;;;36:153:-1;66:2;61:3;58:11;51:19;36:153;;;182:3;176:10;171:3;164:23;98:2;93:3;89:12;82:19;;123:2;118:3;114:12;107:19;;148:2;143:3;139:12;132:19;;36:153;;;274:1;267:3;263:2;259:12;254:3;250:22;246:30;315:4;311:9;305:3;299:10;295:26;356:4;350:3;344:10;340:21;389:7;380;377:20;372:3;365:33;3:399;;;763:17:7;;;;;;;;;;;;;;;;;;;;;786:1;763:25;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;763:25:7;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;526:270;;;;;:::o;94:844::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;5:116:-1:-;;71:45;108:6;95:20;71:45;;;62:54;;56:65;;;;;129:442;;231:3;224:4;216:6;212:17;208:27;201:35;198:2;;;249:1;246;239:12;198:2;286:6;273:20;308:65;323:49;365:6;323:49;;;308:65;;;299:74;;393:6;386:5;379:21;429:4;421:6;417:17;462:4;455:5;451:16;497:3;488:6;483:3;479:16;476:25;473:2;;;514:1;511;504:12;473:2;524:41;558:6;553:3;548;524:41;;;191:380;;;;;;;;579:347;;693:2;681:9;672:7;668:23;664:32;661:2;;;709:1;706;699:12;661:2;772:1;761:9;757:17;744:31;795:18;787:6;784:30;781:2;;;827:1;824;817:12;781:2;847:63;902:7;893:6;882:9;878:22;847:63;;;837:73;;723:193;655:271;;;;;933:825;;;;;1106:3;1094:9;1085:7;1081:23;1077:33;1074:2;;;1123:1;1120;1113:12;1074:2;1186:1;1175:9;1171:17;1158:31;1209:18;1201:6;1198:30;1195:2;;;1241:1;1238;1231:12;1195:2;1261:63;1316:7;1307:6;1296:9;1292:22;1261:63;;;1251:73;;1137:193;1389:2;1378:9;1374:18;1361:32;1413:18;1405:6;1402:30;1399:2;;;1445:1;1442;1435:12;1399:2;1465:63;1520:7;1511:6;1500:9;1496:22;1465:63;;;1455:73;;1340:194;1565:2;1583:52;1627:7;1618:6;1607:9;1603:22;1583:52;;;1573:62;;1544:97;1672:2;1690:52;1734:7;1725:6;1714:9;1710:22;1690:52;;;1680:62;;1651:97;1068:690;;;;;;;;1765:110;1838:31;1863:5;1838:31;;;1833:3;1826:44;1820:55;;;1947:878;;2124:75;2193:5;2124:75;;;2217:6;2212:3;2205:19;2241:4;2236:3;2232:14;2225:21;;2289:3;2331:4;2323:6;2319:17;2314:3;2310:27;2357:77;2428:5;2357:77;;;2455:1;2440:346;2465:6;2462:1;2459:13;2440:346;;;2527:9;2521:4;2517:20;2512:3;2505:33;2553:100;2648:4;2639:6;2633:13;2553:100;;;2545:108;;2670:81;2744:6;2670:81;;;2660:91;;2774:4;2769:3;2765:14;2758:21;;2487:1;2484;2480:9;2475:14;;2440:346;;;2444:14;2799:4;2792:11;;2816:3;2809:10;;2103:722;;;;;;;;;2833:107;2904:30;2928:5;2904:30;;;2899:3;2892:43;2886:54;;;2947:292;;3045:35;3074:5;3045:35;;;3097:6;3092:3;3085:19;3109:63;3165:6;3158:4;3153:3;3149:14;3142:4;3135:5;3131:16;3109:63;;;3204:29;3226:6;3204:29;;;3197:4;3192:3;3188:14;3184:50;3177:57;;3025:214;;;;;;3305:739;;3442:4;3437:3;3433:14;3532:3;3525:5;3521:15;3515:22;3581:3;3575:4;3571:14;3565:3;3560;3556:13;3549:37;3601:68;3664:4;3651:11;3601:68;;;3593:76;;3462:219;3761:4;3754:5;3750:16;3744:23;3779:60;3833:4;3828:3;3824:14;3811:11;3779:60;;;3691:160;3928:4;3921:5;3917:16;3911:23;3946:60;4000:4;3995:3;3991:14;3978:11;3946:60;;;3861:157;4035:4;4028:11;;3415:629;;;;;;4051:193;;4159:2;4148:9;4144:18;4136:26;;4173:61;4231:1;4220:9;4216:17;4207:6;4173:61;;;4130:114;;;;;4251:425;;4451:2;4440:9;4436:18;4428:26;;4501:9;4495:4;4491:20;4487:1;4476:9;4472:17;4465:47;4526:140;4661:4;4652:6;4526:140;;;4518:148;;4422:254;;;;;4683:256;;4745:2;4739:9;4729:19;;4783:4;4775:6;4771:17;4882:6;4870:10;4867:22;4846:18;4834:10;4831:34;4828:62;4825:2;;;4903:1;4900;4893:12;4825:2;4923:10;4919:2;4912:22;4723:216;;;;;4946:259;;5090:18;5082:6;5079:30;5076:2;;;5122:1;5119;5112:12;5076:2;5166:4;5162:9;5155:4;5147:6;5143:17;5139:33;5131:41;;5195:4;5189;5185:15;5177:23;;5013:192;;;;5214:142;;5344:4;5336:6;5332:17;5321:28;;5313:43;;;;5365:128;;5482:5;5476:12;5466:22;;5460:33;;;;5500:88;;5577:5;5571:12;5561:22;;5555:33;;;;5596:143;;5728:4;5720:6;5716:17;5705:28;;5698:41;;;;5747:105;;5816:31;5841:5;5816:31;;;5805:42;;5799:53;;;;5859:78;;5927:5;5916:16;;5910:27;;;;5944:128;;6024:42;6017:5;6013:54;6002:65;;5996:76;;;;6079:78;;6147:5;6136:16;;6130:27;;;;6165:145;6246:6;6241:3;6236;6223:30;6302:1;6293:6;6288:3;6284:16;6277:27;6216:94;;;;6319:268;6384:1;6391:101;6405:6;6402:1;6399:13;6391:101;;;6481:1;6476:3;6472:11;6466:18;6462:1;6457:3;6453:11;6446:39;6427:2;6424:1;6420:10;6415:15;;6391:101;;;6507:6;6504:1;6501:13;6498:2;;;6572:1;6563:6;6558:3;6554:16;6547:27;6498:2;6368:219;;;;;6595:97;;6683:2;6679:7;6674:2;6667:5;6663:14;6659:28;6649:38;;6643:49;;;",
+  "source": "// SPDX-License-Identifier: MIT\r\npragma solidity 0.5.0;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract Retailer{\r\n    \r\n    constructor() public payable{}\r\n    //ethers receive and sent section\r\n    function() external payable{}\r\n\r\n    function getAddress()  public view returns (address){\r\n        return address(this);\r\n    }\r\n\r\n\r\n    // Product Creation and Retrieval\r\n    \r\n    struct Material{\r\n        string material;\r\n        int capacity;\r\n        int price;\r\n    }\r\n    mapping(string => Material[]) product;\r\n\r\n    function createProduct(string memory _product, string memory _material, int _capacity, int _price) public{\r\n        Material memory m;\r\n        m.material = _material;\r\n        m.capacity = _capacity;\r\n        m.price = _price;\r\n        product[_product].push(m);\r\n    }\r\n\r\n    function getProduct(string memory _product) public view returns(Material[] memory){\r\n        return product[_product];\r\n    }\r\n\r\n\r\n\r\n}",
+  "sourcePath": "D:\\Mini-Project-Sem-4\\Supply-Chain-and-Logistics-Blockchain\\backend\\blockchain\\contracts\\Retailer.sol",
+  "ast": {
+    "absolutePath": "/D/Mini-Project-Sem-4/Supply-Chain-and-Logistics-Blockchain/backend/blockchain/contracts/Retailer.sol",
+    "exportedSymbols": {
+      "Retailer": [
+        855
+      ]
+    },
+    "id": 856,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 770,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:7"
+      },
+      {
+        "id": 771,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 855,
+        "linearizedBaseContracts": [
+          855
+        ],
+        "name": "Retailer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 774,
+              "nodeType": "Block",
+              "src": "152:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 775,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 772,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "135:2:7"
+            },
+            "returnParameters": {
+              "id": 773,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:0:7"
+            },
+            "scope": 855,
+            "src": "124:30:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 778,
+              "nodeType": "Block",
+              "src": "226:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 779,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 776,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "207:2:7"
+            },
+            "returnParameters": {
+              "id": 777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "226:0:7"
+            },
+            "scope": 855,
+            "src": "199:29:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 788,
+              "nodeType": "Block",
+              "src": "288:39:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 785,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1006,
+                        "src": "314:4:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Retailer_$855",
+                          "typeString": "contract Retailer"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Retailer_$855",
+                          "typeString": "contract Retailer"
+                        }
+                      ],
+                      "id": 784,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "306:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 786,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "306:13:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 783,
+                  "id": 787,
+                  "nodeType": "Return",
+                  "src": "299:20:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 789,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 780,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:2:7"
+            },
+            "returnParameters": {
+              "id": 783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 782,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 789,
+                  "src": "280:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 781,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "279:9:7"
+            },
+            "scope": 855,
+            "src": "236:91:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Retailer.Material",
+            "id": 796,
+            "members": [
+              {
+                "constant": false,
+                "id": 791,
+                "name": "material",
+                "nodeType": "VariableDeclaration",
+                "scope": 796,
+                "src": "408:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 790,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "408:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 793,
+                "name": "capacity",
+                "nodeType": "VariableDeclaration",
+                "scope": 796,
+                "src": "434:12:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 792,
+                  "name": "int",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "434:3:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 795,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 796,
+                "src": "457:9:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 794,
+                  "name": "int",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "457:3:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Material",
+            "nodeType": "StructDefinition",
+            "scope": 855,
+            "src": "382:92:7",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 801,
+            "name": "product",
+            "nodeType": "VariableDeclaration",
+            "scope": 855,
+            "src": "480:37:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+              "typeString": "mapping(string => struct Retailer.Material[])"
+            },
+            "typeName": {
+              "id": 800,
+              "keyType": {
+                "id": 797,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "488:6:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "480:29:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+                "typeString": "mapping(string => struct Retailer.Material[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 798,
+                  "name": "Material",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 796,
+                  "src": "498:8:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Material_$796_storage_ptr",
+                    "typeString": "struct Retailer.Material"
+                  }
+                },
+                "id": 799,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "498:10:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage_ptr",
+                  "typeString": "struct Retailer.Material[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 840,
+              "nodeType": "Block",
+              "src": "631:165:7",
+              "statements": [
+                {
+                  "assignments": [
+                    813
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 813,
+                      "name": "m",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 840,
+                      "src": "642:17:7",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                        "typeString": "struct Retailer.Material"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 812,
+                        "name": "Material",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 796,
+                        "src": "642:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_storage_ptr",
+                          "typeString": "struct Retailer.Material"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 814,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "642:17:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 819,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 815,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "670:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      },
+                      "id": 817,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "material",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 791,
+                      "src": "670:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 818,
+                      "name": "_material",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 805,
+                      "src": "683:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "670:22:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 820,
+                  "nodeType": "ExpressionStatement",
+                  "src": "670:22:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 825,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 821,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "703:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      },
+                      "id": 823,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "capacity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 793,
+                      "src": "703:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 824,
+                      "name": "_capacity",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 807,
+                      "src": "716:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "703:22:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 826,
+                  "nodeType": "ExpressionStatement",
+                  "src": "703:22:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 831,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 827,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "736:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      },
+                      "id": 829,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "price",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 795,
+                      "src": "736:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 830,
+                      "name": "_price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 809,
+                      "src": "746:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "736:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 832,
+                  "nodeType": "ExpressionStatement",
+                  "src": "736:16:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 837,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "786:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 833,
+                          "name": "product",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 801,
+                          "src": "763:7:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct Retailer.Material storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 835,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 834,
+                          "name": "_product",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 803,
+                          "src": "771:8:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "763:17:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage",
+                          "typeString": "struct Retailer.Material storage ref[] storage ref"
+                        }
+                      },
+                      "id": 836,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "763:22:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Material_$796_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Retailer.Material storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 838,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "763:25:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 839,
+                  "nodeType": "ExpressionStatement",
+                  "src": "763:25:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 841,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createProduct",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 810,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 803,
+                  "name": "_product",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "549:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 802,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "549:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 805,
+                  "name": "_material",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "573:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 804,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "573:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 807,
+                  "name": "_capacity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "598:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 806,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "598:3:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 809,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "613:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 808,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "613:3:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "548:76:7"
+            },
+            "returnParameters": {
+              "id": 811,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "631:0:7"
+            },
+            "scope": 855,
+            "src": "526:270:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 853,
+              "nodeType": "Block",
+              "src": "886:43:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 849,
+                      "name": "product",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 801,
+                      "src": "904:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+                        "typeString": "mapping(string memory => struct Retailer.Material storage ref[] storage ref)"
+                      }
+                    },
+                    "id": 851,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 850,
+                      "name": "_product",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 843,
+                      "src": "912:8:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "904:17:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage",
+                      "typeString": "struct Retailer.Material storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 848,
+                  "id": 852,
+                  "nodeType": "Return",
+                  "src": "897:24:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 854,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProduct",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 843,
+                  "name": "_product",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 854,
+                  "src": "824:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 842,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "823:24:7"
+            },
+            "returnParameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 847,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 854,
+                  "src": "868:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Material_$796_memory_$dyn_memory_ptr",
+                    "typeString": "struct Retailer.Material[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 845,
+                      "name": "Material",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 796,
+                      "src": "868:8:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Material_$796_storage_ptr",
+                        "typeString": "struct Retailer.Material"
+                      }
+                    },
+                    "id": 846,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "868:10:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage_ptr",
+                      "typeString": "struct Retailer.Material[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "867:19:7"
+            },
+            "scope": 855,
+            "src": "804:125:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 856,
+        "src": "94:844:7"
+      }
+    ],
+    "src": "33:905:7"
+  },
+  "legacyAST": {
+    "absolutePath": "/D/Mini-Project-Sem-4/Supply-Chain-and-Logistics-Blockchain/backend/blockchain/contracts/Retailer.sol",
+    "exportedSymbols": {
+      "Retailer": [
+        855
+      ]
+    },
+    "id": 856,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 770,
+        "literals": [
+          "solidity",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:22:7"
+      },
+      {
+        "id": 771,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "57:33:7"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 855,
+        "linearizedBaseContracts": [
+          855
+        ],
+        "name": "Retailer",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 774,
+              "nodeType": "Block",
+              "src": "152:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 775,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 772,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "135:2:7"
+            },
+            "returnParameters": {
+              "id": 773,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "152:0:7"
+            },
+            "scope": 855,
+            "src": "124:30:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 778,
+              "nodeType": "Block",
+              "src": "226:2:7",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 779,
+            "implemented": true,
+            "kind": "fallback",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 776,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "207:2:7"
+            },
+            "returnParameters": {
+              "id": 777,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "226:0:7"
+            },
+            "scope": 855,
+            "src": "199:29:7",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 788,
+              "nodeType": "Block",
+              "src": "288:39:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 785,
+                        "name": "this",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 1006,
+                        "src": "314:4:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_Retailer_$855",
+                          "typeString": "contract Retailer"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_Retailer_$855",
+                          "typeString": "contract Retailer"
+                        }
+                      ],
+                      "id": 784,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "lValueRequested": false,
+                      "nodeType": "ElementaryTypeNameExpression",
+                      "src": "306:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_address_$",
+                        "typeString": "type(address)"
+                      },
+                      "typeName": "address"
+                    },
+                    "id": 786,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "typeConversion",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "306:13:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    }
+                  },
+                  "functionReturnParameters": 783,
+                  "id": 787,
+                  "nodeType": "Return",
+                  "src": "299:20:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 789,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAddress",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 780,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "255:2:7"
+            },
+            "returnParameters": {
+              "id": 783,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 782,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 789,
+                  "src": "280:7:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 781,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "280:7:7",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "279:9:7"
+            },
+            "scope": 855,
+            "src": "236:91:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "Retailer.Material",
+            "id": 796,
+            "members": [
+              {
+                "constant": false,
+                "id": 791,
+                "name": "material",
+                "nodeType": "VariableDeclaration",
+                "scope": 796,
+                "src": "408:15:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 790,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "408:6:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 793,
+                "name": "capacity",
+                "nodeType": "VariableDeclaration",
+                "scope": 796,
+                "src": "434:12:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 792,
+                  "name": "int",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "434:3:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 795,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 796,
+                "src": "457:9:7",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_int256",
+                  "typeString": "int256"
+                },
+                "typeName": {
+                  "id": 794,
+                  "name": "int",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "457:3:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Material",
+            "nodeType": "StructDefinition",
+            "scope": 855,
+            "src": "382:92:7",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 801,
+            "name": "product",
+            "nodeType": "VariableDeclaration",
+            "scope": 855,
+            "src": "480:37:7",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+              "typeString": "mapping(string => struct Retailer.Material[])"
+            },
+            "typeName": {
+              "id": 800,
+              "keyType": {
+                "id": 797,
+                "name": "string",
+                "nodeType": "ElementaryTypeName",
+                "src": "488:6:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "480:29:7",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+                "typeString": "mapping(string => struct Retailer.Material[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 798,
+                  "name": "Material",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 796,
+                  "src": "498:8:7",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_Material_$796_storage_ptr",
+                    "typeString": "struct Retailer.Material"
+                  }
+                },
+                "id": 799,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "498:10:7",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage_ptr",
+                  "typeString": "struct Retailer.Material[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 840,
+              "nodeType": "Block",
+              "src": "631:165:7",
+              "statements": [
+                {
+                  "assignments": [
+                    813
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 813,
+                      "name": "m",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 840,
+                      "src": "642:17:7",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                        "typeString": "struct Retailer.Material"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 812,
+                        "name": "Material",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 796,
+                        "src": "642:8:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_storage_ptr",
+                          "typeString": "struct Retailer.Material"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 814,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "642:17:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 819,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 815,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "670:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      },
+                      "id": 817,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "material",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 791,
+                      "src": "670:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 818,
+                      "name": "_material",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 805,
+                      "src": "683:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "670:22:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 820,
+                  "nodeType": "ExpressionStatement",
+                  "src": "670:22:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 825,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 821,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "703:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      },
+                      "id": 823,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "capacity",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 793,
+                      "src": "703:10:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 824,
+                      "name": "_capacity",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 807,
+                      "src": "716:9:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "703:22:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 826,
+                  "nodeType": "ExpressionStatement",
+                  "src": "703:22:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 831,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 827,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "736:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      },
+                      "id": 829,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "price",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 795,
+                      "src": "736:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 830,
+                      "name": "_price",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 809,
+                      "src": "746:6:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_int256",
+                        "typeString": "int256"
+                      }
+                    },
+                    "src": "736:16:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "id": 832,
+                  "nodeType": "ExpressionStatement",
+                  "src": "736:16:7"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 837,
+                        "name": "m",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 813,
+                        "src": "786:1:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Material_$796_memory_ptr",
+                          "typeString": "struct Retailer.Material memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 833,
+                          "name": "product",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 801,
+                          "src": "763:7:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+                            "typeString": "mapping(string memory => struct Retailer.Material storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 835,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 834,
+                          "name": "_product",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 803,
+                          "src": "771:8:7",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_string_memory_ptr",
+                            "typeString": "string memory"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "763:17:7",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage",
+                          "typeString": "struct Retailer.Material storage ref[] storage ref"
+                        }
+                      },
+                      "id": 836,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "763:22:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Material_$796_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Retailer.Material storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 838,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "763:25:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 839,
+                  "nodeType": "ExpressionStatement",
+                  "src": "763:25:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 841,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createProduct",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 810,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 803,
+                  "name": "_product",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "549:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 802,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "549:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 805,
+                  "name": "_material",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "573:23:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 804,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "573:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 807,
+                  "name": "_capacity",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "598:13:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 806,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "598:3:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 809,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 841,
+                  "src": "613:10:7",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_int256",
+                    "typeString": "int256"
+                  },
+                  "typeName": {
+                    "id": 808,
+                    "name": "int",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "613:3:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_int256",
+                      "typeString": "int256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "548:76:7"
+            },
+            "returnParameters": {
+              "id": 811,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "631:0:7"
+            },
+            "scope": 855,
+            "src": "526:270:7",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 853,
+              "nodeType": "Block",
+              "src": "886:43:7",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 849,
+                      "name": "product",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 801,
+                      "src": "904:7:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_string_memory_$_t_array$_t_struct$_Material_$796_storage_$dyn_storage_$",
+                        "typeString": "mapping(string memory => struct Retailer.Material storage ref[] storage ref)"
+                      }
+                    },
+                    "id": 851,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 850,
+                      "name": "_product",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 843,
+                      "src": "912:8:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "904:17:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage",
+                      "typeString": "struct Retailer.Material storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 848,
+                  "id": 852,
+                  "nodeType": "Return",
+                  "src": "897:24:7"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 854,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getProduct",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 844,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 843,
+                  "name": "_product",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 854,
+                  "src": "824:22:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 842,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "824:6:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "823:24:7"
+            },
+            "returnParameters": {
+              "id": 848,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 847,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 854,
+                  "src": "868:17:7",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_Material_$796_memory_$dyn_memory_ptr",
+                    "typeString": "struct Retailer.Material[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 845,
+                      "name": "Material",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 796,
+                      "src": "868:8:7",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Material_$796_storage_ptr",
+                        "typeString": "struct Retailer.Material"
+                      }
+                    },
+                    "id": 846,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "868:10:7",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_Material_$796_storage_$dyn_storage_ptr",
+                      "typeString": "struct Retailer.Material[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "867:19:7"
+            },
+            "scope": 855,
+            "src": "804:125:7",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 856,
+        "src": "94:844:7"
+      }
+    ],
+    "src": "33:905:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xD14bd445B55B6168aB08ec80De0Df6Ac6Eb24aA3",
+      "transactionHash": "0x9002c437514556fc5690e977d9af29b6c8ef9f25087accee8cba5d7c61155f68"
+    }
+  },
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2022-04-26T11:49:23.138Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}

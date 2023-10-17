@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<head>
+    <title>MANUFACTURER - CREATE</title>
+</head>
+<style>
+    body {
+        background: linear-gradient(to right bottom, rgb(148, 32, 250), rgb(148, 32, 250));
+        height: 100%;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .container {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 110%;
+        left: 50%;
+    }
+
+    form {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        background: rgb(255, 255, 255);
+        padding: 3em;
+        top: 450px;
+        height: 120px;
+        width: 500px;
+        border-radius: 30px;
+        border-left: 1px solid rgb(146, 0, 141);
+        border-top: 1px solid rgb(194, 0, 97);
+        backdrop-filter: blur(10px);
+        box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+        text-align: center;
+
+        transition: all 0.2s ease-in-out;
+    }
+
+    p {
+        font-weight: 500;
+        color: rgb(255, 0, 128);
+        opacity: 0.7;
+        font-size: 1.5rem;
+        margin-top: 0;
+        margin-bottom: 60px;
+        text-shadow: 4px 4px 4px rgb(208, 93, 246);
+        font-weight: 680;
+    }
+
+    input {
+        background: transparent;
+        height: auto;
+        width: 125px;
+        padding: 1em;
+        margin-bottom: 2em;
+        border: none;
+        border-left: 1px solid rgb(255, 255, 255);
+        border-top: 1px solid rgb(255, 255, 255);
+        border-radius: 5000px;
+        backdrop-filter: blur(7px);
+        box-shadow: 4px 4px 60px rgba(156, 156, 156, 0.533);
+        color: rgb(128, 0, 115);
+        font-family: Montserrat, sans-serif;
+        font-weight: 500;
+        transition: all 0.2s ease-in-out;
+        text-shadow: 2px 2px 4px rgba(247, 96, 255, 0.678);
+    }
+
+    input:hover {
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 4px 4px 60px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="button"] {
+        height: auto;
+        width: 150px;
+        font-size: 1rem;
+    }
+
+    input:hover {
+        cursor: pointer;
+    }
+
+    input:active {
+        background: rgba(0, 0, 0, 0.2);
+    }
+
+    ::placeholder {
+        font-family: Montserrat, sans-serif;
+        font-weight: 400;
+        color: rgb(112, 112, 112);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .breadcrumbs {
+        border: 1px solid #929292;
+        border-radius: 0.3rem;
+        left: 50%;
+        display: inline-flex;
+        width: auto;
+        overflow: hidden;
+    }
+
+    .breadcrumbs__item {
+        background: rgb(255, 205, 239);
+        color: rgb(255, 0, 255);
+        outline: none;
+        padding: 0.75em 0.75em 0.75em 1.25em;
+        position: relative;
+        text-decoration: none;
+        transition: background 0.2s linear;
+    }
+
+    .breadcrumbs__item:hover:after,
+    .breadcrumbs__item:hover {
+        background: #edf1f5;
+    }
+
+    .padding {
+    padding: 3rem !important
+}
+
+.user-card-full {
+    overflow: hidden
+}
+
+.card {
+    border-radius: 10px;
+    -webkit-box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.08);
+    box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.08);
+    border: none;
+    margin-bottom: 30px
+}
+
+.m-r-0 {
+    margin-right: 0px
+}
+
+.m-l-0 {
+    margin-left: 0px
+}
+
+.user-card-full .user-profile {
+    border-radius: 5px 0 0 5px
+}
+
+.bg-c-lite-green {
+    background: -webkit-gradient(linear, left top, right top, from(#310041), to(#f69bfb));
+    background: linear-gradient(to right, #84b6fb, #390047)
+}
+
+.user-profile {
+    padding: 20px 0
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.m-b-25 {
+    margin-bottom: 25px
+}
+
+.img-radius {
+    border-radius: 5px
+}
+
+h6 {
+    font-size: 14px
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+@media only screen and (min-width: 1400px) {
+    p {
+        font-size: 14px
+    }
+}
+
+.card-block {
+    padding: 1.25rem
+}
+
+.b-b-default {
+    border-bottom: 1px solid #000000
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.card .card-block p {
+    line-height: 25px
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.text-muted {
+    color: #ffffff !important
+}
+
+.b-b-default {
+    border-bottom: 1px solid #e0e0e0
+}
+
+.f-w-600 {
+    font-weight: 600
+}
+
+.m-b-20 {
+    margin-bottom: 20px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.p-b-5 {
+    padding-bottom: 5px !important
+}
+
+.m-b-10 {
+    margin-bottom: 10px
+}
+
+.m-t-40 {
+    margin-top: 20px
+}
+
+.user-card-full .social-link li {
+    display: inline-block
+}
+
+.user-card-full .social-link li a {
+    font-size: 20px;
+    margin: 0 10px 0 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out
+}
+
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #f0f0f0;
+}
+
+body {
+  color: #999999;
+  font-family: 'Roboto','Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+ 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards__item {
+  display: flex;
+  padding: 1rem;
+  @media(min-width: 40rem) {
+    width: 50%;
+  }
+  @media(min-width: 56rem) {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__image--flowers {
+  background-image: url(https://unsplash.it/800/600?image=82);
+}
+
+.card__image--river {
+  background-image: url(https://unsplash.it/800/600?image=11);
+}
+
+.card__image--record {
+  background-image: url(https://unsplash.it/800/600?image=39);
+}
+
+.card__image--fence {
+  background-image: url(https://unsplash.it/800/600?image=59);
+}
+
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+
+</style>
+
+<body>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <div class="container">
+        <form>
+            <p>MANUFACTURER</p>
+            <input type="text" placeholder="MATERIAL">
+            <input type="text" placeholder="CAPACITY">
+            <input type="button" value="SUBMIT">
+        </form>
+    </div>
+
+    <nav class="breadcrumbs">
+        <a href="#home" class="breadcrumbs__item">Home</a>
+        <a href="#shop" class="breadcrumbs__item">Shop</a>
+        <a href="#cart" class="breadcrumbs__item">Cart</a>
+        <a href="#checkout" class="breadcrumbs__item is-active">Checkout</a>
+    </nav>
+
+    <div class="page-content page-container" id="page-content">
+        <div class="padding">
+            <div class="row container d-flex justify-content-center">
+                <div class="col-xl-6 col-md-12">
+                    <div class="card user-card-full">
+                        <div class="row m-l-0 m-r-0">
+                            <div class="col-sm-4 bg-c-lite-green user-profile">
+                                <div class="card-block text-center text-white">
+                                    <div class="m-b-25"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9cXQzIJhOThBhw4AUSo5jXQYw5KlxY5A0gg&usqp=CAU" class="img-radius" alt="User-Profile-Image"> </div>
+                                    <h6 class="f-w-600">HARSH PATIL</h6>
+                                    <p>MANUFACTURER</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
+                                </div>
+                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- https://source.unsplash.com/random -->
+
+
+
+    <ul class="cards">
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--fence"></div>
+            <div class="card__content">
+              <div class="card__title">Flex</div>
+              <p class="card__text">This is the shorthand for flex-grow, flex-shrink and flex-basis combined. The second and third parameters (flex-shrink and flex-basis) are optional. Default is 0 1 auto. </p>
+              <button class="btn btn--block card__btn">Button</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--river"></div>
+            <div class="card__content">
+              <div class="card__title">Flex Grow</div>
+              <p class="card__text">This defines the ability for a flex item to grow if necessary. It accepts a unitless value that serves as a proportion. It dictates what amount of the available space inside the flex container the item should take up.</p>
+              <button class="btn btn--block card__btn">Button</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--record"></div>
+            <div class="card__content">
+              <div class="card__title">Flex Shrink</div>
+              <p class="card__text">This defines the ability for a flex item to shrink if necessary. Negative numbers are invalid.</p>
+              <button class="btn btn--block card__btn">Button</button>
+            </div>
+          </div>
+        </li>
+        <li class="cards__item">
+          <div class="card">
+            <div class="card__image card__image--flowers"></div>
+            <div class="card__content">
+              <div class="card__title">Flex Basis</div>
+              <p class="card__text">This defines the default size of an element before the remaining space is distributed. It can be a length (e.g. 20%, 5rem, etc.) or a keyword. The auto keyword means "look at my width or height property."</p>
+              <button class="btn btn--block card__btn">Button</button>
+            </div>
+          </div>
+        </li>
+      </ul>
+</body>
+
+</html>
