@@ -1,0 +1,126 @@
+nav {
+    display: flex;
+    /* width: fit-content; */
+    /* justify-content: center; */
+    align-items: center;
+    background-color: rgb(10, 3, 35);
+    /* color: rgb(230, 255, 107); */
+    color: rgb(242, 255, 66); 
+height: 14vh;
+    /* border-radius: 15px; */
+    /* padding-left: 10vw; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+     /* padding-left: 4vw; */
+    /* padding-right: 4vw;  */
+    gap: 4vw;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: white; 
+     */
+    color: rgb(239, 255, 9); 
+
+    text-decoration: none;
+ } 
+ nav ul li{
+    padding-left: 4vw;
+    padding-right: 2vw;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(242, 255, 66); 
+    list-style: none;
+    /* text-decoration: none; */
+ } 
+ nav ul li a{
+cursor: pointer;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* color: rgb(235, 255, 103); */
+    color: rgb(242, 255, 66); 
+   text-decoration: none;
+   font-size: 18px;
+} 
+ footer{
+     /* margin-top: 1vh;  */
+     /* background-color: rgb(32, 9, 110); */
+    
+    background-color: rgb(32, 9, 110);
+    color: rgb(255, 222, 37);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    height: 40px;
+     /* margin-top: 700px;  */
+     /* border-radius: 20px;  */
+     padding-top: 15px;  
+ }  
+ img{
+    width: 60vw;
+    height: 70vh;
+    margin-left: 20vw;
+    margin-bottom: 4vh;
+    margin-top: 5vh;
+    border-radius: 50px;
+  }  
+ main{
+    /* background-color: rgb(0, 34, 112); */
+    background-color: rgb(32, 9, 110);
+    
+}  
+body{
+    background-size: cover;
+}
+@media (max-width:961px) {
+
+    nav ul {
+        /* padding: 1vw; */
+        font-size: 7px;
+        gap: 1vw;
+    }
+    nav ul li{
+        gap: 1vw;
+        padding-right: 1vw;
+        padding-left: 1vw;
+    }
+   #Login{
+        margin-left: 2vw;
+        width: fit-content;
+        height: fit-content;
+    }
+}
+@media (max-width:415px){
+    nav ul li a{
+        font-size: 10px;
+    }
+    #Login{
+font-size: 10px;
+    }
+}
+nav img{
+    width: 10vw;
+    height: 10vh;
+    border-radius: 200px;
+    margin-left: 1vw;
+}
+nav ul li a:hover{
+font-size: 20px;
+font-weight: bolder;
+gap: 3vh;
+}
+nav button{
+    font-size: 20px;
+    background-color: rgb(78, 73, 73);
+    color: rgb(255, 222, 37);
+  font-weight: bold;
+  padding: 15px;
+  width:10vw;
+  border-radius: 20px;
+margin-left: 20vw;
+  
+}
+nav button:hover{
+    font-size: 25px;
+    cursor: pointer;
+}
