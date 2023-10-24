@@ -1,0 +1,187 @@
+
+
+
+What does HTML stand for?
+'(a) Hyper Text Markup Language
+'(b) High-level Text Manipulation Language
+'(c) Hyperlink and Text Markup Language
+'(d) Hyper Transfer Markup Language
+
+Which of the following is NOT a programming language?
+'(a) Java
+'(b) HTML
+'(c) Python
+'(d) Ruby
+
+Which programming paradigm focuses on reusability and separating concerns into classes and objects?
+'(a) Imperative
+'(b) Object-Oriented
+'(c) Functional
+'(d) Procedural
+
+What does CSS stand for?
+'('(a) Computer Style Sheets',
+'('(b) Creative Styling System'
+'('(c) Cascading Style Sheets',
+'('(d) Colorful Styling Solutions'
+
+In JavaScript, which keyword is used to declare a variable?
+'(a) var',
+'(b) int',
+'(c) string',
+'(d) declare'
+
+What data type would you use to store whole numbers in Python?
+'(a) integer',
+'(b) double',
+'(c) char',
+'(d) boolean'
+
+Which operator is used for exponentiation in many programming languages?
+'(a) +',
+'(b) *',
+'(c) ^',
+'(d) /'
+
+Which of the following is an example of a backend programming language?
+'(a) HTML',
+'(b) CSS',
+'(c) Python',
+'(d) jQuery'
+
+Which programming language is known for its speed and is often used in systems programming?
+'(a) Java',
+'(b) Ruby',
+'(c) C++',
+'(d) PHP'
+
+What does SQL stand for?
+'(a) Structured Query Language',
+'(b) Simple Query Language',
+'(c) Standard Question Language',
+'(d) System Query Language'
+
+Which type of loop is executed at least once, even if the condition is false?
+'(a) for loop',
+'(b) while loop',
+'(c) do-while loop',
+'(d) repeat-until loop'
+
+What is the result of 5 + "10" in JavaScript?
+'(b) 15',
+'(c) 510',
+'(d) 510 (as a string)',
+'(a) Error'
+
+Which data structure follows the Last-In-First-Out (LIFO) principle?
+'(a) Queue',
+'(b) Linked List',
+'(c) Stack',
+'(d) Array'
+
+What is the purpose of version control systems like Git?
+'(a) Managing databases',
+'(b) Tracking changes in source code',
+'(c) Optimizing website performance',
+'(d) Creating graphical user interfaces',
+
+What does API stand for?
+'(a) Application Protocol Interface',
+'(b) Application Programming Interface',
+'(c) Advanced Programming Interface',
+'(d) Algorithmic Programming Interface'
+
+Which sorting algorithm has an average and worst-case time complexity of O(n log n)?
+'(a) Bubble sort',
+'(b) Insertion sort',
+'(c) Quick sort',
+'(d) Selection sort'
+
+What does DRY stand for in software development?
+'(a) Don't Reveal Yourself',
+'(b) Don't Repeat Yourself',
+'(c) Develop, Review, Yield',
+'(d) Debug, Refactor, Yield'
+
+In object-oriented programming, what is the process of creating a new instance of a class called?
+'(a) Inheritance',
+'(b) Polymorphism',
+'(c) Encapsulation',
+'(d) Instantiation'
+
+Which keyword is used to define a function in Python?
+'(a) def',
+'(b) function',
+'(c) define',
+'(d) func'
+
+Which of the following is NOT a valid JavaScript variable name?
+'(a) myVariable',
+'(b) 123variable',
+'(c) _variable',
+'(d) $variable'
+
+What does MVC stand for in the context of software architecture?
+'(a) Model-View-Controller
+'(b) Most Valuable Code
+'(c) Many Visual Components
+'(d) Managed Virtual Configuration
+
+What is the primary purpose of a constructor in object-oriented programming?
+'(a) To create private methods
+'(b) To define class properties
+'(c) To initialize object instances
+'(d) To perform arithmetic operations
+
+Which operator is used to concatenate strings in many programming languages?
+'(a) +
+'(b) *
+'(c) &
+'(d) /
+
+Which of the following is an example of a front-end framework?
+'(a) Angular
+'(b) Django
+'(c) Flask
+'(d) Express
+
+What is the output of the following code in Python?
+
+python
+Copy code
+numbers = [1, 2, 3, 4, 5]
+print(numbers[1:3])
+'(a) [2, 3]
+'(b) [1, 2]
+'(c) [3, 4]
+'(d) [2, 4]
+
+Which type of variable has a global scope in JavaScript?
+'(a) var
+'(b) let
+'(c) const
+'(d) global
+
+What is the purpose of a try-catch block in programming?
+'(a) To optimize code execution
+'(b) To create loops
+'(c) To handle errors gracefully
+'(d) To define classes
+
+What is a callback function in JavaScript used for?
+'(a) Drawing graphics on the screen
+'(b) Handling asynchronous operations
+'(c) Defining classes and objects
+'(d) Formatting text
+
+Which of the following is an example of a dynamic programming language?
+'(a) C++
+'(b) Java
+'(c) Python
+'(d) Swift
+
+What is the correct syntax to comment out multiple lines in Python?
+'(a) // This is a comment
+'(b) / This is a comment /
+'(c) # This is a comment
+'(d) <!-- This is a comment -->
