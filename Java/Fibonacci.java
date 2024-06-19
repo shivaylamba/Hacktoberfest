@@ -1,16 +1,27 @@
-class Fibonacci
-{
-    public static void main(String args[]) 
-    {
-        int num1=0, num2=1, num3, i, count=10 ;
-        System.out.print(num1 + " " +num2); // i=0 and i=1 i.e. num1 and num2 will be printed 
+public class FibonacciDP {
 
-        for(i=2; i<count; ++i)  //loop starts
-        {
-           num3 = num1 + num2;
-           System.out.print(" " + num3);
-           num1= num2;
-           num2 = num3;
+    public static long fibonacci(int n) {
+        if (n <= 1) {
+            return n;
         }
+        
+        // Create an array to store Fibonacci numbers
+        long[] fib = new long[n + 1];
+        
+        // Base cases
+        fib[0] = 0;
+        fib[1] = 1;
+        
+        // Calculate and store Fibonacci numbers iteratively
+        for (int i = 2; i <= n; i++) {
+            fib[i] = fib[i - 1] + fib[i - 2];
+        }
+        
+        return fib[n];
+    }
+
+    public static void main(String[] args) {
+        int n = 10; // Example: Calculate Fibonacci number at index 10
+        System.out.println("Fibonacci number at index " + n + " is: " + fibonacci(n));
     }
 }
