@@ -1,39 +1,38 @@
-#include<stdio.h>
+#include <stdio.h>
+#define MAX_SIZE 100 
 
-int main()
-{
-	
-	int i,j,r,a[100];
+int main() {
+    int i, j, r, a[MAX_SIZE];
 
-	printf("Enter number of elements");
+    printf("Enter number of elements (0 to %d): ", MAX_SIZE);
+    scanf("%d", &r);
 
-	scanf("%d", &r);
+    if (r < 0 || r > MAX_SIZE) {
+        printf("Error: Number of elements must be between 0 and %d.\n", MAX_SIZE);
+        return 1; // Exit with an error code
+    }
 
-	for(i=0;i<r;i++)
-	{
-		printf("Enter a[%d]: ", i);
-		scanf("%d", &a[i]);
+    for (i = 0; i < r; i++) {
+        printf("Enter a[%d]: ", i);
+        scanf("%d", &a[i]);
+    }
 
-	}
+    for (i = 0; i < r - 1; i++) {
+        for (j = 0; j < r - 1 - i; j++) {
+            if (a[j] > a[j + 1) {
+              
+                int t = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = t;
+            }
+        }
+    }
 
-	for(i=0;i<r-1;i++)
-	{
-		for(j=0;j<r-1-i;j++)
-		{
-			if(a[j]>a[j+1])
-			{	int t;
-				t=a[j];
-				a[j]=a[j+1];
-				a[j+1]=t;
-			}
-		}
-	}
+    printf("Sorted array:\n");
+    for (i = 0; i < r; i++) {
+        printf("%d ", a[i]);
+    }
+    printf("\n"); 
 
-
-	printf("Sorted array:-\n");
-
-	for(i=0;i<r;i++)
-	{
-		printf("%d ", a[i]);
-	}
+    return 0; 
 }
