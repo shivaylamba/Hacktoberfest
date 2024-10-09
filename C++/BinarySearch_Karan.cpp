@@ -1,4 +1,5 @@
 #include <iostream> 
+#include<algorithm>
 using namespace std; 
 
 int main() 
@@ -13,12 +14,12 @@ int main()
         cout<<"\nEnter Element as "<<i+1<<" position: ";
         cin>>a[i];
     }
-
+   sort(a,a+size);
     int item;
     cout<<"\nEnter the Item which you want to search: ";
     cin>>item;
 
-    int first = 0;
+   int first = 0;
 	int last = size-1;
 	int middle = (first+last)/2;
 	while (first <= last)
