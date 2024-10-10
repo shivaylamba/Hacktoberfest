@@ -1,0 +1,6 @@
+#include<bits/stdc++.h>
+using namaespace std;
+int main(){
+  cout<<"Hello World";
+return 0;
+}
