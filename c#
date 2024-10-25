@@ -1,0 +1,28 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Enter a string: ");
+        string input = Console.ReadLine();
+        
+        string reversed = ReverseString(input);
+        
+        if (input.Equals(reversed, StringComparison.OrdinalIgnoreCase))
+        {
+            Console.WriteLine("The string is a palindrome.");
+        }
+        else
+        {
+            Console.WriteLine("The string is not a palindrome.");
+        }
+    }
+
+    static string ReverseString(string s)
+    {
+        char[] arr = s.ToCharArray();
+        Array.Reverse(arr);
+        return new string(arr);
+    }
+}
