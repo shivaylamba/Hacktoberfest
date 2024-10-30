@@ -1,0 +1,29 @@
+class Solution {
+  public:
+
+
+  // Function to search x in arr
+    // arr: input array
+    // X: element to be searched for
+    int linearsearch(int arr[], int n, int x, int index) {
+
+        // Your code here
+        
+        if(index==n)
+        return -1;
+        
+        if(arr[index]==x)
+        return index;
+   
+        return linearsearch(arr,n,x,index+1);
+        
+      
+    }
+    
+    int search(int arr[],int n , int x){
+        
+        
+        return linearsearch(arr,n,x ,0);
+    }
+    
+};
