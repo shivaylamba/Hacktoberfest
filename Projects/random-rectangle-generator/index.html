@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Random Rectangle Art Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body tabindex="0">
+    <div class="container">
+      <header class="header">
+        <h1>Random Rectangle Art Generator</h1>
+        <p class="subtitle">
+          Create beautiful abstract art with randomly generated rectangles
+        </p>
+      </header>
+
+      <main class="main-content">
+        <div class="canvas-container">
+          <canvas id="c" width="640" height="360"></canvas>
+        </div>
+
+        <div class="control-panel">
+          <div class="control-group">
+            <h3>Drawing Controls</h3>
+            <div class="button-row">
+              <button id="drawBtn" class="btn btn--primary">Draw</button>
+              <button id="startBtn" class="btn btn--secondary">Start</button>
+              <button id="stopBtn" class="btn btn--secondary" disabled>
+                Stop
+              </button>
+              <button id="clearBtn" class="btn btn--outline">Clear</button>
+            </div>
+          </div>
+
+          <div class="control-group">
+            <h3>Canvas Size</h3>
+            <div class="input-row">
+              <div class="form-group">
+                <label class="form-label" for="widthInput">Width</label>
+                <input
+                  type="number"
+                  id="widthInput"
+                  class="form-control"
+                  value="640"
+                  min="100"
+                  max="2000"
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="heightInput">Height</label>
+                <input
+                  type="number"
+                  id="heightInput"
+                  class="form-control"
+                  value="360"
+                  min="100"
+                  max="2000"
+                />
+              </div>
+              <button id="resizeBtn" class="btn btn--outline">Resize</button>
+            </div>
+          </div>
+
+          <div class="keyboard-hint">
+            <span class="hint-text"
+              >💡 Tip: Press <kbd>Spacebar</kbd> to draw a rectangle</span
+            >
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
