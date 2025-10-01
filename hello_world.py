@@ -1,1 +1,1 @@
-print("Hello World")
+print("Hello, Hacktoberfest 2025!")
