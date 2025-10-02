@@ -1,0 +1,56 @@
+#include <iostream>
+#include <vector>
+#include <queue>
+#include <limits>
+using namespace std;
+
+struct Edge {
+    int to, weight;
+};
+
+int main() {
+    int V, E;
+    cout << "Enter number of vertices and edges: ";
+    cin >> V >> E;
+
+    vector<vector<Edge>> graph(V);
+    cout << "Enter edges (u v w) [0-indexed]:\n";
+    for (int i = 0; i < E; i++) {
+        int u, v, w;
+        cin >> u >> v >> w;
+        graph[u].push_back({v, w});
+        graph[v].push_back({u, w}); // if undirected
+    }
+
+    int source;
+    cout << "Enter source vertex: ";
+    cin >> source;
+
+    vector<int> dist(V, numeric_limits<int>::max());
+    dist[source] = 0;
+
+    priority_queue<pair<int,int>, vector<pair<int,int>>, greater<pair<int,int>>> pq;
+    pq.push({0, source});
+
+    while (!pq.empty()) {
+        auto [d, u] = pq.top(); pq.pop();
+        if (d > dist[u]) continue;
+
+        for (auto &edge : graph[u]) {
+            if (dist[u] + edge.weight < dist[edge.to]) {
+                dist[edge.to] = dist[u] + edge.weight;
+                pq.push({dist[edge.to], edge.to});
+            }
+        }
+    }
+
+    cout << "\nShortest distances from source " << source << ":\n";
+    for (int i = 0; i < V; i++) {
+        if (dist[i] == numeric_limits<int>::max())
+            cout << i << " : INF\n";
+        else
+            cout << i << " : " << dist[i] << "\n";
+    }
+
+    return 0;
+}
