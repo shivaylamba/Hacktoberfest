@@ -20,9 +20,9 @@ int main()
 
     int first = 0;
 	int last = size-1;
-	int middle = (first+last)/2;
 	while (first <= last)
 	{
+      int middle = first + (last-first)/2;
 	   if(a[middle] < item)
 	   {
 		first = middle + 1;
@@ -36,7 +36,6 @@ int main()
            else { 
                 last = middle - 1; 
            } 
-           middle = (first + last)/2; 
         } 
         if(first > last)
 	{
