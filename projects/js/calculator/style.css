@@ -1,0 +1,221 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+}
+
+.title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.display-container {
+  margin-bottom: 20px;
+}
+
+.history {
+  height: 20px;
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  padding: 0 10px;
+  opacity: 0.8;
+}
+
+#display {
+  width: 100%;
+  height: 80px;
+  font-size: 2.5rem;
+  font-weight: 500;
+  text-align: right;
+  border: none;
+  border-radius: 15px;
+  padding: 0 20px;
+  background: #f8f9fa;
+  color: #333;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+  outline: none;
+  letter-spacing: 1px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  height: 60px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.btn:hover::before {
+  left: 100%;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn.number {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  color: #333;
+  border: 1px solid #e9ecef;
+}
+
+.btn.number:hover {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn.operator {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.btn.operator:hover {
+  background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.btn.equals {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.btn.equals:hover {
+  background: linear-gradient(135deg, #ff5252 0%, #e53935 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 107, 107, 0.4);
+}
+
+.btn.clear {
+  background: linear-gradient(135deg, #ffa726 0%, #ff9800 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.btn.clear:hover {
+  background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255, 167, 38, 0.4);
+}
+
+.btn.special {
+  background: linear-gradient(135deg, #26c6da 0%, #00acc1 100%);
+  color: white;
+  font-weight: 600;
+}
+
+.btn.special:hover {
+  background: linear-gradient(135deg, #00acc1 0%, #0097a7 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(38, 198, 218, 0.4);
+}
+
+.btn.zero {
+  grid-column: span 2;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .calculator {
+    width: 100%;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  #display {
+    height: 70px;
+    font-size: 2rem;
+  }
+
+  .btn {
+    height: 50px;
+    font-size: 1rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .calculator {
+    background: rgba(30, 30, 30, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  #display {
+    background: #1a1a1a;
+    color: #fff;
+  }
+
+  .history {
+    color: #aaa;
+  }
+}

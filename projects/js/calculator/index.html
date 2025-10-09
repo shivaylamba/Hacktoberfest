@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Beautiful Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Beautiful Calculator</h1>
+      <div class="calculator">
+        <div class="display-container">
+          <div id="history" class="history"></div>
+          <input type="text" id="display" readonly placeholder="0" />
+        </div>
+        <div class="buttons">
+          <!-- Row 1 -->
+          <button onclick="clearAll()" class="btn clear">AC</button>
+          <button onclick="clearEntry()" class="btn clear">CE</button>
+          <button onclick="deleteLast()" class="btn clear">⌫</button>
+          <button onclick="press('/')" class="btn operator">÷</button>
+
+          <!-- Row 2 -->
+          <button onclick="press('7')" class="btn number">7</button>
+          <button onclick="press('8')" class="btn number">8</button>
+          <button onclick="press('9')" class="btn number">9</button>
+          <button onclick="press('*')" class="btn operator">×</button>
+
+          <!-- Row 3 -->
+          <button onclick="press('4')" class="btn number">4</button>
+          <button onclick="press('5')" class="btn number">5</button>
+          <button onclick="press('6')" class="btn number">6</button>
+          <button onclick="press('-')" class="btn operator">−</button>
+
+          <!-- Row 4 -->
+          <button onclick="press('1')" class="btn number">1</button>
+          <button onclick="press('2')" class="btn number">2</button>
+          <button onclick="press('3')" class="btn number">3</button>
+          <button onclick="press('+')" class="btn operator">+</button>
+
+          <!-- Row 5 -->
+          <button onclick="percentage()" class="btn special">%</button>
+          <button onclick="press('0')" class="btn number zero">0</button>
+          <button onclick="press('.')" class="btn number">.</button>
+          <button onclick="calculate()" class="btn equals">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
