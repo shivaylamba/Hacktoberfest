@@ -4,7 +4,7 @@ from manim import *
 class hacktoberfest(Scene):
     def construct(self):
         logo = SVGMobject(
-            "/home/dakota/bootdev/hacktoberfest/logo.svg",
+            "~/hacktoberfest/logo.svg",
             fill_opacity=0.8,
             height=10,
             width=10,
