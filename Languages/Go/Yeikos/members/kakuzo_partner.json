@@ -1,0 +1,32 @@
+{
+    "name": "Kakuzu's Fourth Partner",
+    "alias": "Unknown",
+    "ring": {
+        "kanji": "三",
+        "meaning": "(Three)",
+        "color": "#FFA500"
+    },
+    "appearance": {
+        "height": "Not Specified",
+        "age": "Not Specified",
+        "clan": "Not Specified",
+        "village": "Not Specified"
+    },
+    "background": "Kakuzu's fourth partner was a former Akatsuki member paired with Kakuzu before Hidan. Not much is known about them other than that Kakuzu killed them out of frustration, taking their heart for his Earth Grudge Fear technique.",
+    "abilities": [
+        {
+            "name": "Earth Grudge Fear",
+            "description": "Allowed Kakuzu to take their heart and incorporate it into his body to gain new abilities.",
+            "rank": "S-rank",
+            "rating": 9
+        }
+    ],
+    "stats": "Unknown",
+    "relationships": [
+        {
+            "name": "Kakuzu",
+            "dynamic": "Partner in the Akatsuki who ultimately killed them and took their heart."
+        }
+    ],
+    "quotes": "Not Available"
+}

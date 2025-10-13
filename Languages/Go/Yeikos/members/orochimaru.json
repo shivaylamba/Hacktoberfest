@@ -1,0 +1,133 @@
+{
+    "name": "Orochimaru",
+    "alias": "The Eternal Seeker",
+    "ring": {
+        "kanji": "空",
+        "meaning": "(Sky)",
+        "color": "#5B7C99"
+    },
+    "appearance": {
+        "height": "179 cm",
+        "age": "54",
+        "clan": "Not Specified",
+        "village": "Konohagakure (formerly)"
+    },
+    "background": "Orochimaru, one of the Legendary Sannin, is a former shinobi of Konohagakure who sought to unlock the secrets of immortality and mastery over all techniques. Obsessed with discovering the true meaning of life, he betrayed Konoha to pursue forbidden experiments and formed his own hidden village, Otogakure.",
+    "abilities": [
+        {
+            "name": "Living Corpse Reincarnation",
+            "description": "A forbidden jutsu that allows Orochimaru to transfer his soul into a new body, effectively achieving immortality.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Summoning: Impure World Reincarnation",
+            "description": "Resurrects the dead to fight as their living selves, controlled by Orochimaru.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Summoning: Rashōmon",
+            "description": "Summons a massive, nearly indestructible gate as a defensive barrier.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Soft Physique Modification",
+            "description": "Allows Orochimaru to stretch and contort his body in unnatural ways for combat and evasion.",
+            "rank": "B-rank",
+            "rating": 8.5
+        },
+        {
+            "name": "Snake Clone Technique",
+            "description": "Creates clones of himself that attack enemies using snakes.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "White Snake Form",
+            "description": "Transforms into his true form, a massive white snake composed of countless smaller snakes.",
+            "rank": "S-rank",
+            "rating": 10
+        }
+    ],
+    "stats": {
+        "ninjutsu": 5,
+        "taijutsu": 3.5,
+        "genjutsu": 5,
+        "intelligence": 5,
+        "strength": 3.5,
+        "speed": 4.5,
+        "stamina": 3.5,
+        "handSeals": 5,
+        "total": 35
+    },
+    "relationships": [
+        {
+            "name": "Hiruzen Sarutobi",
+            "dynamic": "Former mentor. Orochimaru resented Hiruzen for not choosing him as Hokage, driving him to betray Konoha."
+        },
+        {
+            "name": "Jiraiya and Tsunade",
+            "dynamic": "Teammates from the Legendary Sannin. Orochimaru's betrayal deeply impacted their relationship."
+        },
+        {
+            "name": "Kabuto Yakushi",
+            "dynamic": "Loyal follower and apprentice. Kabuto aided Orochimaru in his experiments and acted as his right-hand man."
+        },
+        {
+            "name": "Sasuke Uchiha",
+            "dynamic": "Orochimaru's apprentice and intended vessel, but Sasuke ultimately turned against him."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "You just don't have enough information to explain yourself yet. Your glasses, your name, being someone's child is not something that can show who really you are. But that is fine. If you're not happy on what you have now… you can just find new things to find up. …You see, I also want to find who I really am. That's why I'm collecting a bit of everything.",
+            "context": "To Kabuto, explaining his philosophy on self-discovery."
+        },
+        {
+            "text": "I want to obtain all the techniques and gain a true understanding of everything in this world. The first one to mix blue and yellow called the new colour 'green'. I want to do something similar to that. If blue is the chakra, then yellow is the seal, and green is the technique… Just as there is no end to the variety of colours, there are so many thousands… tens of thousands of techniques in the world as well. But in order to obtain every possible technique and truth, it would require an eternity. Only one who understands everything after spending such time on this can be fittingly called the Ultimate Being.",
+            "context": "To Hiruzen, sharing his ultimate ambition."
+        },
+        {
+            "text": "What nonsense! In the grand scheme of time, you're nothing more than a trivial footnote in the brief history of a cluster of huts called 'Konoha'! In time, the Hokage Stone Faces will crumble and be worn down to nothing…",
+            "context": "To Hiruzen, mocking the significance of Konoha."
+        },
+        {
+            "text": "Maybe, just maybe, there is no purpose in life. But if you linger a while longer in this world, you might discover something of value in it, like how you discovered that flower. Or, how I discovered you one fateful night.",
+            "context": "To a young Kimimaro, offering a new perspective on life."
+        },
+        {
+            "text": "The best medicines always taste bitter.",
+            "context": "To Kabuto, referencing Tsunade's abilities."
+        },
+        {
+            "text": "This child… intrigues me to no end!",
+            "context": "Observing Naruto, fascinated by his potential."
+        },
+        {
+            "text": "When I watch this boy, I look back to the time I was called a genius, and think how ridiculous it was.",
+            "context": "Reflecting on Sasuke's abilities."
+        },
+        {
+            "text": "When there is a true desire in the heart and that desire is strong… that is when he finds real strength that even he did not know he had.",
+            "context": "Reflecting on Yūkimaru's hidden strength."
+        },
+        {
+            "text": "I refuse… to let this happen! I am Orochimaru! I am immortal! I will not die here! Destined to discover the true meaning behind everything! Destined to take control of everything in this world!!",
+            "context": "Declaring his defiance to Sasuke."
+        },
+        {
+            "text": "It's just like the time when I planned on crushing the Konohagakure… He has chosen a divergent path from the village… But even so, it'll always have some sentimental value. He's soaking that all in and coming to terms with… The consequences of his future actions and reaffirming his resolve.",
+            "context": "To Suigetsu, discussing Sasuke's motivations."
+        },
+        {
+            "text": "People change. It's just a matter of whether they die before it happens. Although he died just the way he was.",
+            "context": "Commenting on Jiraiya's unchanging nature."
+        },
+        {
+            "text": "Fine, let's bring back the memories… of when I was your student.",
+            "context": "To Hiruzen, reminiscing about their past."
+        }
+    ]
+}

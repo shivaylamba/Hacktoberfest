@@ -1,0 +1,85 @@
+{
+    "name": "Hidan",
+    "alias": "The Immortal",
+    "ring": {
+        "kanji": "三",
+        "meaning": "(Three)",
+        "color": "#FFA500"
+    },
+    "appearance": {
+        "height": "177.1 cm",
+        "age": "22 (immortal)",
+        "clan": "Not Specified",
+        "village": "Yugakure"
+    },
+    "background": "Hidan is a missing-nin from Yugakure and the only known follower of Jashin, a deity who demands ritual sacrifices. He is known for his immortality, which allows him to survive fatal wounds.",
+    "abilities": [
+        {
+            "name": "Ritual of Jashin",
+            "description": "Hidan uses his opponent's blood to link their fates, allowing him to inflict pain on them by harming himself.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Curse Technique: Death Controlling Possessed Blood",
+            "description": "The technique that enables the Ritual of Jashin. Requires Hidan to draw a symbol of Jashin on the ground.",
+            "rank": "A-rank",
+            "rating": 9.5
+        },
+        {
+            "name": "Immortality",
+            "description": "Grants Hidan the ability to survive mortal wounds, such as decapitation or impalement.",
+            "rank": "Kekkei Genkai",
+            "rating": 9.5
+        },
+        {
+            "name": "Triple-Bladed Scythe",
+            "description": "A custom weapon used by Hidan to injure opponents and collect their blood for his rituals.",
+            "rank": "C-rank",
+            "rating": 7
+        }
+    ],
+    "stats": {
+        "ninjutsu": 5,
+        "taijutsu": 4.5,
+        "genjutsu": 3,
+        "intelligence": 3,
+        "strength": 4,
+        "speed": 3.5,
+        "stamina": 5,
+        "handSeals": 3.5,
+        "total": 31.5
+    },
+    "relationships": [
+        {
+            "name": "Kakuzu",
+            "dynamic": "Partnered with Kakuzu in the Akatsuki. They had an antagonistic relationship but worked well together due to their respective immortality and durability."
+        },
+        {
+            "name": "Jashin",
+            "dynamic": "Hidan's deity. He performed ritual sacrifices to honor Jashin and gain immortality."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Now! Let's savour the utmost of suffering together!",
+            "context": null
+        },
+        {
+            "text": "Every damn time… That's not something you say to me… If they can kill me, I couldn't be happier. Although… I don't think they can!",
+            "context": "To Kakuzu after being told not to die."
+        },
+        {
+            "text": "Hell that hurts… You go and stab me all over… Damn both of you… Divine judgement awaits heathens ignorant to the pain of others.",
+            "context": "To the Konoha shinobi."
+        },
+        {
+            "text": "Yeah hurts good doesn't it? Attacking the vitals is such a waste! This pain, this is the best! As the other dies, their agony radiates through my body! And living through it feels even better!",
+            "context": "After wounding Asuma."
+        },
+        {
+            "text": "I'll never die… Even if you destroy my body, and I'm left with nothing but my head… I'll escape somehow… and when I do, I'll find you and bite your throat out!",
+            "context": "To Shikamaru before being buried alive."
+        }
+    ]
+}

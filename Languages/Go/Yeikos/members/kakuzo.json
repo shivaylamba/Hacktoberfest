@@ -1,0 +1,105 @@
+{
+    "name": "Kakuzu",
+    "alias": "Immortal Monster",
+    "ring": {
+        "kanji": "北",
+        "meaning": "(North)",
+        "color": "#053805"
+    },
+    "appearance": {
+        "height": "185 cm",
+        "age": "91 (at death)",
+        "clan": "Not Specified",
+        "village": "Takigakure"
+    },
+    "background": "Kakuzu was a missing-nin from Takigakure and one of the oldest members of Akatsuki. Known for his longevity and greed, he extended his life by stealing hearts and using them to perform powerful elemental jutsu. His unique body structure made him nearly indestructible in battle.",
+    "abilities": [
+        {
+            "name": "Earth Grudge Fear",
+            "description": "Allows Kakuzu to steal hearts from others, granting him additional lives and the ability to perform elemental jutsu.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Fire Release: Intelligent Hard Work",
+            "description": "A large-scale fireball attack using the heart aligned with the Fire element.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Wind Release: Pressure Damage",
+            "description": "Creates a powerful gust of wind to attack and destroy the opponent.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Lightning Release: False Darkness",
+            "description": "Fires a powerful lightning blast that can pierce multiple enemies.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Water Release: Water Encampment Wall",
+            "description": "Forms a defensive wall of water to block incoming attacks.",
+            "rank": "B-rank",
+            "rating": 8.5
+        },
+        {
+            "name": "Enhanced Strength",
+            "description": "Uses his threads to enhance his physical strength and tear apart his opponents.",
+            "rank": "B-rank",
+            "rating": 8
+        }
+    ],
+    "stats": {
+        "ninjutsu": 5,
+        "taijutsu": 4,
+        "genjutsu": 3,
+        "intelligence": 4.5,
+        "strength": 4,
+        "speed": 4,
+        "stamina": 4.5,
+        "handSeals": 3.5,
+        "total": 32.5
+    },
+    "relationships": [
+        {
+            "name": "Hidan",
+            "dynamic": "Partner in the Akatsuki. Kakuzu frequently clashed with Hidan's reckless behavior but relied on him for their missions."
+        },
+        {
+            "name": "Takigakure",
+            "dynamic": "Former village, which Kakuzu betrayed after being sent to assassinate the First Hokage and failing."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Even Hell runs on money. I'd be just fine.",
+            "context": "To Hidan."
+        },
+        {
+            "text": "If you let your guard down… you're dead.",
+            "context": "To Hidan."
+        },
+        {
+            "text": "…One of these days, I swear I'll kill you.",
+            "context": "To Hidan."
+        },
+        {
+            "text": "You actually think… unlike my idiot partner.",
+            "context": "To Shikamaru, about Hidan."
+        },
+        {
+            "text": "Looking at your forehead protector reminds me of the very first Konoha shinobi I fought… the First Hokage, that is.",
+            "context": "To Kakashi, referencing his battle against Hashirama Senju."
+        },
+        {
+            "text": "Heh… No one is immortal.",
+            "context": "Mocking Kakashi during their fight."
+        },
+        {
+            "text": "It's only fitting that I take your heart to replace the one you've destroyed!",
+            "context": "To Kakashi, after losing one of his hearts."
+        }
+    ]
+}

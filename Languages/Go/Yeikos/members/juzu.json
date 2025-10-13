@@ -1,0 +1,49 @@
+{
+    "name": "Jūzō Biwa",
+    "alias": "Demon of the Hidden Mist",
+    "ring": {
+        "kanji": "南",
+        "meaning": "(South)",
+        "color": "#CBA632"
+    },
+    "appearance": {
+        "height": "Not Specified",
+        "age": "Not Specified",
+        "clan": "Not Specified",
+        "village": "Kirigakure"
+    },
+    "background": "Jūzō Biwa was one of the Seven Ninja Swordsmen of the Mist and the original wielder of the Kubikiribōchō. He became a missing-nin and joined the Akatsuki, partnering with Itachi Uchiha during his tenure.",
+    "abilities": [
+        {
+            "name": "Kubikiribōchō (Executioner's Blade)",
+            "description": "A massive sword capable of regenerating itself by absorbing iron from the blood of its victims.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Silent Killing",
+            "description": "A technique used by Mist ninja to eliminate targets without making a sound.",
+            "rank": "B-rank",
+            "rating": 8
+        },
+        {
+            "name": "Water Release: Water Dragon Bullet Technique",
+            "description": "A high-level water release technique that creates a massive water dragon to attack the opponent.",
+            "rank": "A-rank",
+            "rating": 8.5
+        }
+    ],
+    "stats": "Not Available",
+    
+    "relationships": [
+        {
+            "name": "Itachi Uchiha",
+            "dynamic": "Partner in the Akatsuki. Itachi and Jūzō worked well together despite their differing styles."
+        },
+        {
+            "name": "Kirigakure",
+            "dynamic": "Formerly loyal to Kirigakure as one of the Seven Ninja Swordsmen of the Mist before becoming a missing-nin."
+        }
+    ],
+    "quotes": "Not Available"
+}

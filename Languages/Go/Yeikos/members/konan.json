@@ -1,0 +1,113 @@
+{
+    "name": "Konan",
+    "alias": "Angel of God",
+    "ring": {
+        "kanji": "白",
+        "meaning": "(White)",
+        "color": "#625954"
+    },
+    "appearance": {
+        "height": "169.4 cm",
+        "age": "35 (at death)",
+        "clan": "Not Specified",
+        "village": "Amegakure"
+    },
+    "background": "Konan was one of the original founding members of the Akatsuki, alongside Yahiko and Nagato. Known as the Angel of Amegakure, she served as Nagato's most trusted advisor and was deeply loyal to their shared vision of peace. Her mastery of origami-based techniques earned her a fearsome reputation as a kunoichi.",
+    "abilities": [
+        {
+            "name": "Dance of the Shikigami",
+            "description": "Konan transforms her body into countless sheets of paper for offense, defense, and stealth.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Paper Clone",
+            "description": "Creates clones made of paper that explode upon contact or destruction.",
+            "rank": "B-rank",
+            "rating": 8.5
+        },
+        {
+            "name": "Paper Chakram",
+            "description": "Forms a spinning blade of paper to attack enemies with high precision.",
+            "rank": "B-rank",
+            "rating": 8.5
+        },
+        {
+            "name": "Six Hundred Billion Paper Bombs",
+            "description": "An ultimate technique that uses billions of explosive tags to create continuous explosions over a 10-minute period.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Camouflage",
+            "description": "Uses paper to blend into the environment or create disguises.",
+            "rank": "C-rank",
+            "rating": 7
+        }
+    ],
+    "stats": "Unknown",
+    "relationships": [
+        {
+            "name": "Yahiko",
+            "dynamic": "A childhood friend and leader of the original Akatsuki. Konan was deeply loyal to Yahiko's ideals and goals."
+        },
+        {
+            "name": "Nagato",
+            "dynamic": "Partner and close friend. Konan supported Nagato as the leader of Akatsuki after Yahiko's death."
+        },
+        {
+            "name": "Jiraiya",
+            "dynamic": "Former mentor. Jiraiya trained Konan, Yahiko, and Nagato in their youth."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Yahiko and Nagato… I will be the support that holds both our bridges up!",
+            "context": "Expressing her loyalty to Yahiko and Nagato."
+        },
+        {
+            "text": "You have no idea what happened to us after you left, sensei.",
+            "context": "To Jiraiya."
+        },
+        {
+            "text": "I have received the will of god and I must kill you.",
+            "context": "To Jiraiya, showing her loyalty to Nagato's vision."
+        },
+        {
+            "text": "That time, you should have listened to what Orochimaru said, but you saved us instead. Now, it's too late as we act to make his plans a reality.",
+            "context": "To Jiraiya on his decision to save her and her friends."
+        },
+        {
+            "text": "Nagato believed in you, so I believe in you, too.",
+            "context": "To Naruto, showing her faith in him as a symbol of hope."
+        },
+        {
+            "text": "This time… I hope for you these will be flowers of hope that never die.",
+            "context": "To Naruto, symbolizing her belief in his vision of peace."
+        },
+        {
+            "text": "I knew you'd come find me eventually. I've been waiting for my chance to destroy you.",
+            "context": "To Tobi, anticipating their confrontation."
+        },
+        {
+            "text": "He is light personified. That's why everyone he meets… carries the flower called hope!",
+            "context": "To Tobi about Naruto's ability to inspire others."
+        },
+        {
+            "text": "Yahiko founded the Akatsuki. The red clouds on these robes we wear… represent the wars that rained blood upon Amegakure. You merely jumped in our bandwagon. These robes are our legacy, not yours. The Rinnegan is something that Amegakure shinobi Nagato awakened on his own, and it does not belong to you! His eyes are this nation and village's greatest treasure!!",
+            "context": "To Tobi, defending Yahiko and Nagato's legacy."
+        },
+        {
+            "text": "One question… Madara. Do you understand why we betrayed you? Because you are darkness, a world without light where flowers can only wither and die!",
+            "context": "To Tobi, explaining their betrayal of his ideals."
+        },
+        {
+            "text": "Yahiko and Nagato did what they wanted to do. They were never your pawns! No matter what happened to them, they both fought for their own ideals! And that's why their will has been passed down! I won't let you ruin it!",
+            "context": "To Tobi, defending Yahiko and Nagato's independence."
+        },
+        {
+            "text": "Yahiko and Nagato's will hasn't vanished from this world! I believe in Naruto too! He… He will become the bridge that leads us to peace and I will be a support holding the bridge up!",
+            "context": "Final declaration to Tobi about Naruto's role in creating peace."
+        }
+    ]
+}

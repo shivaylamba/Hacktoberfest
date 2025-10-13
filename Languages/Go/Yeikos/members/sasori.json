@@ -1,0 +1,125 @@
+{
+    "name": "Sasori",
+    "alias": "Sasori of the Red Sand",
+    "ring": {
+        "kanji": "玉",
+        "meaning": "(Jewel)",
+        "color": "#674EA7"
+    },
+    "appearance": {
+        "height": "164.1 cm",
+        "age": "35 (at death)",
+        "clan": "Akasuna",
+        "village": "Sunagakure"
+    },
+    "background": "Sasori, known as Sasori of the Red Sand, was a legendary puppet master from Sunagakure. After his parents' death, he became obsessed with creating puppets, leading him to transform his own body into one. As a member of Akatsuki, Sasori partnered with Deidara, blending their contrasting philosophies of art. Sasori's abilities allowed him to take down entire nations with his vast arsenal of puppets.",
+    "abilities": [
+        {
+            "name": "Human Puppet Creation",
+            "description": "Transforms the corpses of powerful shinobi into puppets, allowing them to retain their chakra and abilities.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Puppet Technique",
+            "description": "Manipulates puppets with threads of chakra for offense, defense, and support.",
+            "rank": "B-rank",
+            "rating": 8
+        },
+        {
+            "name": "Performance of a Hundred Puppets",
+            "description": "Controls up to 100 puppets simultaneously, a feat that allowed Sasori to destroy an entire nation.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Iron Sand Techniques",
+            "description": "Using the Third Kazekage puppet, Sasori manipulates iron sand for large-scale attacks.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Hiruko",
+            "description": "A puppet armor that provides both defense and offense with its mechanical enhancements.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Eternal Puppet Body",
+            "description": "Sasori's self-modified puppet body grants him immortality, immunity to aging, and numerous hidden weapons.",
+            "rank": "S-rank",
+            "rating": 10
+        }
+    ],
+    "stats": {
+        "ninjutsu": 5,
+        "taijutsu": 4,
+        "genjutsu": 4,
+        "intelligence": 5,
+        "strength": 3,
+        "speed": 4.5,
+        "stamina": 5,
+        "handSeals": 4,
+        "total": 34.5
+    },
+    "relationships": [
+        {
+            "name": "Chiyo",
+            "dynamic": "Grandmother and fellow puppet master. Their relationship was strained after Sasori defected from Sunagakure."
+        },
+        {
+            "name": "Deidara",
+            "dynamic": "Partner in Akatsuki. Sasori and Deidara often debated over their differing philosophies of art."
+        },
+        {
+            "name": "Kankurō",
+            "dynamic": "A fellow puppet master from Sunagakure. Sasori passed on his parents' puppets to Kankurō before his death."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Since I don't like to wait or make people wait… I'll end this quickly.",
+            "context": "To Kankurō, displaying his efficiency in combat."
+        },
+        {
+            "text": "For my name to be known all the way down to a kid like you… is an honour.",
+            "context": "To Kankurō, acknowledging his reputation."
+        },
+        {
+            "text": "What? You call those explosions fine art? Fine art is something wonderful that's left long into the future… eternal beauty.",
+            "context": "To Deidara, contrasting their views on art."
+        },
+        {
+            "text": "Great puppet masters think alike, I suppose.",
+            "context": "Commenting on Chiyo's skills during their battle."
+        },
+        {
+            "text": "That is a considerable amount of puppets. But… [Proceeds to summon one hundred puppets of his own] With these, I took down a whole nation!",
+            "context": "To Chiyo, boasting about his strength."
+        },
+        {
+            "text": "How'll I explain this… How long it took me to take down a little girl and an old hag… That I even had to use my last trick…",
+            "context": "Reflecting on his battle with Chiyo and Sakura."
+        },
+        {
+            "text": "Women like to do useless things don't they… Even connected by blood ties as we are, I won't feel a thing if grandma dies here. My heart… is just like this body…",
+            "context": "To Sakura, showing his detachment from emotions."
+        },
+        {
+            "text": "Want to try to become like this too? If you do then you'll probably get what I'm saying. A body that does not decay… a puppet body can be rebuilt over and over… unfettered by a mortal lifespan.",
+            "context": "Offering Sakura a glimpse into his philosophy."
+        },
+        {
+            "text": "I would describe myself as a human being who could not become a complete puppet, I am an unfinished puppet, whose lifeless frame still contains a beating heart at its core. I am neither dead, nor am I alive.",
+            "context": "Reflecting on his identity."
+        },
+        {
+            "text": "My old puppet body… Suddenly it all seems so pointless. I now have the body I've always desired, one that will never rot or decay. I've truly become a puppet in every sense of the word.",
+            "context": "Upon seeing Kankurō using his old puppet body."
+        },
+        {
+            "text": "Kankurō… I want you to have my 'Mother' and 'Father' puppets as well… and when you die, pass them both on… to the next generation.",
+            "context": "Last words to Kankurō, showing a rare moment of sentiment."
+        }
+    ]
+}

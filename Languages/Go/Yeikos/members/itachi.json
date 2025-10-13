@@ -1,0 +1,117 @@
+{
+    "name": "Itachi Uchiha",
+    "alias": "The Clan Killer",
+    "ring": {
+        "kanji": "朱",
+        "meaning": "(Crimson)",
+        "color": "#DC143C"
+    },
+    "appearance": {
+        "height": "178 cm",
+        "age": "21 (at death)",
+        "clan": "Uchiha",
+        "village": "Konohagakure"
+    },
+    "background": "Itachi was a prodigy of the Uchiha clan and one of the most complex shinobi in Konohagakure. Despite his actions in killing his clan, Itachi did so to protect the village, carrying the burden of being misunderstood until the very end.",
+    "abilities": [
+        {
+            "name": "Amaterasu",
+            "description": "Black flames that burn anything they touch and never extinguish until their target is reduced to ash.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Tsukuyomi",
+            "description": "A powerful genjutsu that manipulates the victim's perception of time and reality, inflicting psychological torment.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Susano'o",
+            "description": "A giant chakra construct that provides both offense and defense, capable of wielding the Totsuka Blade and Yata Mirror.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Fire Release: Great Fireball Technique",
+            "description": "A high-level fire release technique, creating a massive sphere of fire.",
+            "rank": "B-rank",
+            "rating": 8
+        },
+        {
+            "name": "Crow Clone Technique",
+            "description": "A substitution technique that uses a clone of crows to evade attacks.",
+            "rank": "C-rank",
+            "rating": 7
+        },
+        {
+            "name": "Izanami",
+            "description": "A genjutsu that traps opponents in an infinite loop, forcing them to accept their reality.",
+            "rank": "S-rank",
+            "rating": 9.5
+        }
+    ],
+    "stats": {
+        "ninjutsu": 5,
+        "taijutsu": 4.5,
+        "genjutsu": 5,
+        "intelligence": 5,
+        "strength": 3.5,
+        "speed": 5,
+        "stamina": 2.5,
+        "handSeals": 5,
+        "total": 35.5
+    },
+    "relationships": [
+        {
+            "name": "Sasuke Uchiha",
+            "dynamic": "Younger brother and the person Itachi sought to protect above all else, despite being hated by him."
+        },
+        {
+            "name": "Shisui Uchiha",
+            "dynamic": "Best friend and mentor. Shisui's death profoundly shaped Itachi's actions."
+        },
+        {
+            "name": "Kisame Hoshigaki",
+            "dynamic": "Partner in Akatsuki. They shared mutual respect and understanding."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Don't cry, Sasuke. Your big brother is here to protect you, no matter what happens.",
+            "context": "To an infant Sasuke."
+        },
+        {
+            "text": "You hold onto the organisation and your clan name. These things limit us and limit our capacities… These things deserve to be shunned. It is foolish to fear what we've yet to see and know!",
+            "context": "To Yashiro, Tekka, and Inabi."
+        },
+        {
+            "text": "There is no value in killing the likes of you… My foolish brother… If you want to kill me… curse me! Hate me! And live a long and unsightly life… Run away… run away… and cling to your pitiful life. And then some day, when you have the same eyes as I do, come before me.",
+            "context": "To Sasuke."
+        },
+        {
+            "text": "...People live their lives bound by what they accept as correct and true… that is how they define reality. But what does it mean to be correct or true? Merely vague concepts… their reality may all be an illusion.",
+            "context": "To Sasuke."
+        },
+        {
+            "text": "Those who kill their own comrades are sure to die a terrible death.",
+            "context": "To Kisame."
+        },
+        {
+            "text": "We don't know what kind of people we truly are until the moment before our deaths. As death comes to embrace you, you will realise what you are. That's what death is, don't you think?",
+            "context": "To Kisame."
+        },
+        {
+            "text": "You don't become the Hokage to be acknowledged by everyone. The one who is acknowledged by everyone becomes the Hokage.",
+            "context": "To Naruto."
+        },
+        {
+            "text": "The village does have its dark side and its inconsistencies, but I'm still Konoha's Itachi Uchiha.",
+            "context": "About Konoha."
+        },
+        {
+            "text": "If I had been open with you from the start… and looked you straight in the eyes and told you the truth, then I wouldn't have had to stand before you, from above, as a failure, telling you all of this. So this time, I want to impart this truth to you… You don't ever have to forgive me. And no matter what you do from here on out, know this… I will love you always.",
+            "context": "Last words to Sasuke after reincarnation."
+        }
+    ]
+}
