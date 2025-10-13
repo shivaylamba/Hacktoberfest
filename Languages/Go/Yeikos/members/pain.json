@@ -1,0 +1,113 @@
+{
+    "name": "Nagato",
+    "alias": "Pain, God of the Akatsuki",
+    "ring": {
+        "kanji": "零",
+        "meaning": "(Zero)",
+        "color": "#743774"
+    },
+    "appearance": {
+        "height": "175 cm (Pain's Deva Path)",
+        "age": "35 (at death)",
+        "clan": "Uzumaki Clan",
+        "village": "Amegakure"
+    },
+    "background": "Nagato, also known as Pain, was a shinobi from the Uzumaki Clan and the leader of the Akatsuki. Once an idealistic child trained by Jiraiya, Nagato became disillusioned after witnessing the endless cycle of hatred and war in the ninja world. Using the Rinnegan bestowed upon him by Madara Uchiha, Nagato became 'Pain' and sought to enforce peace through destruction, believing pain was the only way to unite the world.",
+    "abilities": [
+        {
+            "name": "Rinnegan",
+            "description": "The legendary ocular jutsu that grants access to powerful techniques, including mastery over the six paths of Pain.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Six Paths of Pain",
+            "description": "A technique that allows Nagato to control six reanimated bodies, each with unique abilities representing one of the six paths of reincarnation.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Almighty Push (Shinra Tensei)",
+            "description": "An offensive and defensive technique that repels everything in a spherical area around the user.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Planetary Devastation (Chibaku Tensei)",
+            "description": "Creates a massive gravitational core that pulls everything around it, forming a giant sphere.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Summoning: Demonic Statue of the Outer Path",
+            "description": "Summons a massive statue that can absorb chakra and extract tailed beasts.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Naraka Path",
+            "description": "Allows Nagato to summon the King of Hell, capable of interrogating and healing.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Universal Pull (Banshō Ten'in)",
+            "description": "A technique that pulls a target toward the user using gravity.",
+            "rank": "A-rank",
+            "rating": 9
+        }
+    ],
+    "stats": "Unknown",
+    "relationships": [
+        {
+            "name": "Konan",
+            "dynamic": "Childhood friend and loyal partner in the Akatsuki. Konan supported Nagato's vision of peace."
+        },
+        {
+            "name": "Yahiko",
+            "dynamic": "Best friend and original leader of the Akatsuki. Yahiko's death deeply influenced Nagato's transformation into Pain."
+        },
+        {
+            "name": "Jiraiya",
+            "dynamic": "Former mentor who trained Nagato, Yahiko, and Konan in their youth. Jiraiya inspired Nagato's early ideals of peace."
+        },
+        {
+            "name": "Naruto Uzumaki",
+            "dynamic": "A fellow Uzumaki and the person Nagato entrusted with his dream of peace before his death."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Peace… I don't know how to get there… but… but someday I'll break the curse. If there's such a thing as peace, I will find it!",
+            "context": "Expressing his early ideals to Jiraiya."
+        },
+        {
+            "text": "We're both of the same breed, after all… motives for war are of no concern. Religion, ideology, resources, land, grudges, love, or just because… No matter how pathetic the reason, it's enough to start a war. War will never cease to exist… Reasons can be thought up after the fact. Human nature pursues strife.",
+            "context": "Addressing the Akatsuki about the nature of war."
+        },
+        {
+            "text": "Even a foolish child can grow up in a right way, when he learns what pain is. Knowing pain controls one's thoughts and decisions.",
+            "context": "To Jiraiya, explaining his philosophy."
+        },
+        {
+            "text": "You think you're the only ones who matter. You think you can put off death. But that peace made you foolish and thoughtless. If you kill someone, someone else will kill you… this hatred binds us together. I want you to feel pain, to think about pain, to accept pain, to know pain.",
+            "context": "To Tsunade, justifying his actions against Konoha."
+        },
+        {
+            "text": "We are both ordinary men, driven to seek vengeance in the name of justice. However, if there is justice in vengeance, then justice will breed only more vengeance. And trigger a cycle of hatred.",
+            "context": "To Naruto, discussing the cycle of hatred."
+        },
+        {
+            "text": "To create short these periods of peace through pain that interrupt the endless cycle of hatred… that is my dream.",
+            "context": "Revealing his dream to Naruto."
+        },
+        {
+            "text": "Dying like trash… never ending hatred… pain that never heals… that is war… Naruto… this… is what you must face… The book… and you… It's like… someone… set this all up… Or… maybe… this… is… the hand of the real God… My role is over now… Naruto… you… can really—",
+            "context": "Last words to Naruto before dying."
+        },
+        {
+            "text": "Naruto… I'll be returning to where our master is, so I can see your story… If you ask me… You're the third part that concludes the series… The first part was Jiraiya… He was flawless… But… The second part was me, an almost complete failure… I couldn't even get our master to acknowledge me… Ending the series is the third part… The final work will settle it all! Become such a masterpiece that that failure will be like it was cancelled altogether… Naruto!",
+            "context": "Last words to Naruto before being sealed, entrusting him with their master's legacy."
+        }
+    ]
+}

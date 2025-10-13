@@ -1,0 +1,115 @@
+{
+    "name": "Deidara",
+    "alias": "Art Is an Explosion",
+    "ring": {
+        "kanji": "青",
+        "meaning": "(Blue)",
+        "color": "#1B9AC9"
+    },
+    "appearance": {
+        "height": "166 cm",
+        "age": "19 (at death)",
+        "clan": "Not Specified",
+        "village": "Iwagakure"
+    },
+    "background": "Deidara is a missing-nin from Iwagakure and an explosives expert who views his art as transient and beautiful destruction.",
+    "abilities": [
+        {
+            "name": "C0",
+            "description": "Deidara's ultimate self-destruction technique, creating an explosion covering a 10 km radius.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "C4 Karura",
+            "description": "Creates a giant clone that releases microscopic bombs, causing cellular-level destruction.",
+            "rank": "S-rank",
+            "rating": 9.5
+        },
+        {
+            "name": "C3",
+            "description": "Drops a clay bomb capable of leveling an entire village.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "C2 Dragon",
+            "description": "Creates a large clay dragon that launches various explosive projectiles.",
+            "rank": "B-rank",
+            "rating": 8.5
+        },
+        {
+            "name": "C1",
+            "description": "Basic explosive clay creations used for versatile attacks.",
+            "rank": "C-rank",
+            "rating": 7
+        },
+        {
+            "name": "Explosive Clay Minions",
+            "description": "Creates clay minions capable of self-destruction to trap and damage enemies.",
+            "rank": "C-rank",
+            "rating": 7
+        },
+        {
+            "name": "Earth Release: Hiding Like a Mole Technique",
+            "description": "Allows Deidara to move underground stealthily.",
+            "rank": "C-rank",
+            "rating": 6.5
+        }
+    ],
+    "stats": {
+        "ninjutsu": 5,
+        "taijutsu": 3.5,
+        "genjutsu": 3.5,
+        "intelligence": 4.5,
+        "strength": 3.5,
+        "speed": 4.5,
+        "stamina": 4,
+        "handSeals": 3.5,
+        "total": 32
+    },
+    "relationships": [
+        {
+            "name": "Sasori",
+            "dynamic": "Partner and rival, often clashed over the philosophy of art."
+        },
+        {
+            "name": "Tobi",
+            "dynamic": "New partner, whom Deidara found annoying but tolerated in battle."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Art is an explosion!",
+            "context": "Catchphrase and battle mantra."
+        },
+        {
+            "text": "Look at those fools. They have no appreciation for art. You have to feel art. And true art… is an EXPLOSION!",
+            "context": "Before killing the Suna guards."
+        },
+        {
+            "text": "Fine art is the beauty of that single fleeting moment of explosion.",
+            "context": "To Sasori."
+        },
+        {
+            "text": "Tobi, even a Buddha loses patience when insulted a third time… One more word and there'll be no doubt about the cause of your death.",
+            "context": "To Tobi, after he mocked how Deidara had lost his arms."
+        },
+        {
+            "text": "You think you're so cool! And those eyes make me sick!! Always judging me… and my art!! You have no appreciation of the beauty of my work… and it makes me want to kill you!!",
+            "context": "To Sasuke."
+        },
+        {
+            "text": "This will be my ultimate piece of art. I'll explode. I shall die and become art itself! This will be like no explosion before it, and it will leave a scar upon the Earth unlike anything else. Then, my art will receive the admiration it's always deserved! Tremble! Be afraid! Recoil in despair! Cower in awe! And cry your heart out, because my art… is an EXPLOSION!",
+            "context": "Last words to Sasuke before self-detonating."
+        },
+        {
+            "text": "Shut up! I killed Sasuke Uchiha! And you're next, you art-hating sack of wrinkles!",
+            "context": "To Ōnoki after being reincarnated."
+        },
+        {
+            "text": "Art will never die… even if I already have.",
+            "context": "To himself."
+        }
+    ]
+}

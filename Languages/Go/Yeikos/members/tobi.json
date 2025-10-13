@@ -1,0 +1,121 @@
+{
+    "name": "Obito Uchiha",
+    "alias": "Tobi, Madara Uchiha",
+    "ring": {
+        "kanji": "玉",
+        "meaning": "(Jewel)",
+        "color": "#674EA7"
+    },
+    "appearance": {
+        "height": "182 cm",
+        "age": "31 (at death)",
+        "clan": "Uchiha",
+        "village": "Konohagakure (formerly)"
+    },
+    "background": "Obito Uchiha was a member of the Uchiha clan of Konohagakure. Presumed dead after the events of the Third Shinobi World War, Obito re-emerged as Tobi, a masked figure manipulating the Akatsuki from the shadows. Fueled by despair and loss, Obito sought to remake the world with the Eye of the Moon Plan, believing it was the only way to achieve peace. Despite his descent into darkness, he found redemption in the end, entrusting Naruto Uzumaki with the hope of a better future.",
+    "abilities": [
+        {
+            "name": "Sharingan",
+            "description": "Grants enhanced perception and the ability to copy techniques, as well as cast powerful genjutsu.",
+            "rank": "B-rank",
+            "rating": 8
+        },
+        {
+            "name": "Mangekyō Sharingan (Kamui)",
+            "description": "Allows Obito to manipulate space-time, phasing through objects and teleporting himself or others.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Wood Release",
+            "description": "Harnesses Hashirama Senju's cells to perform Wood Release techniques for offense and defense.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Rinnegan",
+            "description": "Bestowed by Madara, it grants Obito access to god-like abilities, including the Six Paths techniques.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Fire Release: Blast Wave Wild Dance",
+            "description": "A devastating fire technique that incinerates enemies within a wide radius.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Tailed Beast Control",
+            "description": "Uses the Sharingan to subdue and control tailed beasts, including the Nine-Tails.",
+            "rank": "S-rank",
+            "rating": 10
+        }
+    ],
+    "stats": {
+        "ninjutsu": 3,
+        "taijutsu": 2,
+        "genjutsu": 1.5,
+        "intelligence": 1,
+        "strength": 2,
+        "speed": 3,
+        "stamina": 2.5,
+        "handSeals": 3,
+        "total": 18
+    },
+    "relationships": [
+        {
+            "name": "Kakashi Hatake",
+            "dynamic": "Former teammate and lifelong rival. Their bond was shaped by loss, betrayal, and eventual redemption."
+        },
+        {
+            "name": "Naruto Uzumaki",
+            "dynamic": "Obito saw Naruto as a reflection of his younger self and entrusted him with the future of the ninja world."
+        },
+        {
+            "name": "Madara Uchiha",
+            "dynamic": "Mentor and manipulator. Madara shaped Obito's worldview and set him on the path to becoming Tobi."
+        },
+        {
+            "name": "Rin Nohara",
+            "dynamic": "Childhood teammate and the source of Obito's emotional turmoil after her death."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Those who break the rules are trash, but those who abandon their comrades are worse than trash! If I'm going to be called trash either way, I'd rather break the rules! And if that somehow makes me anything less than a real shinobi, then I'll crush all of the so-called 'real' shinobi!",
+            "context": "To Kakashi, reflecting on his ideals as a young shinobi."
+        },
+        {
+            "text": "I'm about to… die… but I'll become your eye… and see the future with you.",
+            "context": "Dying words to Kakashi after giving him his Sharingan."
+        },
+        {
+            "text": "The true power of the Sharingan… this is Madara Uchiha's power!",
+            "context": "To Pain and Konan, declaring his strength as Tobi."
+        },
+        {
+            "text": "The moment people come to know love, they run the risk of carrying hate.",
+            "context": "Reflecting on the relationship between love and hatred."
+        },
+        {
+            "text": "I'm no one… I don't want to be anyone. All I care about is completing the Eye of the Moon Plan. This world is completely worthless… there is nothing left in it but misery.",
+            "context": "To Naruto and Killer B, explaining his nihilistic worldview."
+        },
+        {
+            "text": "You remind me of myself… Naruto… yeah… just like when I was young… but, that'll all change with time…",
+            "context": "Reflecting on Naruto's similarities to his younger self."
+        },
+        {
+            "text": "Look! There is nothing in my heart! I don't even feel pain!! You don't have to feel guilty, Kakashi. This windhole was opened by this hell of a world.",
+            "context": "To Kakashi, expressing his emptiness and despair."
+        },
+        {
+            "text": "Now I finally realised that faking one's name and letting others do everything for you is different than entrusting something to one's comrades. I'm not you. The current me is the one who wanted to become Hokage: Obito Uchiha!",
+            "context": "To Madara, reclaiming his identity and rejecting his mentor's ideology."
+        },
+        {
+            "text": "You'll probably have to suffer again from now on… but don't change, keep going your way. You told me that you never change your words… that's your ninja way. Right? Naruto, become Hokage… at all costs.",
+            "context": "Last words to Naruto, encouraging him to fulfill his dreams."
+        }
+    ]
+}

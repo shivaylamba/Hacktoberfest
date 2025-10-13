@@ -1,0 +1,95 @@
+{
+    "name": "Zetsu",
+    "alias": "The Observer",
+    "ring": {
+        "kanji": "亥",
+        "meaning": "(Boar)",
+        "color": "#B13A2A"
+    },
+    "appearance": {
+        "height": "177 cm",
+        "age": "Unknown",
+        "clan": "None",
+        "village": "Not Affiliated"
+    },
+    "background": "Zetsu was a unique, plant-like being composed of two distinct personalities: White Zetsu and Black Zetsu. White Zetsu served as an observer and information gatherer for Akatsuki, while Black Zetsu was a manifestation of Kaguya Ōtsutsuki’s will, seeking her resurrection. Together, they played critical roles in the Akatsuki's plans, including manipulating events leading to the Fourth Shinobi World War.",
+    "abilities": [
+        {
+            "name": "Mayfly",
+            "description": "Allows Zetsu to merge with and travel through the ground and trees at high speed, making him undetectable.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Spore Technique",
+            "description": "Creates spores that attach to enemies, draining their chakra while growing into clones of Zetsu.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Subterranean Voyage",
+            "description": "Enables Zetsu to travel underground stealthily, avoiding detection and escaping threats.",
+            "rank": "B-rank",
+            "rating": 8
+        },
+        {
+            "name": "White Zetsu Army Clone Technique",
+            "description": "Generates a massive number of clones from White Zetsu’s body, used for large-scale battles.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Transformation Technique",
+            "description": "White Zetsu’s ability to perfectly mimic the appearance and chakra of others, making infiltration seamless.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Black Zetsu Manipulation",
+            "description": "Black Zetsu’s ability to attach to and control others’ bodies, influencing their actions.",
+            "rank": "S-rank",
+            "rating": 10
+        }
+    ],
+    "stats": "Unknown",
+    "relationships": [
+        {
+            "name": "Obito Uchiha",
+            "dynamic": "Served as Obito's loyal subordinate, assisting in the execution of the Eye of the Moon Plan."
+        },
+        {
+            "name": "Kaguya Ōtsutsuki",
+            "dynamic": "Black Zetsu was created by Kaguya's will and worked tirelessly to orchestrate her resurrection."
+        },
+        {
+            "name": "Akatsuki",
+            "dynamic": "Zetsu served as the organization’s spy and cleanup crew, gathering intel and disposing of bodies."
+        },
+        {
+            "name": "White Zetsu Army",
+            "dynamic": "White Zetsu created clones of himself to act as soldiers during the Fourth Shinobi World War."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "Well to say it simply… He wants to get rid of all the bad things in the world and run away to a dreamland full of good things! In a dream you can do whatever you want… even revive the dead.",
+            "context": "Explaining the Eye of the Moon Plan to Obito."
+        },
+        {
+            "text": "It'll be all right, after all, Tobi is a good boy.",
+            "context": "White Zetsu to Black Zetsu, endorsing Tobi’s role in Akatsuki."
+        },
+        {
+            "text": "When you're sad and alone… The only one you can count on is yourself.",
+            "context": "White Zetsu and Black Zetsu discussing self-reliance with Hidan."
+        },
+        {
+            "text": "The next time you open your eyes you'll be seeing a whole new world… things are getting really fun!",
+            "context": "Taunting Sasuke during his manipulation."
+        },
+        {
+            "text": "My Transformation Technique is the best out of all shinobi… the tale of shinobi... a story for the sake of my Mother’s resurrection.",
+            "context": "White Zetsu boasting about his transformation abilities, followed by Black Zetsu revealing his true purpose."
+        }
+    ]
+}

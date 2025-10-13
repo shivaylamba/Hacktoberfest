@@ -1,0 +1,101 @@
+{
+    "name": "Kisame Hoshigaki",
+    "alias": "Monster of the Hidden Mist",
+    "ring": {
+        "kanji": "南",
+        "meaning": "(South)",
+        "color": "#CBA632"
+    },
+    "appearance": {
+        "height": "195 cm",
+        "age": "32 (at death)",
+        "clan": "Not Specified",
+        "village": "Kirigakure"
+    },
+    "background": "Kisame was one of the Seven Ninja Swordsmen of the Mist and a missing-nin from Kirigakure. Known for his monstrous strength and chakra, he wielded the legendary blade Samehada, which allowed him to absorb chakra and fuse with it for increased power. His loyalty to Akatsuki was unmatched, culminating in his self-sacrifice to protect the organization's secrets.",
+    "abilities": [
+        {
+            "name": "Samehada",
+            "description": "A sentient sword that shreds opponents instead of slicing them and absorbs chakra from its targets.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Water Release: Great Shark Bullet Technique",
+            "description": "A giant water shark that grows stronger by absorbing the opponent's chakra.",
+            "rank": "A-rank",
+            "rating": 9.5
+        },
+        {
+            "name": "Water Prison Shark Dance Technique",
+            "description": "Creates a massive dome of water that moves with Kisame, giving him the advantage in underwater combat.",
+            "rank": "S-rank",
+            "rating": 10
+        },
+        {
+            "name": "Water Clone Technique",
+            "description": "Creates a clone made of water to confuse and attack opponents.",
+            "rank": "B-rank",
+            "rating": 8
+        },
+        {
+            "name": "Water Release: Five Feeding Sharks",
+            "description": "Summons five sharks made of water to attack the enemy.",
+            "rank": "A-rank",
+            "rating": 9
+        },
+        {
+            "name": "Shark Fusion",
+            "description": "Fuses with Samehada to transform into a monstrous shark-like creature, increasing strength and chakra reserves.",
+            "rank": "S-rank",
+            "rating": 10
+        }
+    ],
+    "stats": {
+        "ninjutsu": 4.5,
+        "taijutsu": 4.5,
+        "genjutsu": 2.5,
+        "intelligence": 3.5,
+        "strength": 5,
+        "speed": 4,
+        "stamina": 5,
+        "handSeals": 3.5,
+        "total": 32.5
+    },
+    "relationships": [
+        {
+            "name": "Itachi Uchiha",
+            "dynamic": "Partner in the Akatsuki. Kisame respected Itachi's strength and wisdom and remained loyal to him until his death."
+        },
+        {
+            "name": "Kirigakure",
+            "dynamic": "Former village, which Kisame betrayed after killing his comrades to protect classified information."
+        },
+        {
+            "name": "Samehada",
+            "dynamic": "A sentient blade and Kisame's trusted weapon, which granted him immense power and adaptability in combat."
+        }
+    ],
+    "quotes": [
+        {
+            "text": "My massive blade Samehada, doesn't slice… It shreds you to ribbons!",
+            "context": "Taunting Asuma during their encounter."
+        },
+        {
+            "text": "I get stronger in direct proportion to how strong my opponent is. I do not tire, and cannot be defeated.",
+            "context": "Boasting to Killer B during their battle."
+        },
+        {
+            "text": "I knew that from the first time I had to kill my comrades… Kill a Kiri ninja as a Kiri ninja. What does that make me? Am I a friend or foe? What is my purpose and my position? Where do I go? Where can I go? I'm well aware that my entire life has been one giant lie.",
+            "context": "To Yagura."
+        },
+        {
+            "text": "Sharks start out as eggs, but incubate and hatch in the womb. Sometimes the number of pups is less than the number of eggs that were fertilised. Do you know why? Cannibalism. The pups start eating each other within the mother's womb the moment they hatch. They start killing their siblings the moment they enter the world, viewing everything they see as nothing more than prey. As of today you and I are fellow members of Akatsuki. So be careful… of me.",
+            "context": "Warning Itachi upon their first meeting in Akatsuki."
+        },
+        {
+            "text": "Itachi… It seems that in the end… I'm not so terrible after all.",
+            "context": "Last words."
+        }
+    ]
+}
