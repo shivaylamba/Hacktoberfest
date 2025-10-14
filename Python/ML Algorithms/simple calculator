@@ -1,0 +1,12 @@
+num1 = float(input("Enter first number: "))
+operator = float(input("+, -, *, or /"))
+num2 = float(input("Enter second number: "))
+
+if operator == "+":
+    print(f"Result = {num1 + num2}")
+elif operator == "-":
+    print(f"Result = {num1 - num2}")
+elif operator == "*":
+    print(f"Result = {num1 * num2}")
+else:
+    print(f"Result = {num1 / num2}")
