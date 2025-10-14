@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Palindrome Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Palindrome Checker</h1>
+    <p class="desc">Type a phrase, number, or word — punctuation, spaces, and case are ignored.</p>
+
+    <label for="inputText" class="visually-hidden">Input text</label>
+    <input id="inputText" type="text" placeholder="Enter text to check" autofocus />
+
+    <div class="controls">
+      <button id="checkBtn">Check</button>
+      <button id="clearBtn" class="alt">Clear</button>
+    </div>
+
+    <div id="result" aria-live="polite" class="result hidden"></div>
+
+    <section class="examples">
+      <h2>Examples</h2>
+      <ul>
+        <li>"A man, a plan, a canal: Panama" → Palindrome</li>
+        <li>"Hello" → Not a palindrome</li>
+        <li>"12321" → Palindrome</li>
+      </ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
