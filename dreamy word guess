@@ -1,0 +1,29 @@
+import random
+
+wordslist = [
+    "ocean", "ember", "lunar", "bloom", "petal", "dusk", "mist", "echo",
+    "willow", "rift", "aurora", "glade", "meadow", "haze", "fable", "spire",
+    "solace", "twine", "drift", "quill"
+]
+
+word = random.choice(wordslist)
+guessedWord = ['_'] * len(word)
+attempts = 8
+while attempts > 0:
+    print('\ncurrent word: '+' '.join(guessedWord))
+    guess = input('guess an alphabet: ').lower()
+    if guess in word:
+        for i in range(len(word)):
+            if word[i] == guess:
+                guessedWord[i] = guess
+        print('great guess!')
+    else:
+        attempts = attempts - 1
+        print('oops! wrong guess:( attempts left: ' + str(attempts))
+    if '_' not in guessedWord:
+        print("\nyou guessed it, good job: " + word)
+        break
+    
+    if attempts == 0 and '_' in guessedWord:
+        print('\n you have run out of attempts! the word was: ' + word)
+
