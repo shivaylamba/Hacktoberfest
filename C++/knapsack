@@ -1,0 +1,32 @@
+int knapsack(int* weight, int* value, int n, int maxWeight) {
+	// Write your code here
+    int **ans = new int*[n+1];
+    for(int i=0;i<=n;i++) {
+        ans[i] = new int[maxWeight+1];
+    }
+    
+    ans[0][0] = 0;
+    for(int i=0;i<=n;i++) {
+        ans[i][0] = 0;
+    }
+    
+    for(int i=0;i<=maxWeight;i++) {
+        ans[0][i] = 0;
+    }
+    
+    for(int i=1;i<=n;i++) {
+        for(int j=1;j<maxWeight;j++) {
+            if(weight[i] > maxWeight) {
+                ans[i][j] = ans[i-1][j];
+            }else{
+                int a = ans[i-1][j-weight[i]]+value[i];////
+                int b = ans[i-1][j];
+                
+                ans[i][j] = max(a,b);
+            }
+        }
+    }
+    
+    return ans[n][maxWeight];
+    
+}
