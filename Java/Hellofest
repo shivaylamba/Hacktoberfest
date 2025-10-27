@@ -1,0 +1,14 @@
+
+
+public class HacktoberfestGreeting {
+    public static void main(String[] args) {
+        String name = "Open Source Contributor";
+        
+        System.out.println("========================================");
+        System.out.println("🎉 Welcome to Hacktoberfest 2025! 🎉");
+        System.out.println("Hello, " + name + "!");
+        System.out.println("Thank you for contributing to open source ❤️");
+        System.out.println("Keep coding, keep growing!");
+        System.out.println("========================================");
+    }
+}
