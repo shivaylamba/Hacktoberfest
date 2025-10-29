@@ -7,6 +7,8 @@
 #include<cmath>
 using namespace std;
 
+
+
 //count coins
 int coin_conut(vector<int> v){
   int sum = 0, count = 1;
