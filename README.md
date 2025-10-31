@@ -285,3 +285,8 @@ Uber open source project info
 A blazing fast & offline web playground in your browser.
 
 ### 11. [Initial Project](https://github.com/alwibastomi/ProjekAwal)
+
+### 👤 About Contributor
+Hi, I'm **Vaithiyanathan** — an MCA student and open-source learner.  
+Excited to take part in **Hacktoberfest 2025** and contribute to open source!
+
