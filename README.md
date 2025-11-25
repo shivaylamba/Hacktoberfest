@@ -290,5 +290,3 @@ A blazing fast & offline web playground in your browser.
 A responsive frontend web project built using HTML, CSS, and JavaScript. 
 Added by Gelli Keerthi for Hacktoberfest 2025.
 
- 
-Added by Gelli Keerthi for Hacktoberfest 2025 🌱
