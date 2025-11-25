@@ -285,3 +285,8 @@ Uber open source project info
 A blazing fast & offline web playground in your browser.
 
 ### 11. [Initial Project](https://github.com/alwibastomi/ProjekAwal)
+
+### 27. [My Frontend Project-Care Connect](https://github.com/gellikeerthi/CareConnect)
+A responsive frontend web project built using HTML, CSS, and JavaScript. 
+Added by Gelli Keerthi for Hacktoberfest 2025.
+
